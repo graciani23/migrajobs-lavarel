@@ -1,0 +1,31 @@
+
+/* rodapé */
+footer {
+    text-align: center;
+    background-color: #802A73;
+    color: white;
+    padding: 20px;
+}
+
+
+
+.corpo-rodape {
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: flex-end;
+    align-content: center;
+}
+
+.footer-idioma {
+    /* display: inline-block; */
+    align-items: center;
+}
+
+.footer-idioma small {
+    padding-right: 10px;
+}
+
+
+.footer-idioma img {
+    width: 50px;
+}

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #1C6BB5;
+    text-align: center;
+}
+
+.img-carousel {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* menu de navegação */
+
+nav .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+nav {
+    background-color: #1C6BB5;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+ /* bandeiras */
+nav > .container img {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+}
+
+ /* bandeiras */
+ footer > .container img {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+}
+
+ /* logos */
+ section > .row img {
+    width: 100px;
+    height: 80px;
+    padding: 5px;
+}
+
+
+/* rodapé */
+footer {
+    text-align: center;
+    background-color: #1C6BB5;
+    color: white;
+    padding: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.footer-idioma {
+    display: flex;
+    align-items: center;
+}
+
+h3{
+    color: #1C6BB5;
+    padding: 8px;
+}
+
+.display-4 {
+    color: #1C6BB5;
+}
+
+h2 {
+    text-align: center;
+}
+
+section a {
+    text-decoration: none;
+    color: white;
+}

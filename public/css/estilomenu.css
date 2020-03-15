@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ .logo {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    
+}
+
+span:hover {
+    color: #007bff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+header {
+    text-align: center;
+}
+
+
+
+/* menu de navegação */
+
+
+
+nav ul li:hover {
+    background-color:rgb(128, 42, 115);
+    border-radius: 100px;
+    color: white;
+    text-align: center;
+    
+    
+}
+
+.nav-link {
+    color: #007bff!important;
+    padding: 20px!important;
+    text-align: center;
+
+}
+
+nav > .container > ul > li > a {
+    text-decoration: none;
+    color: rgb(3, 187, 219);
+}
+
+.nav-link:hover {
+    color:white!important;
+        
+    }
+
+ /* bandeiras */
+ .form-inline >  img {
+    width: 10%;
+    height: 10%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.idioma {
+    display: block;
+    padding: 20px;
+}
+
+button {
+    text-align: center;
+}
+
+/* reponsividade */
+@media only screen and (max-width: 800px){
+    .form-inline >  img {
+        width: 8%;
+        padding: 10px;
+    }
+ 
+}
+
+@media only screen and (max-width: 600px){
+
+    .logo {
+        padding-left: 20%;
+        padding-right: 20%;
+
+    }
+
+    .form-inline >  img {
+        width: 10%;
+        padding: 1px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .form-inline >  img {
+        width: 7%;
+    }
+
+}
+

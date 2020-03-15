@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height:100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	flex-direction: column;
+	height:100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(49, 48, 48);
+}
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+
+header {
+    text-align: center;
+}
+
+/* menu de navegação */
+
+/* .container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+/* nav {
+    text-align: center;
+} */
+
+/* nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 15px;
+}
+
+nav ul li a {
+    font-size: 14px;
+}
+
+nav ul li:hover {
+    background-color:rgb(128, 42, 115);
+    border-radius: 100px;
+    color: white;
+    
+    
+}
+
+
+nav > .container > ul > li > a {
+    text-decoration: none;
+    color: rgb(3, 187, 219); */
+} */
+
+/* nav > .container > ul > li > a:hover {
+    color:white;
+} */
+
+ /* bandeiras */
+/* nav > .container img {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.pidioma {
+    margin-bottom: 0rem;
+} */

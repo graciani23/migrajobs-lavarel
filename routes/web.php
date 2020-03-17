@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/index',  'IndexController@exibirIndex');
 Route::get('/cad-log-empresa', 'EmpresaController@cadastrarEmpresa');
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante');
+Route::get('/curriculo', 'CurriculoController@curriculoUsuario');
+Route::get('/search', 'SearchController@buscarVagasUsuario');

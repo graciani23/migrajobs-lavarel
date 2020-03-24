@@ -18,11 +18,10 @@
                 <div class="logo mt-2"><a href="index.php">MigraJobs</a></div>
                 <nav>
                     <ul>
-                        <li><a href="#">Minha área</a></li>
-                        <li><a href="#">Candidaturas</a></li>
-                        <li><a href="#">Buscar vagas</a></li>
+                        <li><a href="curriculo">Minha área</a></li>
+                        <li><a href="">Candidaturas</a></li>
+                        <li><a href="search">Buscar vagas</a></li>
                         <li><a href="#">Currículo</a></li>
-                        <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
 

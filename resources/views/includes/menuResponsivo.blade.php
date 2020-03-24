@@ -32,7 +32,7 @@
         <a class="nav-link" href="cad-log-empresa" tabindex="-1" aria-disabled="true">Área da Empresa</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index/#link-contato" tabindex="-1" aria-disabled="true">Contato</a>
+        <a class="nav-link" a href=#link-contato tabindex="-1" aria-disabled="true">Contato</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

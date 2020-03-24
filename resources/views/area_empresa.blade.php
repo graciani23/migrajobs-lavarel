@@ -13,33 +13,22 @@
 <!-- primeira linha -->
 <nav> 
     <div class="cabecalho">
+		<span class="logo">MigraJobs</span>
         <div class="links">
-		<a href="sobre-nos.php"><img src="assets/img/logo-exemplo.png" width=100px height=50px alt="logo"></a>
-		<a href="cad-log-empresa.php">Minha área</a>
-        <a href="cad-log-usuario.php">Área do Usuário</a>
-		<a href="#">Contato</a>
+		<a href="cad-log-empresa">Minha área</a>
+        <a href="cad-log-usuario">Área do Usuário</a>
+		<a href="index">Contato</a>
 		</div>
-	    <div class="bandeira">
-            <p style="color:white;margin-bottom:0rem;font-size:14px">Selecione o seu idioma</p>
-            <img src="./assets/img/Brazil.png" alt="Bandeira do Brasil">
-            <img src="./assets/img/England.png" alt="Bandeira da Inglaterra">
-            <img src="./assets/img/France.png" alt="Bandeira da França">
-            <img src="./assets/img/Spain.png" alt="Bandeira da Espanha">
-        </div>
+		<div class="user">Olá, XXXXX</div>
     </div>
-</nav>
-      
-<!-- segunda linha -->
-    
-	<div class="titulo">
-							
-			<h1>ÁREA DA EMPRESA</h1>    
-	</div>
+</nav>     
             
 <!-- terceira linha -->
 </header>
-	<div class="buscadecandidato">
-		<p>ENCONTRE O SEU CANDIDATO</p>
+<div class="buscadecandidato">
+	<div class="encontreCandidato">
+				<p>ENCONTRE O SEU CANDIDATO</p>
+	</div>
 		<form>
 		<select class="estadocidade" name="estados-brasil">
 			<option value="">Selecione um estado</option>

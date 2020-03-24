@@ -31,7 +31,7 @@ select {
 /* header */
 header {
     width: 100%;
-    height: 70px;
+    height: 80px;
     background: #343A40;
     font-family: 'Montserrat', sans-serif;
 }
@@ -118,7 +118,7 @@ header img {
 }
 
 .cancelar, .salvar {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 /* Para todos os selection */
@@ -166,7 +166,6 @@ option {
 .estadoCivil > select {
     width: 600px;
 }
-
 
 /* Contato */
 .redes-sociais img{

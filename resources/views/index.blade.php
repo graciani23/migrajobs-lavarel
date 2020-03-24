@@ -11,15 +11,15 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-        @include('includes/menuResponsivo');      
-    <div class="fundo">        
+        @include('includes/menuResponsivo')
+    <div class="fundo">
         <h2 class="h2">Recomeço além das fronteiras</h2>
-            <button class="botao"> 
+            <button class="botao">
                 <a href="#cadastro" class="participe">Participe</a>
             </button>
             <br> <br> <br>
         </div>
-        <div class="fundo">      
+        <div class="fundo">
     </div>
     <section class="sobrenos">
         <div class="container">
@@ -31,12 +31,12 @@
                 </div>
                 <div class="col col-lg-4 col-sm-12">
                     <h2 class="quem"> O QUE </h2>
-                    <h6 class="somos">FAZEMOS?</h6>  
+                    <h6 class="somos">FAZEMOS?</h6>
                     <p class="psobrenos">Nosso papel é servir como ponte entre imigrantes e refugiados que buscam trabalho digno e empresas que querem contratar. Nossa missão é promover o encontro de pessoas talentosas com empresas que precisam de gente em diversas áreas de atuação</p>
                 </div>
                 <div class="col col-lg-4 col-sm-12">
                     <h2 class="quem"> QUEM </h2>
-                    <h6 class="somos">NOS APOIA?</h6>  
+                    <h6 class="somos">NOS APOIA?</h6>
                     <p class="psobrenos">Contamos com o suporte de ONGS como o CAMI (Centro de Apoio ao Imigrante) para realizar a triagem e cadastro de perfis e ao mesmo tempo buscamos parcerias de empresas que acredite nos nossos valores e nossa missão</p>
             </div>
         </div>
@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <h4>Quero mudar minha vida</h4>
-                <div class="form">    
+                <div class="form">
                     <h5 class="card-title">SOU IMIGRANTE</h5>
                     <div class="form-group">
                         <label for="exampleInputEmail1"></label>
@@ -64,16 +64,16 @@
                         <button type="submit" class="entrar">Entrar</button>
                         </div>
                     </div>
-                </div>      
+                </div>
             </div>
-        
+
             <div class="col-sm-6">
-                <h4>Quero mudar outras vidas</h4>  
-                <div class="form">  
+                <h4>Quero mudar outras vidas</h4>
+                <div class="form">
                     <h5 class="card-title">SOU EMPRESA</h5>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">                
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1"></label>
@@ -87,22 +87,22 @@
                         <button type="submit" class="entrar">Entrar</button>
                     </div>
                 </div>
-            </div>  
+            </div>
 
         </div>
     </main>
     <section>
         <div class="col-sm-12">
-            <h4>Dúvidas?</h4>  
-                <div class="form-contato">  
+            <h4 id="link-contato">Dúvidas?</h4>
+                <div class="form-contato">
                     <h5 class="card-title"><a name="FALE CONOSCO">FALE CONOSCO</h5>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">                
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail"> 
+                            <input for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
                         </div>
                         <div class="form-group-mensagem">
                             <label for="mensagem"></label>
@@ -112,11 +112,11 @@
                     <div class="form-group form-check">
                         <button type="submit" class="entrar">Enviar</button>
                  </div>
-            </div>  
+            </div>
         <br>
     </section>
 
-        @include('.includes/footerQS');   
+        @include('.includes/footerQS')
 
         <link rel="stylesheet" href="/css/estilofooterqs.css">
 </body>

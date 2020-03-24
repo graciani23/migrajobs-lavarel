@@ -13,9 +13,9 @@
 <body>
     <header>
         <div class="container">
-            
+
             <div class="principal">
-                <div class="logo"><a href="index.php">MigraJobs</a></div>
+                <div class="logo"><a href="index">MigraJobs</a></div>
 
                 <nav>
                     <ul>
@@ -24,7 +24,7 @@
                         <li><a href="#">Buscar vagas</a></li>
                         <li><a href="#">Currículo</a></li>
                         <li><a href="#">Contato</a></li>
-                    </ul>    
+                    </ul>
                 </nav>
 
                 <div class="user">
@@ -33,9 +33,9 @@
 
                 <img src="assets/icones/user.svg" alt="">
             </div>
-        </div>    
+        </div>
     </header>
-    
+
     <div class="container">
         <div class="fundo">
             <div class="foto">
@@ -92,11 +92,11 @@
                 </div>
 
                 <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                    <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick=""> 
-                    <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick=""> 
+                    <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
+                    <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
                 </form>
         </section>
-                
+
         <section class="endereco border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Endereço</h4>
@@ -132,11 +132,11 @@
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick=""> 
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick=""> 
+                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
+                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </form>
         </section>
-    
+
         <section class="contato border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
@@ -180,11 +180,11 @@
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick=""> 
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick=""> 
+                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
+                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </form>
         </section>
-       
+
         <section class="objetivo-profissional border mt-3">
             <div class="Experiência pt-3 mx-4">
                 <h4>Experiência</h4>
@@ -225,23 +225,23 @@
 
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" for="dataInicio">Data início:</label>
-                    
+
                     @include('./includes/comboBoxMesAno')
-                    
+
                 <label class="termino pr-2" for="dataTermino">Data término:</label>
-                    
+
                     @include('./includes/comboBoxMesAno')
-                
+
                 </div><br>
-                
+
             <div class="form-group pt-3 mx-4">
                 <label for="descricao-cargo">Descrição</label>
                 <textarea class="form-control border-secondary" id="descricao-cargo" rows="4" placeholder="Descrição do cargo"></textarea>
             </div>
-    
+
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick=""> 
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick=""> 
+                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
+                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </form>
         </section>
 
@@ -264,13 +264,13 @@
 
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" for="dataInicio">Data início:</label>
-                    
+
                     @include('./includes/comboBoxMesAno')
 
                 <br>
                 <label class="termino pr-2" for="dataTermino">Data término:</label>
-                    
-                    @include('./includes/comboBoxMesAno')     
+
+                    @include('./includes/comboBoxMesAno')
 
             </div><br>
 
@@ -280,8 +280,8 @@
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick=""> 
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick=""> 
+                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
+                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </form>
         </section>
     </div>

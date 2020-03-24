@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./assets/css/estilofooterqs.css">
+    <link rel="stylesheet" href="/css/estiloFooter.css">
 
     <title>Document</title>
 </head>
@@ -18,7 +18,7 @@
                 <img src="assets/img/Brazil.png" alt="Bandeira do Brasil">
             </div>
         </div>
-    </footer>                       
+    </footer>
 </body>
 </html>
 

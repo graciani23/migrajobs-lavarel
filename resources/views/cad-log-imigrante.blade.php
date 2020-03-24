@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    
-    <title>Login Usuário</title>  
+
+    <title>Login Usuário</title>
 </head>
 <body>
         @include('includes/menuNav')
@@ -34,14 +34,14 @@
             <button type="submit" class="btn btn-light">Cadastrar</button>
         </form>
     </div>
-    
-        @include('includes/footer');
 
-        
+        @include('includes/footer')
+
+
     <link rel="stylesheet" href="/css/estiloCadUsuarioEmpresa.css">
     <link rel="stylesheet" href="/css/estilofooterqs.css">
     <link rel="stylesheet" href="/css/estiloMenuNav.css">
-    
-    
+
+
 </body>
 </html>

@@ -8,33 +8,32 @@
     <title>Cadastro e Login - Empresa</title>
 </head>
 <body>
-    <?php
-        require('.public/assets/includes/isamenuNavResponsivo.php');
-    ?>
+
+    @include('includes/isamenuNavResponsivo')
+
     <div class="corpo-form">
         <form method="POST">
             <h2><strong>Cadastre sua empresa</strong></h2>
             <input type="text" id="inputName" placeholder="Nome da empresa">
-            <input type="number" id="inputCNPJ" placeholder="Informe seu CNPJ">        
+            <input type="number" id="inputCNPJ" placeholder="Informe seu CNPJ">
             <input type="email" id="inputEmail" placeholder="Email de acesso">
             <input type="password" id="inputPassword" placeholder="Senha">
             <input type="password" id="inputConfirmPassword" placeholder="Confirme sua senha">
-    
+
             <button type="submit" class="btn btn-light">Entrar</button>
         </form>
     </div>
 
     <div class="corpo">
-        
-    </div>
-    
 
-    <?php
-        require '.public/assets/includes/footer.php';
-    ?>
-    
-    <link rel="stylesheet" href="public/assets/css/estiloCadUsuarioEmpresa.css">
-    <link rel="stylesheet" href=".public/assets/css/estilofooterqs.css">
-    <link rel="stylesheet" href="public/assets/css/estiloMenuNav.css">
+    </div>
+
+
+        @include('includes/footer')
+
+
+    <link rel="stylesheet" href="/css/estiloCadUsuarioEmpresa.css">
+    <link rel="stylesheet" href="/css/estiloFooter.css">
+    <link rel="stylesheet" href="/css/estiloMenuNav.css">
 </body>
 </html>

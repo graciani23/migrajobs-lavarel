@@ -19,12 +19,30 @@ h3, h4, h5 {
     color: black;
 }
 
-                    
+.cancelar, .salvar {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Para todos */
+label{
+    color: black;
+}
+
 select {
     width: 40%;
     height: 30px;
     border-radius: 5px;
     padding-right: 2px;
+    color: black;
+}
+
+input {
+    height: 35px;   
+}
+
+option {
+    color: black;
 }
 
 
@@ -54,7 +72,6 @@ header {
     color: #FFFFFF;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     display: inline-block;
-    
 }
 
 .logo a{
@@ -64,7 +81,7 @@ header {
 }
 
 nav {
-    margin: auto 50px;
+    margin: auto 90px;
     display: inline-block;
 }
 
@@ -103,7 +120,7 @@ nav ul li a:hover {
     box-sizing: border-box;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     display: inline-block;
-    margin-left: 120px;
+    margin-left: 35px;
     
 }
 
@@ -117,29 +134,13 @@ header img {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.cancelar, .salvar {
-    font-size: 14px;
-}
-
-/* Para todos os selection */
-label{
-    color: black;
-}
-
-input {
-    height: 35px;   
-}
-
-option {
-    color: black;
-}
 
 
 /* Dados Pessoais */
 .fundo {
     background-image: url("/assets/img/quebracabeca.jpg");
     background-size: cover;
-    height: 170px;
+    height: 180px;
     margin-top: 50px;
     
 }
@@ -154,7 +155,19 @@ option {
     margin-left: 20px;
     position: absolute;
     z-index: 5;
-}   
+}  
+
+.editar-foto {
+    padding-left: 170px;
+    font-size: small;
+    
+}
+
+.editar-foto > input {
+    color: black;
+}
+
+
 .estadoCivil {
     color: black;
 }

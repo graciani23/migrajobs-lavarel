@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/',  'IndexController@exibirIndex');
 Route::get('/index',  'IndexController@exibirIndex');
 Route::get('/cad-log-empresa', 'EmpresaController@cadastrarEmpresa');
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante');

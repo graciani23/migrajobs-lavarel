@@ -22,7 +22,6 @@
                         <li><a href="#">Candidaturas</a></li>
                         <li><a href="search">Buscar vagas</a></li>
                         <li><a href="#">Currículo</a></li>
-                        <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
 

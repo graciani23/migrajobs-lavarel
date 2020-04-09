@@ -1,8 +1,8 @@
 # Projeto integrador - Digital House
-Visa colocar em prática todo conteúdo que nos foi passado, integrando todas as tecnologias a fim de criar um produto de ponta a ponta.
+Visa colocar em prática todo conteúdo que nos foi passadono decorrer do curso, integrando todas as tecnologias a fim de criar um produto de ponta a ponta.
 
 ## Objetivo
-O projeto tem como objetivo ajudar os refugiados na busca por vagas de emprego, fazendo com que seus conhecimentos e experiências anteriores sejam melhor aproveitados.
+O projeto tem como objetivo ajudar os refugiados/imigrantes na busca por vagas de emprego, fazendo com que seus conhecimentos e experiências anteriores sejam melhor aproveitados.
 
 ## Sprints
 <table>
@@ -12,7 +12,7 @@ O projeto tem como objetivo ajudar os refugiados na busca por vagas de emprego, 
     <th>19/02/2020</th>
     <th>09/03/2020</th>
     <th>27/03/2020</th>
-    <th></th>
+    <th>20/04/2020</th>
     <th></th>
 
   </tr>
@@ -22,7 +22,7 @@ O projeto tem como objetivo ajudar os refugiados na busca por vagas de emprego, 
     <td>Responsividade</td>
     <td>Entrega do DER, SQL</td>
     <td>Criar projeto no laravel, criar rotas e controllers</td>
-    <td></td>
+    <td>Desenvolver a lógica, CRUD, models, conexão com DB, validação de registros gravados no DB,login e painel Admin</td>
     <td></td>
   </tr>
 </table>

@@ -59,7 +59,7 @@
                     </div>
                     <div class="form-group form-check">
                             <a href="" class="senha"> Esqueci minha senha</a>
-                            <a href="cad-log-usuario.php" class="senha">Quero me cadastrar</a>
+                            <a href="cad-log-imigrante" class="senha">Quero me cadastrar</a>
                     <div>
                         <button type="submit" class="entrar">Entrar</button>
                         </div>
@@ -82,7 +82,7 @@
                         <br>
                     <div class="form-group form-check">
                         <a href="http://" class="senha">Esqueci minha senha</a>
-                        <a href="cad-log-empresa.php" class="senha">Quero me cadastrar</a>
+                        <a href="cad-log-empresa" class="senha">Quero me cadastrar</a>
                     <div>
                         <button type="submit" class="entrar">Entrar</button>
                     </div>

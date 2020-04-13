@@ -1,9 +1,14 @@
 
-/* rodapé */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 footer {
     text-align: center;
-    background-color: rgb(166, 59, 50);
-    color: rgb(242, 181, 68);
+    background-color:  #802A73;
+    color: white;
     padding: 20px;
 }
 

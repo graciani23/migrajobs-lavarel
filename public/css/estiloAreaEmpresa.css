@@ -1,5 +1,7 @@
 * {
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -19,23 +21,34 @@ body {
 /* início da nav */
 
 nav>div {
+    padding-top: 10px;
     background-color: #3c3f44;
     display: flex;
     justify-content: space-around;
 }
 
-nav>div>div>a{
-	text-decoration: none;
-	padding: 35px 90px 20px 30px;
-	display: inline-block;
+.cabecalho ul li a {
+    text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    padding: 20px;
 }
 
-nav>div>div>a:hover{
-    color: #ffc107;
-    font-weight: bold;
-} 
+.cabecalho ul li {
+    display: inline;
+}
+
+.img-cabecalho {
+    color: #ffffff;
+    text-align: center;
+}
+
+.img-cabecalho img {
+    width: 40px;
+}
+
+.img-cabecalho p {
+    padding-top: 10px;
+}
 
 /* segunda linha */
 
@@ -57,48 +70,54 @@ header{
 /* INÍCIO DA TERCEIRA LINHA - MENU DE BUSCA */
 
 .buscadecandidato {
-    margin:0;
+    padding: 20px;
 	display: flex;
-    justify-content: space-between; 
-    padding: 0 70px 0 70px;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
     background-color: #3c3f44;
     font-size: 18px;
     color:#ffffff;
     font-weight: bold;
 }
 
+.buscadecandidato p {
+    margin: 0 0px 0 65px;
+}
 .estadocidade {
     font-size: 16px;
     border: 1px solid #3c3f44;
     width: 300px;
     height: 31px;
-    margin-top: 15px;
 }
 
 .funcao {
     color: #3c3f44;
+    border-radius: 5px;
     width: 230px;
     height: 31px;
-    margin-top: 15px;
     font-size: 16px;
-} 
-
-.botao{
-    width: 70px;
-    height: 31px;
-    margin-top: 15px;
-    font-size: 14px;
 }
+
 
 /* FIM DA TERCEIRA LINHA */
 
 /* INÍCIO DA DIV COM O RESULTADOS DA BUSCA */
 
+.container {
+    margin: 40px auto 20px auto;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
 #resultado{
     color: #3c3f44;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    margin-left: 65px;
+    padding-bottom: 15px;
     font-weight: bold;
 }
 
@@ -131,7 +150,7 @@ header{
 }
 
 .candidato p{
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     margin-top: -2px;
     margin-left: 5px;
     font-size: 16px;
@@ -145,22 +164,18 @@ header{
 
 }
 
-main {
-	padding: 10px;
-}
 
-.lado-lado>main{
+.lado-lado {
 	display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2);
 	align-items: baseline;
     grid-gap: 15px;
-    margin-left: 65px;
 }
 
-.lado-lado>main>.candidato{
+.lado-lado>.candidato{
 	padding: 10px;
-} 
+}
 
 .pagina {
     color: #3c3f44;
@@ -179,4 +194,57 @@ main {
 .footer p{
    padding-top: 25px;
    margin-left: 280px;
+}
+
+@media only screen and (max-width: 900px){
+    .lado-lado{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2);
+        align-items: baseline;
+        grid-gap: 15px;
+        margin-left: 65px;
+    }
+
+    .buscadecandidato {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        background-color: #3c3f44;
+        font-size: 18px;
+        color:#ffffff;
+        font-weight: bold;
+    }
+
+    .buscadecandidato p {
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .lado-lado{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2);
+        align-items: baseline;
+        grid-gap: 15px;
+        margin-left: 65px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .lado-lado{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2);
+        align-items: baseline;
+        grid-gap: 15px;
+        margin-left: 65px;
+    }
+
 }

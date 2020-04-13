@@ -9,4 +9,5 @@ class EmpresaController extends Controller
     public function cadastrarEmpresa() {
         return view('cad-log-empresa');
     }
+
 }

@@ -39,8 +39,10 @@
 
 
     <link rel="stylesheet" href="/css/estiloCadUsuarioEmpresa.css">
-    <link rel="stylesheet" href="/css/estilofooterqs.css">
     <link rel="stylesheet" href="/css/estiloMenuNav.css">
+
+    <link rel="stylesheet" href="/css/estiloFooter.css">
+
 
 
 </body>

@@ -17,56 +17,6 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-/* HEADER */
-/* início da nav */
-
-nav>div {
-    padding-top: 10px;
-    background-color: #3c3f44;
-    display: flex;
-    justify-content: space-around;
-}
-
-.cabecalho ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    padding: 20px;
-}
-
-.cabecalho ul li {
-    display: inline;
-}
-
-.img-cabecalho {
-    color: #ffffff;
-    text-align: center;
-}
-
-.img-cabecalho img {
-    width: 40px;
-}
-
-.img-cabecalho p {
-    padding-top: 10px;
-}
-
-/* segunda linha */
-
-header{
-    background-color: #17a2b8;
-}
-
-.titulo {
-    font-family: 'Montserrat', sans-serif;
-    color: #3c3f44;
-    font-weight: bold;
-    text-align: center;
-    height: 55px;
-}
-
-/* FIM DO HEADER */
-
-
 /* INÍCIO DA TERCEIRA LINHA - MENU DE BUSCA */
 
 .buscadecandidato {
@@ -223,6 +173,13 @@ main {
         margin: 0;
     }
 
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        width: 100%;
+
+    }
 }
 
 @media only screen and (max-width: 600px){

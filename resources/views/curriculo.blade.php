@@ -15,14 +15,13 @@
         <div class="container">
 
             <div class="principal">
-                <div class="logo mt-2"><a href="index.php">MigraJobs</a></div>
+                <div class="logo mt-2"><a href="index">MigraJobs</a></div>
                 <nav>
                     <ul>
                         <li><a href="#">Minha área</a></li>
                         <li><a href="#">Candidaturas</a></li>
-                        <li><a href="#">Buscar vagas</a></li>
+                        <li><a href="search">Buscar vagas</a></li>
                         <li><a href="#">Currículo</a></li>
-                        <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
 
@@ -41,6 +40,12 @@
                 <img src="assets/img/refugiado.jpg" alt="">
             </div>
         </div>
+        <form>
+            <div class="editar-foto form-group">
+                <label for="edit-photo"></label>
+                <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
+            </div>
+        </form>
         <section class="dados-pessoais border">
             <div class="form-row pt-4 mx-4">
                 <div class="col">
@@ -91,13 +96,8 @@
             </div>
 
                 <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-<<<<<<< HEAD
                     <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                     <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-=======
-                    <input class="cancelar btn btn-light bg-transparent text-danger" name="cancel" id="cancel" type="button" value="Cancelar" onClick="">
-                    <input class="salvar btn btn-primary" name="save" id="save" type="submit" value="Salvar" onCLick="">
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
                 </form>
         </section>
 
@@ -136,13 +136,8 @@
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-<<<<<<< HEAD
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-=======
-                <input class="cancelar btn btn-light bg-transparent text-danger" name="cancel" id="cancel" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary" name="save" id="save" type="submit" value="Salvar" onCLick="">
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
             </form>
         </section>
 
@@ -189,13 +184,8 @@
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-<<<<<<< HEAD
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-=======
-                <input class="cancelar btn btn-light bg-transparent text-danger" name="cancel" id="cancel" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary btn-custonm" name="save" id="save" type="submit" value="Salvar" onCLick="">
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
             </form>
         </section>
 
@@ -238,45 +228,24 @@
             </div>
 
             <div class="data form-row pt-2 mx-4">
-<<<<<<< HEAD
                 <label class="inicio pr-2" for="dataInicio">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
 
                 <label class="termino pr-2" for="dataTermino">Data término:</label>
 
-=======
-                <label class="inicio pr-2" for="start-date">Data início:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
-                <label class="termino pr-2" for="end-date">Data término:</label>
-
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
                     @include('./includes/comboBoxMesAno')
 
                 </div><br>
-<<<<<<< HEAD
 
             <div class="form-group pt-3 mx-4">
                 <label for="descricao-cargo">Descrição</label>
                 <textarea class="form-control border-secondary" id="descricao-cargo" rows="4" placeholder="Descrição do cargo"></textarea>
-=======
-
-            <div class="form-group pt-3 px-1 mx-4">
-                <label for="job-description">Descrição</label>
-                <textarea class="form-control border-secondary" name="jov-description" id="job-description" rows="4" placeholder="Descrição do cargo"></textarea>
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-<<<<<<< HEAD
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-=======
-                <input class="cancelar btn btn-light bg-transparent text-danger" name="cancel" id="cancel" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary" name="save" id="save" type="submit" value="Salvar" onCLick="">
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
             </form>
         </section>
 
@@ -298,7 +267,6 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-<<<<<<< HEAD
                 <label class="inicio pr-2" for="dataInicio">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
@@ -307,16 +275,6 @@
                 <label class="termino pr-2" for="dataTermino">Data término:</label>
 
                     @include('./includes/comboBoxMesAno')
-=======
-                <label class="inicio pr-2" for="start-date">Data início:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
-                <br>
-                <label class="termino pr-2" for="end-date">Data término:</label>
-
-                    @include('./includes/comboBoxMesAno')
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
 
             </div><br>
 
@@ -326,13 +284,8 @@
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-<<<<<<< HEAD
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-=======
-                <input class="cancelar btn btn-light bg-transparent text-danger" name="cancel" id="cancel" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary" name="save" id="save" type="submit" value="Salvar" onCLick="">
->>>>>>> addb48d127d0e3a486131bed967e1826b581360a
             </form>
         </section>
     </div>

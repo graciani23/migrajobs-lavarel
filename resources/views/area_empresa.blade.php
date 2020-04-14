@@ -41,8 +41,10 @@
 
 <!-- terceira linha -->
 </header>
-	<div class="buscadecandidato">
-		<p>ENCONTRE O SEU CANDIDATO</p>
+<div class="buscadecandidato">
+	<div class="encontreCandidato">
+				<p>ENCONTRE O SEU CANDIDATO</p>
+	</div>
 		<form>
 		<select class="estadocidade" name="estados-brasil">
             @include('includes/comboEstados')

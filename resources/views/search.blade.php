@@ -14,29 +14,31 @@
     <link rel="stylesheet" href="/css/search.css">
 </head>
 
-<body>
-    <header id="cabecalho">
-        <div id="cabecalho-central">
-            <!-- MigraJobs logo no header de navegação -->
-            <div class="logo">
-                <a href="sobre-nos.php">MigraJobs</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Minha área</a></li>
-                    <li><a href="#">Candidaturas</a></li>
-                    <li><a href="#">Buscar vagas</a></li>
-                    <li><a href="#">Currículo</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-
-            <div class="user">Olá, Jeferson</div>
-
-            <img src="assets/icones/user.svg" alt="">
+<header id="cabecalho">
+    <div id="cabecalho-central">
+        <!-- MigraJobs logo no header de navegação -->
+        <div class="logo">
+            <a href="index">MigraJobs</a>
         </div>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="#">Minha área</a></li>
+                <li><a href="#">Candidaturas</a></li>
+                <li><a href="#">Buscar vagas</a></li>
+                <li><a href="curriculo">Currículo</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
 
+        <div class="user">
+            Olá, Jeferson
+        </div>
+
+        <img src="assets/icones/user.svg" alt="">
+    </div>
+</header>
+
+<div>
     <div class="column-left">
         <div class="profile">
             <div class="addPhoto">FOTO</div>

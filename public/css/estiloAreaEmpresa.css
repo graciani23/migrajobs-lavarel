@@ -25,7 +25,7 @@ body {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    background-color: #3c3f44;
+    background-color: #333a40;
     font-size: 18px;
     color:#ffffff;
     font-weight: bold;
@@ -72,10 +72,10 @@ main {
 }
 
 .candidato{
-    width: 220px;
-    height: 330px;
-    left: 88px;
-    top: 301px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     border: 2px solid #ffffff;
     box-sizing: border-box;
     border-radius: 10px;
@@ -87,8 +87,8 @@ main {
 .candidato img{
     width: 200px;
     height: 200px;
-    /* margin-left: 10px;
-    margin-right: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 90px;
     border: 2px solid white;
 }
@@ -108,7 +108,6 @@ main {
 
 .candidato a{
     color: #802A73;
-    margin-left: 55px;
     font-size: 18px;
     font-weight: bold;
 
@@ -146,14 +145,13 @@ main {
    margin-left: 280px;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1015px){
     .lado-lado{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(2);
         align-items: baseline;
         grid-gap: 15px;
-        margin-left: 65px;
     }
 
     .buscadecandidato {
@@ -176,32 +174,51 @@ main {
 }
 
 @media only screen and (max-width: 750px) {
-    .container {
+    main {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-
     }
-}
-
-@media only screen and (max-width: 600px){
     .lado-lado{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2);
         align-items: baseline;
         grid-gap: 15px;
-        margin-left: 65px;
     }
 
 }
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 520px) {
     .lado-lado{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(2);
         align-items: baseline;
         grid-gap: 15px;
-        margin-left: 65px;
     }
 
+}
+
+@media only screen and (max-width: 300px) {
+    .candidato{
+        width: 100%;
+    }
+
+    .candidato img{
+        width: 100%;
+    }
+
+    .estadocidade {
+        width: 100%;
+    }
+
+    .funcao {
+        width: 100%;
+    }
+
+    .lado-lado{
+        width: 100%;
+    }
 }

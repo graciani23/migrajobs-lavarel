@@ -96,23 +96,25 @@
             <h4 id="link-contato">Dúvidas?</h4>
                 <div class="form-contato">
                     <h5 class="card-title"><a name="FALE CONOSCO">FALE CONOSCO</h5>
+                    <form action="send-mail" method="post" enctype="multpart/form-data">
                         <div class="form-group">
-                            <label for="exampleInputEmail1"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">
+                            <label for="nome"></label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Nome de usuário" name="nome">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input for="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail" name="email">
                         </div>
                         <div class="form-group-mensagem">
                             <label for="mensagem"></label>
                             <input type="text" class="form-control" name="mensagem" id="mensagem" placeholder="Escreva sua mensagem">
                         </div>
                         <br>
-                    <div class="form-group form-check">
-                        <button type="submit" class="entrar">Enviar</button>
-                 </div>
-            </div>
+                        <div class="form-group form-check">
+                            <button type="submit" class="entrar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
         <br>
     </section>
 

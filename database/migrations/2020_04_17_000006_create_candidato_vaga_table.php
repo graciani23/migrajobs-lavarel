@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetalhesEmpresasTable extends Migration
+class CreateCandidatoVagaTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'detalhes_empresas';
+    public $tableName = 'candidato_vaga';
 
     /**
      * Run the migrations.
-     * @table detalhes_empresas
+     * @table candidato_vaga
      *
      * @return void
      */
@@ -22,20 +22,22 @@ class CreateDetalhesEmpresasTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->string('razao_social', 45);
-            $table->string('cnpj', 45);
-            $table->string('endereco', 45)->nullable();
-            $table->string('area_de_atuacao', 45)->nullable();
-            $table->integer('vaga_id');
+            $table->increments('vaga_id');
+            $table->unsignedInteger('candidato_id');
+            $table->string('nome_cadidato', 45);
 
-            $table->index(["vaga_id"], 'fk_detalhes_empresas_vagas1_idx');
+            $table->index(["vaga_id"], 'fk_VAGAS_has_CANDIDATOS_VAGAS_idx');
 
-            $table->unique(["cnpj"], 'cnpj_UNIQUE');
+            $table->index(["candidato_id"], 'fk_VAGAS_has_CANDIDATOS_CANDIDATOS1_idx');
 
 
-            $table->foreign('vaga_id', 'fk_detalhes_empresas_vagas1_idx')
+            $table->foreign('vaga_id', 'fk_VAGAS_has_CANDIDATOS_VAGAS_idx')
                 ->references('id')->on('vagas')
+                ->onDelete('no action')
+                ->onUpdate('no action');
+
+            $table->foreign('candidato_id', 'fk_VAGAS_has_CANDIDATOS_CANDIDATOS1_idx')
+                ->references('id')->on('candidatos')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });

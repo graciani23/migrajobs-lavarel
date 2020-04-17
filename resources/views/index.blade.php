@@ -96,18 +96,22 @@
             <h4 id="link-contato">Dúvidas?</h4>
                 <div class="form-contato">
                     <h5 class="card-title"><a name="FALE CONOSCO">FALE CONOSCO</h5>
-                    <form action="send-mail" method="post" enctype="multpart/form-data">
+                    <form method="post" action="{{ action('MessageController@enviarEmail') }}" enctype="multpart/form-data">
+                        @csrf
                         <div class="form-group">
                             <label for="nome"></label>
-                            <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Nome de usuário" name="nome">
+                        <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Nome de usuário" name="nome" value="{{ old('name') }}">
+                            {!! $errors->first('name', '<small>:message</small>') !!}<br>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail" name="email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail" name="email" value="{{ old('email') }}">
+                            {!! $errors->first('email', '<small>:message</small>') !!}<br>
                         </div>
+                        <br>
                         <div class="form-group-mensagem">
-                            <label for="mensagem"></label>
-                            <input type="text" class="form-control" name="mensagem" id="mensagem" placeholder="Escreva sua mensagem">
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="6" class="form-control" placeholder="Escreva sua mensagem">{{ old('mensagem') }}</textarea>
+                        {!! $errors->first('mensagem', '<small>:message</small>') !!}<br>
                         </div>
                         <br>
                         <div class="form-group form-check">

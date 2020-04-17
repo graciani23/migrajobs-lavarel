@@ -20,4 +20,4 @@ Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante');
 Route::get('/curriculo', 'CurriculoController@curriculoUsuario');
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
-Route::get('/send-mail', 'IndexController@enviarEmail');
+Route::post('index', 'MessageController@enviarEmail');

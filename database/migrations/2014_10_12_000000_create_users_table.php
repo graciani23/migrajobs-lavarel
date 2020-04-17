@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
 
             $table->unique(["email_login"], 'email_login_UNIQUE');
 
-
+            $table->integer('detalhe_empresa_id', 'fk_table1_DETALHES_EMPRESA1_idx')->unsigned();
             $table->foreign('detalhe_empresa_id', 'fk_table1_DETALHES_EMPRESA1_idx')
                 ->references('id')->on('detalhes_empresas')
                 ->onDelete('no action')

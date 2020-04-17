@@ -21,11 +21,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create($this->tableName, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->integer('detalhe_empresa_id');
-            $table->string('email_login', 45);
-            $table->string('senha', 45);
             $table->increments('id');
+<<<<<<< HEAD
 
             $table->index(["detalhe_empresa_id"], 'fk_table1_DETALHES_EMPRESA1_idx');
 
@@ -38,6 +35,14 @@ class CreateUsersTable extends Migration
                 ->references('id')->on('detalhes_empresas')
                 ->onDelete('no action')
                 ->onUpdate('no action');
+=======
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+>>>>>>> a57d913fc6716559111390801570bb26d7b010aa
         });
     }
 

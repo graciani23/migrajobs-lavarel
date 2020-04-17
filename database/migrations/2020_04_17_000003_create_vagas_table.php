@@ -23,7 +23,7 @@ class CreateVagasTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('kf_id_empresa');
+            $table->unsignedInteger('empresa_id');
             $table->string('nome_empresa', 45);
             $table->string('descricao', 45)->nullable();
             $table->string('idioma_requerido', 45)->nullable();

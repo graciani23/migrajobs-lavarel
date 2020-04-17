@@ -48,7 +48,7 @@ class CreateCandidatosTable extends Migration
             $table->date('formacao_data_inicio')->nullable();
             $table->date('formacao_data_termino')->nullable();
             $table->string('formacao_descricao', 45)->nullable();
-            $table->integer('usuario_id');
+            $table->unsignedInteger('usuario_id');
 
             $table->index(["usuario_id"], 'fk_candidatos_USUARIO11_idx');
 

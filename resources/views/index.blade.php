@@ -100,8 +100,8 @@
                         @csrf
                         <div class="form-group">
                             <label for="nome"></label>
-                        <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Nome de usuário" name="nome" value="{{ old('name') }}">
-                            {!! $errors->first('name', '<small>:message</small>') !!}<br>
+                        <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Nome de usuário" name="nome" value="{{ old('nome') }}">
+                            {!! $errors->first('nome', '<small>:message</small>') !!}<br>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>

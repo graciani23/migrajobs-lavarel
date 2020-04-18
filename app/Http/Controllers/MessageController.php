@@ -9,13 +9,17 @@ class MessageController extends Controller
 {
     public function enviarEmail()
     {
-        request()->validate([
-            'name' => 'required',
+        $mensagem = request()->validate([
+            'nome' => 'required',
             'email' => 'required|email',
-            'mensamge' => 'required|min:3'
+            'mensagem' => 'required|min:3'
         ]);
-    Mail::to('migrajobscontato@gmail.com')->send(new MensagemRecebida);
 
-        return 'Mensagem enviada';
+        Mail::to('migrajobscontato@gmail.com')->send( new MensagemRecebida($mensagem));
+
+        //return new MensagemRecebida($mensagem);
+
+        return "Mensagem enviada";
+
     }
 }

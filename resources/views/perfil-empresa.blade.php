@@ -107,11 +107,6 @@
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A">
             </div>
 
-
-            <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </form>
         </section>
 
 

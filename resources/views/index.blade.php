@@ -50,11 +50,11 @@
                     <h5 class="card-title">SOU IMIGRANTE</h5>
                     <div class="form-group">
                         <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário" name="email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
                     <br>
                     </div>
                     <div class="form-group form-check">

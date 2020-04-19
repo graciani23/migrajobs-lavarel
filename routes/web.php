@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',  'IndexController@exibirIndex');
-Route::get('/index',  'IndexController@exibirIndex');
+Route::get('/index',  'IndexController@exibirIndex')->name('index');
 Route::post('index', 'MessageController@enviarEmail');
 
 Route::get('/cad-log-empresa', 'EmpresaController@cadastrarEmpresa')->name('cad_empresa');
@@ -23,7 +23,7 @@ Route::post('/cad-log-empresa', 'EmpresaController@store');
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
-Route::get('/curriculo', 'CurriculoController@curriculoUsuario')->name('curriculo_candidato');
+Route::get('/curriculo', 'CurriculoController@curriculoUsuario');
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 

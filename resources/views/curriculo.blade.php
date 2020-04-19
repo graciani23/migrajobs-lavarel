@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/curriculo.css">
+
     <title>Curriculo</title>
 </head>
 
@@ -89,21 +90,23 @@
                 <h4>Endereço</h4>
             </div>
 
-            <div class="form-group mx-4 pt-3 px-1">
-                <label for="adress">Logradouro</label>
-                <input type="text" class="form-control border-secondary" name="adress" id="adress" placeholder="Ex. Avenida Brasil, 500">
-            </div>
-
-            <div class="form-group mx-4 px-1">
-                <label for="complement">Complemento</label>
-                <input type="text" class="form-control border-secondary" name="complement" id="complement" placeholder="Ex. Apartamento 23 Bloco A">
-            </div>
 
             <div class="form-row mx-4">
+                <div class="form-group col-md-4">
+                    <label for="zip-code">CEP</label>
+                    <input type="text" class="form-control border-secondary" name="zip-code" id="cep">
+                </div>
+
                 <div class="form-group col-md-6">
                     <label for="city">Cidade</label>
-                    <input type="text" class="form-control border-secondary" name="city" id="city">
+                    <input type="text" class="form-control border-secondary" name="city" id="cidade">
                 </div>
+
+                <div class="form-group col-md-2">
+                    <label for="city">UF</label>
+                    <input type="text" class="form-control border-secondary" name="city" id="uf">
+                </div>
+                <!--
                 <div class="form-group col-md-4">
                     <label for="state">Estado</label>
                     <select class="form-control border-secondary" name="state" id="state">
@@ -112,11 +115,27 @@
 
                     </select>
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="zip-code">CEP</label>
-                    <input type="text" class="form-control border-secondary" name="zip-code" id="zip-code">
-                </div>
+                -->
+
             </div>
+
+            <div class="form-row mx-4">
+                <div class="form-group col-md-10">
+                    <label for="adress">Logradouro</label>
+                    <input type="text" class="form-control border-secondary" name="adress" id="rua" placeholder="Ex. Avenida Brasil">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="numero">Número</label>
+                    <input type="number" class="form-control border-secondary" name="numero" id="numero">
+                </div>
+
+            </div>
+
+            <div class="form-group mx-4 px-1">
+                <label for="complement">Complemento</label>
+                <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A">
+            </div>
+
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
@@ -280,6 +299,8 @@
         </footer>
     </div>
 </div>
+
+<script src="/js/buscaCep.js"></script>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

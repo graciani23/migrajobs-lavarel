@@ -14,20 +14,9 @@ class ImigranteController extends Controller
 
     public function store(CandidatoRequest $request)
     {
-        // $data = [
-        //     'nome' => request('name'),
-        //     'genero' => request('genero'),
-        //     'senha' => request('senha'),
-        //     'confsenha' => request('confSenha'),
-        //     'pais' => request('paises')
-        // ];
-
-        // User::create($data);
-        // dd($data);
-        //dd($candidato);
 
         $cadidato = User::create($request->all());
 
-        return redirect()->route('curriculo_candidato');
+        return redirect()->route('index');
     }
 }

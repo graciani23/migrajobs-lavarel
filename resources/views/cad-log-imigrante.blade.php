@@ -32,6 +32,7 @@
             <input type="email" id="inputEmail" placeholder="Email" name="email" value="{{ old('email') }}">
             {!! $errors->first('email', '<small>:message</small>') !!}<br>
             <input type="password" id="inputPassword" placeholder="Senha" name="senha">
+            {!! $errors->first('senha', '<small>:message</small>') !!}<br>
             <input type="password" id="inputConfirmPassword" placeholder="Confirme sua senha" name="confSenha">
 
                 @include('includes/comboBoxPaises')

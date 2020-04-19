@@ -48,17 +48,18 @@
             </div>
         </form>
         <section class="dados-pessoais border">
+            @foreach($candidatos as $cadidato)
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
-                    <input type="text" class="form-control border-secondary" name="name" id="nome" placeholder="Nome">
+                    <input type="text" class="form-control border-secondary" name="name" id="nome" placeholder="Nome" value="{{ $cadidato->name }}">
                 </div>
                 <div class="col">
                     <label class="label-nome pt-5" id="sobrenome" for="sobrenome">Sobrenome</label>
                     <input type="text" class="form-control border-secondary" name="surname" id="surname" placeholder="Sobrenome">
                 </div>
             </div>
-
+            @endforeach
             <div class="form-group pt-3 mx-4 px-1">
                 <textarea class="form-control border-secondary" name="about-you" id="about-you" rows="4" placeholder="Fale sobre você"></textarea>
             </div>

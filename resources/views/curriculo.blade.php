@@ -11,24 +11,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-
-            <div class="principal">
-                <div class="logo mt-2"><a href="index">MigraJobs</a></div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Minha área</a></li>
-                        <li><a href="#">Candidaturas</a></li>
-                        <li><a href="search">Buscar vagas</a></li>
-                        <li><a href="#">Currículo</a></li>
-                    </ul>
-                </nav>
-
-                <div class="user">
-                    Olá, Jeferson
-                </div>
-
+@include('includes/menuCurriculo')
                 <img src="assets/icones/user.svg" alt="">
             </div>
         </div>
@@ -90,7 +73,7 @@
                         <option value="sasado">Casado(a)</option>
                         <option value="separado">Separado(a)</option>
                         <option value="sivorciado">Divorciado(a)</option>
-                        <option value="viuvo"<Viuvo(a)></option>
+                        <option value="viuvo"> Viúvo(a)></option>
                     </select><br>
                 </div>
             </div>

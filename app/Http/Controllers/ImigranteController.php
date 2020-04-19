@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use App\Http\Requests\CandidatoRequest;
+use App\User;
+use Illuminate\Http\Request;
+
 
 class ImigranteController extends Controller
 {
-    public function cadastrarImigrante()
+    public function cadastrarImigrante(Request $request)
     {
+        $candidatos = User::query()
+            ->get();
         return view('cad-log-imigrante');
     }
 

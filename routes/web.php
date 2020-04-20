@@ -27,5 +27,12 @@ Route::get('/curriculo', 'CurriculoController@curriculoUsuario');
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
-Route::get('/perfil-empresa', 'PerfilEmpresaController@perfilEmpresa');
+Route::get('/perfil-empresa-index', 'PerfilEmpresaController@index'); 
+Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
+Route::get('/perfil-empresa/salvar', 'PerfilEmpresaController@salvar');
+Route::get('/perfil-empresa/editar/{id}', 'PerfilEmpresaController@editar');
+Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar');
+Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar');
+
+
 Route::get('/publicar-vagas', 'VagasController@publicar');

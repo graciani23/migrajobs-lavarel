@@ -12,26 +12,29 @@
 
 <body>
 @include('includes/menuPerfilEmpresa')
-
+<form action="perfil-empresa" method="post" enctype="multipart/fomr-data">
     <div class="container">
         <div class="fundo">
+            @if(isset($registro->imagem))
             <div class="foto">
-                <img src="https://pbs.twimg.com/profile_images/1129626341370933250/dizro5ap_400x400.jpg" alt="">
+                <img src="{{asset($registro->imagem)}}">
             </div>
+            @endif
         </div>
-        <form>
+
+            {{csrf_field()}}
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
             </div>
-        </form>
+        
         <section class="dados-pessoais border">
         <div class="pt-3 mx-4">
                 <h4>Sobre a empresa</h4>
             </div>
             <div class="areasInteresses pb-2 px-1 mx-4">
-                <label for="areas">Área de atuação</label>
-                    <select class="bg-light border-secondary" name="areas" id="areas" required="required">
+                <label for="area_de_atuacao">Área de atuação</label>
+                    <select class="bg-light border-secondary" name="area_de_atuacao" id="area_de_atuacao">
                         <option value="">Selecione a área</option>
                         <option value="administrativo">Administrativo</option>
                         <option value="financeiro">Financeiro</option>
@@ -44,19 +47,19 @@
             </div>
             <div class="form-row pt-4 mx-4">
                 <div class="col">
-                    <label class="label-nome pb-2" for="nome">Razão Social</label>
-                    <input type="text" class="form-control border-secondary" name="name" id="nome" placeholder="Razão Social">
+                    <label class="label-nome pb-2" for="razao_social">Razão Social</label>
+                    <input type="text" class="form-control border-secondary" name="razao_social" id="razao_social" placeholder="Razão Social" value="{{isset($registro->razao_social) ? $registro->razao_social : ''}}">
                 </div>
                 <div class="col pb-3">
-                    <label class="label-nome pb-2" id="sobrenome" for="sobrenome">CNPJ</label>
-                    <input type="text" class="form-control border-secondary" name="surname" id="surname" placeholder="CNPJ">
+                    <label class="label-nome pb-2" id="cnpj" for="sobrenome">CNPJ</label>
+                    <input type="number" class="form-control border-secondary" name="cnpj" id="cnpj" placeholder="CNPJ" value="{{isset($registro->cnpj) ? $registro->cnpj : ''}}">
                 </div>
             </div>
 
            
         </section>
         
-        <section class="endereco border mt-3">
+       <!-- <section class="endereco border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Endereço</h4>
             </div>
@@ -77,17 +80,7 @@
                     <label for="city">UF</label>
                     <input type="text" class="form-control border-secondary" name="city" id="uf">
                 </div>
-                <!--
-                <div class="form-group col-md-4">
-                    <label for="state">Estado</label>
-                    <select class="form-control border-secondary" name="state" id="state">
-
-                        @include('./includes/comboEstados')
-
-                    </select>
-                </div>
-                -->
-
+                
             </div>
 
             <div class="form-row mx-4">
@@ -106,49 +99,43 @@
                 <label for="complement">Complemento</label>
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A">
             </div>
-
         </section>
 
-
+        -->
         <section class="contato border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
             </div>
-
-            <div class="email form-group mx-4 pt-3 px-1">
-                <label class="pr-2" for="email">E-mail</label>
-                <input type="mail" class="form-control border-secondary" name="email" id="email" placeholder="name@example.com">
-            </div>
-
             <div class="redes-sociais form-row mx-4">
                 <div class="col">
                     <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
-                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin">
+                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($registro->linkedin) ? $registro->linkedin : ''}}" >
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
-                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram">
+                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($registro->instagram) ? $registro->instagram : ''}}">
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
-                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook">
+                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($registro->facebook) ? $registro->facebook : ''}}">
                 </div>
             </div>
-
-            <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="salvar btn btn-primary pl-3" type="submit" value="Salvar" onCLick="">
             </form>
+                <input class="salvar btn btn-primary pl-3 m-4" type="submit" value="Salvar" onCLick="">
+            </form>
+    
         </section>
 
-  
     </div>
     <br>
+  
+   
 
     <div class="rodape mt-3">
         <footer>

@@ -9,7 +9,7 @@ class PerfilEmpresaController extends Controller
 {
     public function index() {
         $registros = DetalhesEmpresa::all();
-        return view('perfil-empresa-index', compact('registros'));
+        return view('empresa-index', compact('registros'));
     }
 
     public function adicionar() {
@@ -37,7 +37,7 @@ class PerfilEmpresaController extends Controller
             $dados['imagem'] = $dir."/".$nomeImagem;
         }
         
-        DadosEmpresas::create($dados);
+        DetalhesEmpresa::create($dados);
 
         return redirect()->routes('perfil-empresa/index');
     }

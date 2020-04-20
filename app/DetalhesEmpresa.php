@@ -8,4 +8,5 @@ class DetalhesEmpresa extends Model
 {
     protected $fillable = ['id','razao_social', 'cnpj', 'endereco', 'area_de_atuacao', 'imagem', 'linkedin', 'instagram','facebook'
     ];
+
 }

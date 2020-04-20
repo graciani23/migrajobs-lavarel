@@ -28,11 +28,12 @@ class CreateDetalhesEmpresasTable extends Migration
             $table->string('cnpj', 45);
             $table->string('endereco', 45)->nullable();
             $table->string('area_de_atuacao', 45)->nullable();
-            $table->unsignedInteger('vaga_id');
-            $table->unsignedInteger('users_id');
             $table->string('linkedin', 45);
             $table->string('instagram', 45);
             $table->string('facebook', 45);
+            $table->unsignedInteger('vaga_id');
+            $table->unsignedInteger('users_id');
+        
 
 
             $table->index(["users_id"], 'fk_detalhes_empresas_users1_idx');

@@ -16,6 +16,15 @@ class PerfilEmpresaController extends Controller
         return view('perfil-empresa');
     }
 
+    public function adicionarSubmitPost(Request $req){
+        $dados = $req->all();
+        $novoDado = new DetalhesEmpresa();
+        $novoDado -> fill($dados);
+        $novoDado -> save();
+        return view('perfil-empresa');
+
+    }
+
     public function salvar(Request $req){
         $dados = $req->all();
         if($req->hasFile('imagem')){

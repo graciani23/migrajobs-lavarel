@@ -13,6 +13,7 @@
 <body>
 @include('includes/menuPerfilEmpresa')
 <form action="perfil-empresa" method="post" enctype="multipart/fomr-data">
+    @csrf 
     <div class="container">
         <div class="fundo">
             @if(isset($registro->imagem))

@@ -29,6 +29,8 @@ Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
 Route::get('/perfil-empresa-index', 'PerfilEmpresaController@index'); 
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
+Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
+
 Route::get('/perfil-empresa/salvar', 'PerfilEmpresaController@salvar');
 Route::get('/perfil-empresa/editar/{id}', 'PerfilEmpresaController@editar');
 Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar');

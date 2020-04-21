@@ -25,6 +25,8 @@ Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
 Route::get('/curriculo', 'CurriculoController@curriculoUsuario');
+Route::post('/curriculo', 'CurriculoController@curriculoPost');
+
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 

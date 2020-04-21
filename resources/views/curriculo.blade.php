@@ -25,24 +25,25 @@
             </div>
         </div>
         <form>
+             
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
             </div>
         </form>
         <section class="dados-pessoais border">
-            @foreach($candidatos as $cadidato)
+            
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
-                    <input type="text" class="form-control border-secondary" name="name" id="nome" placeholder="Nome" value="{{ $cadidato->name }}">
+                <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="">
                 </div>
                 <div class="col">
-                    <label class="label-nome pt-5" id="sobrenome" for="sobrenome">Sobrenome</label>
-                    <input type="text" class="form-control border-secondary" name="surname" id="surname" placeholder="Sobrenome">
+                    <label class="label-nome pt-5" id="nationality" for="nationality">Nacionalidade</label>
+                    <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade">
                 </div>
             </div>
-            @endforeach
+            
             <div class="form-group pt-3 mx-4 px-1">
                 <textarea class="form-control border-secondary" name="about-you" id="about-you" rows="4" placeholder="Fale sobre você"></textarea>
             </div>
@@ -60,12 +61,12 @@
 
             <div class="sexo form-row pt-4 mx-4">
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="female" name="female" class="custom-control-input">
-                    <label class="custom-control-label" for="female">Feminino</label>
+                    <input type="radio" id="female" name="genre-female" class="custom-control-input">
+                    <label class="custom-control-label" for="genre-female">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="male" name="male" class="custom-control-input">
-                    <label class="custom-control-label" for="male">Masculino</label>
+                    <input type="radio" id="male" name="genre-male" class="custom-control-input">
+                    <label class="custom-control-label" for="genre-male">Masculino</label>
                 </div>
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
@@ -105,7 +106,7 @@
 
                 <div class="form-group col-md-2">
                     <label for="city">UF</label>
-                    <input type="text" class="form-control border-secondary" name="city" id="uf">
+                    <input type="text" class="form-control border-secondary" name="uf" id="uf">
                 </div>
                 <!--
                 <div class="form-group col-md-4">
@@ -127,7 +128,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="numero">Número</label>
-                    <input type="number" class="form-control border-secondary" name="numero" id="numero">
+                    <input type="number" class="form-control border-secondary" name="number" id="numero">
                 </div>
 
             </div>
@@ -217,12 +218,12 @@
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="experience">Experiência</label>
-                <textarea class="form-control border-secondary" name="experience" id="experience" rows="4" placeholder="Digite seu resumo profissional"></textarea>
+                <textarea class="form-control border-secondary" name="professional-experience" id="professional-experience" rows="4" placeholder="Digite seu resumo profissional"></textarea>
             </div>
 
             <div class="empresa form-group px-1 mx-4">
                 <label class="pr-2 pt-2" for="company">Empresa</label>
-                <input type="text" class="form-control border-secondary" name="company" id="complany" placeholder="">
+                <input type="text" class="form-control border-secondary" name="company" id="company" placeholder="">
             </div>
 
             <div class="cargo form-group px-1 mx-4">
@@ -242,8 +243,8 @@
                 </div><br>
 
             <div class="form-group pt-3 mx-4">
-                <label for="descricao-cargo">Descrição</label>
-                <textarea class="form-control border-secondary" id="descricao-cargo" rows="4" placeholder="Descrição do cargo"></textarea>
+                <label for="job-description">Descrição</label>
+                <textarea class="form-control border-secondary" name='job-description' id="job-description" rows="4" placeholder="Descrição do cargo"></textarea>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
@@ -282,8 +283,8 @@
             </div><br>
 
             <div class="form-group pt-3 mx-4">
-                <label for="academic-education">Descrição</label>
-                <textarea class="form-control border-secondary" name="academic-education" id="academic-education" rows="4" placeholder="Descrição do curso"></textarea>
+                <label for="course-description">Descrição</label>
+                <textarea class="form-control border-secondary" name="course-description" id="course-description" rows="4" placeholder="Descrição do curso"></textarea>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">

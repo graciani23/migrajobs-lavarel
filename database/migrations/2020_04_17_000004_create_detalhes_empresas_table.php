@@ -33,7 +33,7 @@ class CreateDetalhesEmpresasTable extends Migration
             $table->string('facebook', 45);
             $table->unsignedInteger('vaga_id');
             $table->unsignedInteger('users_id');
-        
+
 
 
             $table->index(["users_id"], 'fk_detalhes_empresas_users1_idx');
@@ -52,6 +52,7 @@ class CreateDetalhesEmpresasTable extends Migration
                 ->references('id')->on('users')
                 ->onDelete('no action')
                 ->onUpdate('no action');
+            $table->timestamps();
         });
     }
 

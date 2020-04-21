@@ -32,12 +32,14 @@ class PerfilEmpresaController extends Controller
             $num = rand(1111,9999);
             $dir = "img/empresas/";
             $ex = $imagem->guessClientExtension();
-            $nomeImagem = "imagem_".$num.".".$ex; 
+            $nomeImagem = "imagem_".$num.".".$ex;
             $imagm->move($dir,$nomeImagem);
             $dados['imagem'] = $dir."/".$nomeImagem;
         }
-        
+
+        dd($dados);
         DetalhesEmpresa::create($dados);
+
 
         return redirect()->routes('perfil-empresa/index');
     }

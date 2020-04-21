@@ -39,3 +39,12 @@ Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar');
 
 
 Route::get('/publicar-vagas', 'VagasController@publicar');
+
+Route::get('/admin', 'AuthController@dashboard')->name('admin');
+Route::get('/admin/login', 'AuthController@showLoginForm')->name('admin.login');
+Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
+Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

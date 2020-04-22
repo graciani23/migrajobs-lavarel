@@ -34,8 +34,8 @@ Route::get('/empresa-index', 'PerfilEmpresaController@index');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 
-Route::get('/perfil-empresa/salvar', 'PerfilEmpresaController@salvar');
-Route::get('/perfil-empresa/editar/{id}', 'PerfilEmpresaController@editar');
+Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
+Route::get('/empresa-editar/{id}', 'PerfilEmpresaController@editar')->name('empresaEditar');
 Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar');
 Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar');
 

@@ -31,12 +31,17 @@ class CreateDetalhesEmpresasTable extends Migration
             $table->string('linkedin', 45);
             $table->string('instagram', 45);
             $table->string('facebook', 45);
+            $table->string('cep', 45);
+            $table->string('city', 45);
+            $table->string('uf', 45);
+            $table->string('rua', 45);
+            $table->string('numero', 45);
+            $table->string('complemento', 45);
             $table->unsignedInteger('vaga_id');
             $table->unsignedInteger('users_id');
 
 
-
-            $table->index(["users_id"], 'fk_detalhes_empresas_users1_idx');
+          /*  $table->index(["users_id"], 'fk_detalhes_empresas_users1_idx');
 
             $table->index(["vaga_id"], 'fk_detalhes_empresas_vagas1_idx');
 
@@ -47,11 +52,13 @@ class CreateDetalhesEmpresasTable extends Migration
                 ->references('id')->on('vagas')
                 ->onDelete('no action')
                 ->onUpdate('no action');
+      
 
             $table->foreign('users_id', 'fk_detalhes_empresas_users1_idx')
                 ->references('id')->on('users')
                 ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onUpdate('no action');  */
+              
             $table->timestamps();
         });
     }

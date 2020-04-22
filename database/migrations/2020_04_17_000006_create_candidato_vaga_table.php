@@ -18,7 +18,7 @@ class CreateCandidatoVagaTable extends Migration
      *
      * @return void
      */
-    public function up()
+   public function up()
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';

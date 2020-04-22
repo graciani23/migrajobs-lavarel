@@ -7,13 +7,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/curriculo.css">
-    <title>Empresa</title>
+    <title>Editar cursos</title>
 </head>
 
 <body>
 @include('includes/menuPerfilEmpresa')
 <form action="perfil-empresa" method="post" enctype="multipart/fomr-data">
     @csrf 
+    <input type="hidden" name="_method" value="put">
     <div class="container">
         <div class="fundo">
             @if(isset($registro->imagem))
@@ -128,7 +129,7 @@
                 </div>
             </div>
             </form>
-                <input class="salvar btn btn-primary pl-3 m-4" type="submit" value="Salvar" onCLick="">
+                <input class="salvar btn btn-primary pl-3 m-4" type="submit" value="Atualizar" onCLick="">
             </form>
     
         </section>

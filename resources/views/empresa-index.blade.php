@@ -19,56 +19,47 @@
             <div class="foto">
             @foreach($registros as $registro)
                 <img src="{{asset($registro->imagem)}}" alt="">
-                @endforeach
             </div>
         </div>
         <form>
-            <div class="editar-foto form-group">
-                <label for="edit-photo"></label>
-            </div>
-        </form>
-        <section class="dados-pessoais border">
-        <div class="pt-3 mx-4">
-                <h4>Sobre a empresa</h4>
-                @foreach($registros as $registro)
-
+            
+            
+            
+        <section class="endereco border mt-3">
+            <h4>Sobre a empresa</h4>
             </div>
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Área de atuação</label>
-                    <select>{{$registro->area_de_atuacao}} </select><br>
+                <div style="color:black"> {{$registro->area_de_atuacao}}  </div> 
             </div>
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pb-2" for="nome">Razão Social</label>
-                    {{$registro->razao_social}}
+                    <div style="color:black"> {{$registro->razao_social}} </div>
                 </div>
-                <div class="col pb-3">
                     <label class="label-nome pb-2" id="sobrenome" for="sobrenome">CNPJ</label>
-                    {{$registro->cnpj}}
+                    <div style="color:black"> {{$registro->cnpj}}</div> 
                 </div>
             </div>
-         
-            @endforeach
-
         </section>
         
         <section class="endereco border mt-3">
             <div class="pt-3 mx-4">
-                <h4>Endereço</h4>
-                @foreach($registros as $registro)
+                <h4 class="pt-3 mx-4">Endereço</h4>
 
+           
+                <div style="color:black">
+                {{$registro->CEP}}
+                {{$registro->UF}}
+                {{$registro->city}}
+                {{$registro->rua}}
+                {{$registro->numero}}
+                {{$registro->complemento}}
+                </div>
             </div>
 
 
-                {{$registro->endereco}}
-
-
-            </div>
-
-
-
-            @endforeach
-
+          
         </section>
 
 
@@ -76,33 +67,39 @@
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
             </div>
-            @foreach($registros as $registro)
 
             <div class="redes-sociais form-row mx-4">
                 <div class="col">
                     <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
+                    <div style="color:black">
                     {{$registro->linkedin}}
+                    </div>
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
+                    <div style="color:black">
                     {{$registro->instagram}}
+                    </div>
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
+                    <div style="color:black">
                     {{$registro->facebook}}
+                    </div>
+
                 </div>
                 @endforeach
 
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="editar btn btn-primary pl-3 m-1" type="submit" value="Editar"  >
+            <<input class="editar btn btn-primary pl-3 m-1" type="submit" value="Editar"   >
                 <input class="deletar btn btn-danger pl-3 m-1" type="submit" value="Deletar" >
 
             </form>

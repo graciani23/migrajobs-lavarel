@@ -36,11 +36,14 @@ class PerfilEmpresaController extends Controller
             $imagm->move($dir,$nomeImagem);
             $dados['imagem'] = $dir."/".$nomeImagem;
         }
-
-        dd($dados);
         DetalhesEmpresa::create($dados);
 
 
         return redirect()->routes('perfil-empresa/index');
+    }
+
+    public function editar ($id){
+        $registros = DetalhesEmpresa::find($id);
+        return view('empresa-editar',compact('registros'));
     }
 }

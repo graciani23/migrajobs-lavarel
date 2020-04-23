@@ -23,6 +23,7 @@ class CreateCandidatosTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('image', 45)->nullable();
             $table->string('name', 45);
             $table->string('nationality', 45);
             $table->string('about-you', 200);

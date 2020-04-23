@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\DetalhesCurriculo;
 use Illuminate\Http\Request;
+use App\Candidato;
 
 class CurriculoController extends Controller
 {
-    public function loginCurriculo()
+    public function index()
     {
-        $candidatos = DetalhesCurriculo::all();
-        return view('curriculo', compact('candidatos'));
+        $candidatos = Candidato::all();
+        return view('curriculo-index', compact('candidatos'));
     }
 
     public function curriculoUsuario() 
@@ -19,18 +18,29 @@ class CurriculoController extends Controller
         return view('curriculo');
     }
 
-    public function curriculoPost(Request $request)
+    public function adicionarCurriculoPost(Request $request)
     {
         $curriculo = $request->all();
-        $novoCurriculo = new DetalhesCurriculo();
-        $novoCurriculo -> fill($curriculo);
-        $novoCurriculo -> save();
-        return view('curriculo');
+        $novoCurriculo = new Candidato();
+        $novoCurriculo->fill($request->all())->save();
+        return view('curriculo')->with('mensagem', 'Formulario salvo!');
+
     }    
 
-    public function salvarCurriculo(Request $request)
+    public function salvar(Request $request)
     {
-        $cadidato = Curriculo::create($request->all());
+        $dados = $request->all();
+        if($request->hasFile('image')){
+            $imagem = $request->file('image');
+            $num = rand(1111,9999);
+            $dir = "public/assets/img";
+            $ext = $imagem->guessClientExtension();
+            $nomeImagem = "image_".$num.".".$ext;
+            $imagem->move($dir, $nomeImagem);
+            $dados['image'] = $dir."/".$nomeImagem;
+        }
+
+        $dados = Candidato::create($request->all());
         return redirect()->routes('curriculo');
     }
         

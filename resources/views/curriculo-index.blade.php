@@ -17,18 +17,16 @@
             </div>
         </div>
     </header>
-    @csrf
+
     <div class="container">
         <div class="fundo">
-            @if(isset($candidato->image))
             <div class="foto">
-                <img src="{{ asset($candidato->image) }}" alt="">
+                @foreach ($candidatos as $candidato)
+            <img src="{{ asset($candidato->image) }}" alt="">
+                @endforeach
             </div>
-            @endif
         </div>
         <form>
-
-            {{csrf_field()}}
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
@@ -36,57 +34,57 @@
         </form>
         <section class="dados-pessoais border">
 
-            
+            @foreach ($candidatos as $candidato)
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
-                <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{isset($candidato->name) ? $candidato->name : ''}}">
+                <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{ $candidato->name }}">
                 </div>
                 <div class="col">
                     <label class="label-nome pt-5" id="nationality" for="nationality">Nacionalidade</label>
-                <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidato->nationality) ? $candidato->nationality : ''}}">
+                <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{ $candidato->nationality }}">
                 </div>
             </div>
-            
+            @endforeach
 
             <div class="form-group pt-3 mx-4 px-1">
-                <textarea class="form-control border-secondary" name="about-you" id="about-you" rows="4" placeholder="Fale sobre você">{{isset($candidato->about-you) ? $candidato->about-you : ''}}</textarea>
+                <textarea class="form-control border-secondary" name="about-you" id="about-you" rows="4" placeholder="Fale sobre você">@foreach ($candidatos as $candidato) {{ $candidado->about-you }} @endforeach</textarea>
             </div>
 
-            
+            @foreach ($candidatos as $candidato)
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
-                <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidato->birth) ? $candidato->birth : ''}}">
+                <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidato->birth }}">
                 </div>
                 <div class="col">
                     <label class="idade" id="idade" for="idade">Idade</label>
-                <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{isset($candidato->age) ? $candidato->age : ''}}">
+                <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{ $candidato->age }}">
                 </div>
             </div>
-            
 
             <div class="sexo form-row pt-4 mx-4">
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="female" name="genre-female" class="custom-control-input" value="{{isset($candidato->genre-female) ? $candidato->genre-female : ''}}">
+                <input type="radio" id="female" name="genre-female" class="custom-control-input" value="{{ $candidato->genre-female }}">
                     <label class="custom-control-label" for="genre-female">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="male" name="genre-male" class="custom-control-input" value="{{isset($candidato->genre-male) ? $candidato->genre-male : ''}}">
+                    <input type="radio" id="male" name="genre-male" class="custom-control-input" value="{{ $candidato->genre-male }}">
                     <label class="custom-control-label" for="genre-male">Masculino</label>
                 </div>
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
                     <select class="estadoCivil bg-white border-secondary " name="status" id="status" required="required">
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Estado Civil</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Solteiro(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Casado(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Separado(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Divorciado(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}"> Viúvo(a)></option>
+                        <option value="{{ $candidado->status }}">Estado Civil</option>
+                        <option value="{{ $candidado->status }}">Solteiro(a)</option>
+                        <option value="{{ $candidado->status }}">Casado(a)</option>
+                        <option value="{{ $candidado->status }}">Separado(a)</option>
+                        <option value="{{ $candidado->status }}">Divorciado(a)</option>
+                        <option value="{{ $candidado->status }}"> Viúvo(a)></option>
                     </select><br>
                 </div>
             </div>
+            @endforeach
 
                 <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
                     <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
@@ -99,21 +97,21 @@
                 <h4>Endereço</h4>
             </div>
 
-
+            @foreach ($candidatos as $candidato)
             <div class="form-row mx-4">
                 <div class="form-group col-md-4">
                     <label for="zip-code">CEP</label>
-                    <input type="text" class="form-control border-secondary" name="zip-code" id="cep">
+                <input type="text" class="form-control border-secondary" name="zip-code" id="cep" value="{{ $candidato->zip-code }}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="city">Cidade</label>
-                    <input type="text" class="form-control border-secondary" name="city" id="cidade">
+                    <input type="text" class="form-control border-secondary" name="city" id="cidade" value="{{ $candidato->city }}">
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="city">UF</label>
-                    <input type="text" class="form-control border-secondary" name="uf" id="uf">
+                    <input type="text" class="form-control border-secondary" name="uf" id="uf" value="{{ $candidato->uf }}">
                 </div>
                 <!--
                 <div class="form-group col-md-4">
@@ -131,19 +129,20 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-10">
                     <label for="adress">Logradouro</label>
-                    <input type="text" class="form-control border-secondary" name="adress" id="rua" placeholder="Ex. Avenida Brasil">
+                    <input type="text" class="form-control border-secondary" name="adress" id="rua" placeholder="Ex. Avenida Brasil" value="{{ $candidato->adress }}">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="numero">Número</label>
-                    <input type="number" class="form-control border-secondary" name="number" id="numero">
+                    <input type="number" class="form-control border-secondary" name="number" id="numero" {{ $candidato->number }}>
                 </div>
 
             </div>
 
             <div class="form-group mx-4 px-1">
                 <label for="complement">Complemento</label>
-                <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A">
+                <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" {{ $candidato->complement }}>
             </div>
+            @endforeach
 
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
@@ -157,19 +156,20 @@
                 <h4>Contato</h4>
             </div>
 
+            @foreach ($candidatos as $candidato)
             <div class="email form-group mx-4 pt-3 px-1">
                 <label class="pr-2" for="email">E-mail</label>
-                <input type="mail" class="form-control border-secondary" name="email" id="email" placeholder="name@example.com">
+            <input type="mail" class="form-control border-secondary" name="email" id="email" placeholder="name@example.com" value="{{ $candidato->email }}">
             </div>
 
             <div class="form-row pt-3 mx-4">
                 <div class="col">
                 <label class="telefone-fixo" id="telefone-fixo" for="telephone">Telefone fixo</label>
-                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000">
+                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000" value="{{ $candidato->telephone }}">
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell-phone" id="cell-phone" placeholder="+55 (00) 00000-0000">
+                    <input type="number" class="form-control border-secondary" name="cell-phone" id="cell-phone" placeholder="+55 (00) 00000-0000" value="{{ $candidato->cel-phone }}">
                 </div>
             </div>
 
@@ -178,21 +178,22 @@
                     <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
-                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin">
+                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{ $candidato->linkedin }}">
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
-                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram">
+                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{ $candidato->instagram }}">
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
-                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook">
+                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{ $candidato->facebook }}">
                 </div>
             </div>
+            @endforeach
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
@@ -207,37 +208,40 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
-                <textarea class="form-control border-secondary" name="professional-goal" id="professional-goal" rows="4" placeholder="Digite seu objetivo profissional"></textarea>
+                <textarea class="form-control border-secondary" name="professional-goal" id="professional-goal" rows="4" placeholder="Digite seu objetivo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional-goal}} @endforeach</textarea>
             </div>
 
+            @foreach ($candidatos as $candidato)
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Areas de interesse</label>
                 <select class="bg-light border-secondary" name="areas" id="areas" required="required">
-                    <option value="">Selecione a área</option>
-                    <option value="administrativo">Administrativo</option>
-                    <option value="financeiro">Financeiro</option>
-                    <option value="recursosHumanos">Recursos Humanos</option>
-                    <option value="setorComercial">Setor Comercial</option>
-                    <option value="setorOperacional">Setor Operacional</option>
-                    <option value="tecnologia">Tecnologia</option>
+                    <option value="{{ $candidato->areas }}">Selecione a área</option>
+                    <option value="{{ $candidato->areas }}">Administrativo</option>
+                    <option value="{{ $candidato->areas }}">Financeiro</option>
+                    <option value="{{ $candidato->areas }}">Recursos Humanos</option>
+                    <option value="{{ $candidato->areas }}">Setor Comercial</option>
+                    <option value="{{ $candidato->areas }}">Setor Operacional</option>
+                    <option value="{{ $candidato->areas }}">Tecnologia</option>
                 </select><br>
             </div>
+            @endforeach
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="experience">Experiência</label>
-                <textarea class="form-control border-secondary" name="professional-experience" id="professional-experience" rows="4" placeholder="Digite seu resumo profissional"></textarea>
+            <textarea class="form-control border-secondary" name="professional-experience" id="professional-experience" rows="4" placeholder="Digite seu resumo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional-experience }} @endforeach</textarea>
             </div>
 
+            @foreach ($candidatos as $candidato)
             <div class="empresa form-group px-1 mx-4">
                 <label class="pr-2 pt-2" for="company">Empresa</label>
-                <input type="text" class="form-control border-secondary" name="company" id="company" placeholder="">
+            <input type="text" class="form-control border-secondary" name="company" id="company" placeholder="" value="{{ $candidato->company }}">
             </div>
 
             <div class="cargo form-group px-1 mx-4">
                 <label class="pr-2 pt-2" for="cargo">Cargo</label>
-                <input type="text" class="form-control border-secondary" name="job-role" id="job-role" placeholder="">
+                <input type="text" class="form-control border-secondary" name="job-role" id="job-role" placeholder="" value="{{ $candidato->job-role }}">
             </div>
-
+            
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" for="dataInicio">Data início:</label>
 
@@ -251,7 +255,7 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="job-description">Descrição</label>
-                <textarea class="form-control border-secondary" name='job-description' id="job-description" rows="4" placeholder="Descrição do cargo"></textarea>
+                <textarea class="form-control border-secondary" name='job-description' id="job-description" rows="4" placeholder="Descrição do cargo">@foreach ($candidatos as $candidato) {{ $candidato->job-description }} @endforeach</textarea>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
@@ -273,7 +277,7 @@
 
                 <div class="formacao form-group">
                     <label class="pr-2 pt-2" for="formation">Formação</label>
-                    <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="">
+                <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="" value=" {{ $candidato->formation }} ">
                 </div>
             </form>
 
@@ -291,8 +295,9 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="course-description">Descrição</label>
-                <textarea class="form-control border-secondary" name="course-description" id="course-description" rows="4" placeholder="Descrição do curso"></textarea>
+                <textarea class="form-control border-secondary" name="course-description" id="course-description" rows="4" placeholder="Descrição do curso"> @foreach ($candidatos as $candidato) {{ $candidato->course-description }} @endforeach</textarea>
             </div>
+            @endforeach
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">

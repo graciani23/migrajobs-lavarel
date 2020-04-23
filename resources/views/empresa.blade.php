@@ -7,18 +7,17 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/curriculo.css">
+
     <title>Empresa</title>
 </head>
 
 <body>
 @include('includes/menuPerfilEmpresa')
 
-
     <div class="container">
         <div class="fundo">
             <div class="foto">
-            @foreach($registros as $registro)
-                <img src="{{asset($registro->imagem)}}" alt="">
+                <img src="{{asset($registros->imagem)}}" alt="">
             </div>
         </div>
         <form>
@@ -30,15 +29,15 @@
             </div>
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Área de atuação</label>
-                <div style="color:black"> {{$registro->area_de_atuacao}}  </div> 
+                <div style="color:black"> {{$registros->area_de_atuacao}}  </div> 
             </div>
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pb-2" for="nome">Razão Social</label>
-                    <div style="color:black"> {{$registro->razao_social}} </div>
+                    <div style="color:black"> {{$registros->razao_social}} </div>
                 </div>
                     <label class="label-nome pb-2" id="sobrenome" for="sobrenome">CNPJ</label>
-                    <div style="color:black"> {{$registro->cnpj}}</div> 
+                    <div style="color:black"> {{$registros->cnpj}}</div> 
                 </div>
             </div>
         </section>
@@ -49,12 +48,12 @@
 
            
                 <div style="color:black">
-                {{$registro->CEP}}
-                {{$registro->UF}}
-                {{$registro->city}}
-                {{$registro->rua}}
-                {{$registro->numero}}
-                {{$registro->complemento}}
+                {{$registros->CEP}}
+                {{$registros->UF}}
+                {{$registros->city}}
+                {{$registros->rua}}
+                {{$registros->numero}}
+                {{$registros->complemento}}
                 </div>
             </div>
 
@@ -74,7 +73,7 @@
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
                     <div style="color:black">
-                    {{$registro->linkedin}}
+                    {{$registros->linkedin}}
                     </div>
                 </div>
                     <div class="col">
@@ -82,7 +81,7 @@
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <div style="color:black">
-                    {{$registro->instagram}}
+                    {{$registros->instagram}}
                     </div>
                 </div>
                     <div class="col">
@@ -90,18 +89,17 @@
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
                     <div style="color:black">
-                    {{$registro->facebook}}
+                    {{$registros->facebook}}
                     </div>
 
                 </div>
-                @endforeach
 
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="post">
 
-            <a href="{{route('empresaEditar', $registro->id)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
-            <a href="{{route('empresaDeletar', $registro->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
+            <a href="{{route('empresaEditar', $registros)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
+            <a href="{{route('index')}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
 
             </form>
 

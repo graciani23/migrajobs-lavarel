@@ -35,11 +35,13 @@ Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 Route::get('/empresa-index', 'PerfilEmpresaController@index');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
-
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
+
+Route::get('/empresa/{id}', 'PerfilEmpresaController@mostrar')->name('empresaMostrar');
 Route::get('/empresa-editar/{id}', 'PerfilEmpresaController@editar')->name('empresaEditar');
-Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar');
-Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar');
+Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar');
+Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar')->name('empresaDeletar');
+
 
 
 Route::get('/publicar-vagas', 'VagasController@publicar');
@@ -49,6 +51,6 @@ Route::get('/admin/login', 'AuthController@showLoginForm')->name('admin.login');
 Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
 Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');
 
-//Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -7,19 +7,20 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/curriculo.css">
-    <title>Editar cursos</title>
+    <title>Editar</title>
 </head>
 
 <body>
 @include('includes/menuPerfilEmpresa')
-<form action="perfil-empresa" method="post" enctype="multipart/fomr-data">
-    @csrf 
-    <input type="hidden" name="_method" value="put">
+
+<form action="{{route('empresaEditar', $registros->id)}}" method="post" enctype="multipart/form-data">
+    {{csrf_field()}}
+    <input type="hidden" name="_method" value="PUT">
     <div class="container">
         <div class="fundo">
-            @if(isset($registro->imagem))
+            @if(isset($registros->imagem))
             <div class="foto">
-                <img src="{{asset($registro->imagem)}}">
+                <img src="{{asset($registros->imagem)}}">
             </div>
             @endif
         </div>
@@ -50,11 +51,11 @@
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pb-2" for="razao_social">Razão Social</label>
-                    <input type="text" class="form-control border-secondary" name="razao_social" id="razao_social" placeholder="Razão Social" value="{{isset($registro->razao_social) ? $registro->razao_social : ''}}">
+                    <input type="text" class="form-control border-secondary" name="razao_social" id="razao_social" placeholder="Razão Social" value="{{isset($registros->razao_social) ? $registros->razao_social : ''}}">
                 </div>
                 <div class="col pb-3">
                     <label class="label-nome pb-2" id="cnpj" for="sobrenome">CNPJ</label>
-                    <input type="number" class="form-control border-secondary" name="cnpj" id="cnpj" placeholder="CNPJ" value="{{isset($registro->cnpj) ? $registro->cnpj : ''}}">
+                    <input type="number" class="form-control border-secondary" name="cnpj" id="cnpj" placeholder="CNPJ" value="{{isset($registros->cnpj) ? $registros->cnpj : ''}}">
                 </div>
             </div>
 
@@ -70,17 +71,17 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-4">
                     <label for="cep">CEP</label>
-                    <input type="text" class="form-control border-secondary" name="cep" id="cep" value="{{isset($registro->cep) ? $registro->cep : ''}}">
+                    <input type="text" class="form-control border-secondary" name="cep" id="cep" value="{{isset($registros->cep) ? $registros->cep : ''}}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="city">Cidade</label>
-                    <input type="text" class="form-control border-secondary" name="city" id="city" value="{{isset($registro->city) ? $registro->city : ''}}">
+                    <input type="text" class="form-control border-secondary" name="city" id="city" value="{{isset($registros->city) ? $registros->city : ''}}">
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="uf">UF</label>
-                    <input type="text" class="form-control border-secondary" name="uf" id="uf" value="{{isset($registro->uf) ? $registro->uf : ''}}">
+                    <input type="text" class="form-control border-secondary" name="uf" id="uf" value="{{isset($registros->uf) ? $registros->uf : ''}}">
                 </div>
                 
             </div>
@@ -88,18 +89,18 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-10">
                     <label for="rua">Logradouro</label>
-                    <input type="text" class="form-control border-secondary" name="rua" id="rua" placeholder="Ex. Avenida Brasil" value="{{isset($registro->rua) ? $registro->rua : ''}}">
+                    <input type="text" class="form-control border-secondary" name="rua" id="rua" placeholder="Ex. Avenida Brasil" value="{{isset($registros->rua) ? $registros->rua : ''}}">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="numero">Número</label>
-                    <input type="number" class="form-control border-secondary" name="numero" id="numero" value="{{isset($registro->numero) ? $registro->numero : ''}}">
+                    <input type="number" class="form-control border-secondary" name="numero" id="numero" value="{{isset($registros->numero) ? $registros->numero : ''}}">
                 </div>
 
             </div>
 
             <div class="form-group mx-4 px-1">
                 <label for="complemento">Complemento</label>
-                <input type="text" class="form-control border-secondary" name="complemento" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" value="{{isset($registro->complemento) ? $registro->complemento : ''}}">
+                <input type="text" class="form-control border-secondary" name="complemento" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" value="{{isset($registros->complemento) ? $registros->complemento : ''}}">
             </div>
         </section>
 
@@ -113,30 +114,30 @@
                     <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
-                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($registro->linkedin) ? $registro->linkedin : ''}}" >
+                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($registros->linkedin) ? $registros->linkedin : ''}}" >
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
-                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($registro->instagram) ? $registro->instagram : ''}}">
+                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($registros->instagram) ? $registros->instagram : ''}}">
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
-                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($registro->facebook) ? $registro->facebook : ''}}">
+                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($registros->facebook) ? $registros->facebook : ''}}">
                 </div>
             </div>
-            </form>
-                <input class="salvar btn btn-primary pl-3 m-4" type="submit" value="Atualizar" onCLick="">
-            </form>
+            
+            <a href="{{route('empresaMostrar', $registros->id)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
     
-        </section>
+      </section>
 
     </div>
+    </form>  
     <br>
-  
+ 
    
 
     <div class="rodape mt-3">

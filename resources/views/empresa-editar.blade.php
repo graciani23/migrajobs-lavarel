@@ -13,8 +13,9 @@
 <body>
 @include('includes/menuPerfilEmpresa')
 
-<form action="{{route('empresaEditar', $registros->id)}}" method="post" enctype="multipart/form-data">
+<form action="{{route('empresaAtualizar', $registros->id)}}" method="post" enctype="multipart/form-data">
     {{csrf_field()}}
+    @method('put')
     <input type="hidden" name="_method" value="PUT">
     <div class="container">
         <div class="fundo">
@@ -25,7 +26,7 @@
             @endif
         </div>
 
-            {{csrf_field()}}
+    
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
@@ -130,7 +131,7 @@
                 </div>
             </div>
             
-            <a href="{{route('empresaMostrar', $registros->id)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
+            <button class="editar btn btn-primary pl-3 m-1" type> Editar</button>
     
       </section>
 

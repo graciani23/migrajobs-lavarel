@@ -32,7 +32,7 @@ Route::get('/curriculo-salvar', 'CurriculoControllr@salvar');
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
-Route::get('/empresa-index', 'PerfilEmpresaController@index');
+Route::get('/empresa-index', 'PerfilEmpresaController@index')->name('empresaIndex');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');

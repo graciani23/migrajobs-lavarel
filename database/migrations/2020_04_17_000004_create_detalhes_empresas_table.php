@@ -37,27 +37,19 @@ class CreateDetalhesEmpresasTable extends Migration
             $table->string('rua', 45);
             $table->string('numero', 45);
             $table->string('complemento', 45);
-            $table->unsignedInteger('vaga_id');
             $table->unsignedInteger('users_id');
 
 
-          /*  $table->index(["users_id"], 'fk_detalhes_empresas_users1_idx');
-
-            $table->index(["vaga_id"], 'fk_detalhes_empresas_vagas1_idx');
+            $table->index(["users_id"], 'fk_detalhes_empresas_users1_idx');
 
             $table->unique(["cnpj"], 'cnpj_UNIQUE');
 
 
-            $table->foreign('vaga_id', 'fk_detalhes_empresas_vagas1_idx')
-                ->references('id')->on('vagas')
-                ->onDelete('no action')
-                ->onUpdate('no action');
-      
 
             $table->foreign('users_id', 'fk_detalhes_empresas_users1_idx')
                 ->references('id')->on('users')
                 ->onDelete('no action')
-                ->onUpdate('no action');  */
+                ->onUpdate('no action');  
               
             $table->timestamps();
         });

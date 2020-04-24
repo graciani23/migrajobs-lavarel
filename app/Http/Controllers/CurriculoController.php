@@ -13,27 +13,20 @@ class CurriculoController extends Controller
         return view('curriculo-index', compact('candidatos'));
     }
 
-    public function adicionar() 
+    public function create() 
     {
         return view('curriculo');
     }
 
-    public function salvar(Request $request)
+    public function store(Request $request)
     {
         $curriculo = $request->all();
         $novoCurriculo = new Candidato();
         $novoCurriculo->fill($curriculo);
-        if($request->hasFile('image')){
-            $imagem = $request->file('image');
-            $num = rand(1111,9999);
-            $dir = "public/assets/img";
-            $ext = $imagem->guessClientExtension();
-            $nomeImagem = "image_".$num.".".$ext;
-            $imagem->move($dir, $nomeImagem);
-            $dados['image'] = $dir."/".$nomeImagem;
-        }
-        Candidato::create($novoCurriculo);
         
+        Candidato::create($novoCurriculo);
+        //dd($novoCurriculo);
+
         return view('curriculo')->with('mensagem', 'Formulario salvo!');
 
     }    

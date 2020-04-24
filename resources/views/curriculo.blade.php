@@ -19,6 +19,10 @@
     </header>
 <form action="curriculo" method="post" enctype="multipart/form-data">
     @csrf
+    @if(session('mensagem'))
+    <div class="alert alert-success"> {{session('mensagem')}}</div>
+    @endif
+    <table class="table">
     <div class="container">
         <div class="fundo">
             @if(isset($candidato->image))

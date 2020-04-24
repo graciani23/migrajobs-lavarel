@@ -25,8 +25,8 @@ Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
 Route::get('/curriculo-index', 'CurriculoController@index');
-Route::get('/curriculo', 'CurriculoController@adicionar');
-Route::post('/curriculo', 'CurriculoController@salvar');
+Route::get('/curriculo', 'CurriculoController@create');
+Route::post('/curriculo', 'CurriculoController@store');
 
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
@@ -50,6 +50,6 @@ Route::get('/admin/login', 'AuthController@showLoginForm')->name('admin.login');
 Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
 Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');
 
-//Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

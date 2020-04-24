@@ -29,7 +29,7 @@
         <form>
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
-                <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
+                <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
         </form>
         <section class="dados-pessoais border">
@@ -48,7 +48,7 @@
             @endforeach
 
             <div class="form-group pt-3 mx-4 px-1">
-                <textarea class="form-control border-secondary" name="about-you" id="about-you" rows="4" placeholder="Fale sobre você">@foreach ($candidatos as $candidato) {{ $candidado->about-you }} @endforeach</textarea>
+                <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">@foreach ($candidatos as $candidato) {{ $candidado->about_you }} @endforeach</textarea>
             </div>
 
             @foreach ($candidatos as $candidato)
@@ -65,12 +65,12 @@
 
             <div class="sexo form-row pt-4 mx-4">
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                <input type="radio" id="female" name="genre-female" class="custom-control-input" value="{{ $candidato->genre-female }}">
-                    <label class="custom-control-label" for="genre-female">Feminino</label>
+                <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{ $candidato->genre_female }}">
+                    <label class="custom-control-label" for="genre_female">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="male" name="genre-male" class="custom-control-input" value="{{ $candidato->genre-male }}">
-                    <label class="custom-control-label" for="genre-male">Masculino</label>
+                    <input type="radio" id="genre_male" name="genre_male" class="custom-control-input" value="{{ $candidato->genre_male }}">
+                    <label class="custom-control-label" for="genre_male">Masculino</label>
                 </div>
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
@@ -101,7 +101,7 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-4">
                     <label for="zip-code">CEP</label>
-                <input type="text" class="form-control border-secondary" name="zip-code" id="cep" value="{{ $candidato->zip-code }}">
+                <input type="text" class="form-control border-secondary" name="zip_code" id="cep" value="{{ $candidato->zip_code }}">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -169,7 +169,7 @@
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell-phone" id="cell-phone" placeholder="+55 (00) 00000-0000" value="{{ $candidato->cel-phone }}">
+                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{ $candidato->cel_phone }}">
                 </div>
             </div>
 
@@ -208,7 +208,7 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
-                <textarea class="form-control border-secondary" name="professional-goal" id="professional-goal" rows="4" placeholder="Digite seu objetivo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional-goal}} @endforeach</textarea>
+                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional_goal}} @endforeach</textarea>
             </div>
 
             @foreach ($candidatos as $candidato)
@@ -228,7 +228,7 @@
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="experience">Experiência</label>
-            <textarea class="form-control border-secondary" name="professional-experience" id="professional-experience" rows="4" placeholder="Digite seu resumo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional-experience }} @endforeach</textarea>
+            <textarea class="form-control border-secondary" name="professional_experience" id="professional_experience" rows="4" placeholder="Digite seu resumo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional_experience }} @endforeach</textarea>
             </div>
 
             @foreach ($candidatos as $candidato)
@@ -239,7 +239,7 @@
 
             <div class="cargo form-group px-1 mx-4">
                 <label class="pr-2 pt-2" for="cargo">Cargo</label>
-                <input type="text" class="form-control border-secondary" name="job-role" id="job-role" placeholder="" value="{{ $candidato->job-role }}">
+                <input type="text" class="form-control border-secondary" name="job_role" id="job_role" placeholder="" value="{{ $candidato->job_role }}">
             </div>
             
             <div class="data form-row pt-2 mx-4">
@@ -255,7 +255,7 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="job-description">Descrição</label>
-                <textarea class="form-control border-secondary" name='job-description' id="job-description" rows="4" placeholder="Descrição do cargo">@foreach ($candidatos as $candidato) {{ $candidato->job-description }} @endforeach</textarea>
+                <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo">@foreach ($candidatos as $candidato) {{ $candidato->job_description }} @endforeach</textarea>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
@@ -295,7 +295,7 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="course-description">Descrição</label>
-                <textarea class="form-control border-secondary" name="course-description" id="course-description" rows="4" placeholder="Descrição do curso"> @foreach ($candidatos as $candidato) {{ $candidato->course-description }} @endforeach</textarea>
+                <textarea class="form-control border-secondary" name="course_description" id="course_description" rows="4" placeholder="Descrição do curso"> @foreach ($candidatos as $candidato) {{ $candidato->course_description }} @endforeach</textarea>
             </div>
             @endforeach
 
@@ -306,7 +306,7 @@
         </section>
     </div>
 
- 
+    {{ $curriculo->links() }}
 
     <div class="rodape mt-3">
         <footer>

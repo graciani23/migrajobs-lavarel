@@ -17,6 +17,7 @@
             </div>
         </div>
     </header>
+<form action="curriculo" method="post" enctype="multipart/form-data">
     @csrf
     <div class="container">
         <div class="fundo">
@@ -31,7 +32,7 @@
             {{csrf_field()}}
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
-                <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
+                <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
         </form>
         <section class="dados-pessoais border">
@@ -50,7 +51,7 @@
             
 
             <div class="form-group pt-3 mx-4 px-1">
-                <textarea class="form-control border-secondary" name="about-you" id="about-you" rows="4" placeholder="Fale sobre você">{{isset($candidato->about-you) ? $candidato->about-you : ''}}</textarea>
+                <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{isset($candidato->about_you) ? $candidato->about_you : ''}}</textarea>
             </div>
 
             
@@ -68,12 +69,12 @@
 
             <div class="sexo form-row pt-4 mx-4">
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="female" name="genre-female" class="custom-control-input" value="{{isset($candidato->genre-female) ? $candidato->genre-female : ''}}">
-                    <label class="custom-control-label" for="genre-female">Feminino</label>
+                    <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{isset($candidato->genre_female) ? $candidato->genre_female : ''}}">
+                    <label class="custom-control-label" for="genre_female">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="male" name="genre-male" class="custom-control-input" value="{{isset($candidato->genre-male) ? $candidato->genre-male : ''}}">
-                    <label class="custom-control-label" for="genre-male">Masculino</label>
+                    <input type="radio" id="genre_male" name="genre_male" class="custom-control-input" value="{{isset($candidato->genre_male) ? $candidato->genre_male : ''}}">
+                    <label class="custom-control-label" for="genre_male">Masculino</label>
                 </div>
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
@@ -103,17 +104,17 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-4">
                     <label for="zip-code">CEP</label>
-                    <input type="text" class="form-control border-secondary" name="zip-code" id="cep">
+                <input type="text" class="form-control border-secondary" name="zip_code" id="cep" value="{{isset($candidato->zip_code) ? $candidato->zip_code : ''}}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="city">Cidade</label>
-                    <input type="text" class="form-control border-secondary" name="city" id="cidade">
+                <input type="text" class="form-control border-secondary" name="city" id="cidade" value="{{isset($candidato->city) ? $candidato->city : ''}}">
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="city">UF</label>
-                    <input type="text" class="form-control border-secondary" name="uf" id="uf">
+                        <input type="text" class="form-control border-secondary" name="uf" id="uf" value="{{isset($candidato->uf) ? $candidato->uf : ''}}">
                 </div>
                 <!--
                 <div class="form-group col-md-4">
@@ -131,18 +132,18 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-10">
                     <label for="adress">Logradouro</label>
-                    <input type="text" class="form-control border-secondary" name="adress" id="rua" placeholder="Ex. Avenida Brasil">
+                    <input type="text" class="form-control border-secondary" name="adress" id="rua" placeholder="Ex. Avenida Brasil" value="{{isset($candidato->adress) ? $candidato->adress : ''}}">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="numero">Número</label>
-                    <input type="number" class="form-control border-secondary" name="number" id="numero">
+                    <input type="number" class="form-control border-secondary" name="number" id="numero" value="{{isset($candidato->number) ? $candidato->number : ''}}">
                 </div>
 
             </div>
 
             <div class="form-group mx-4 px-1">
                 <label for="complement">Complemento</label>
-                <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A">
+                <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" value="{{isset($candidato->complement) ? $candidato->complement : ''}}">
             </div>
 
 
@@ -159,17 +160,17 @@
 
             <div class="email form-group mx-4 pt-3 px-1">
                 <label class="pr-2" for="email">E-mail</label>
-                <input type="mail" class="form-control border-secondary" name="email" id="email" placeholder="name@example.com">
+                <input type="mail" class="form-control border-secondary" name="email" id="email" placeholder="name@example.com" value="{{isset($candidato->email) ? $candidato->email : ''}}">
             </div>
 
             <div class="form-row pt-3 mx-4">
                 <div class="col">
                 <label class="telefone-fixo" id="telefone-fixo" for="telephone">Telefone fixo</label>
-                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000">
+                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000" value="{{isset($candidato->telephone) ? $candidato->telephone : ''}}">
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell-phone" id="cell-phone" placeholder="+55 (00) 00000-0000">
+                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{isset($candidato->cell_phone) ? $candidato->cell_phone : ''}}">
                 </div>
             </div>
 
@@ -178,19 +179,19 @@
                     <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
-                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin">
+                    <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($candidato->linkedin) ? $candidato->linkedin : ''}}">
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
-                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram">
+                    <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($candidato->instagram) ? $candidato->instagram : ''}}">
                 </div>
                     <div class="col">
                     <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
-                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook">
+                    <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($candidato->facebook) ? $candidato->facebook : ''}}">
                 </div>
             </div>
 
@@ -207,35 +208,35 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
-                <textarea class="form-control border-secondary" name="professional-goal" id="professional-goal" rows="4" placeholder="Digite seu objetivo profissional"></textarea>
+                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{isset($candidato->profissional_goal) ? $candidato->profissional_goal : ''}}</textarea>
             </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Areas de interesse</label>
                 <select class="bg-light border-secondary" name="areas" id="areas" required="required">
-                    <option value="">Selecione a área</option>
-                    <option value="administrativo">Administrativo</option>
-                    <option value="financeiro">Financeiro</option>
-                    <option value="recursosHumanos">Recursos Humanos</option>
-                    <option value="setorComercial">Setor Comercial</option>
-                    <option value="setorOperacional">Setor Operacional</option>
-                    <option value="tecnologia">Tecnologia</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Selecione a área</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Administrativo</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Financeiro</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Recursos Humanos</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Setor Comercial</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Setor Operacional</option>
+                    <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Tecnologia</option>
                 </select><br>
             </div>
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="experience">Experiência</label>
-                <textarea class="form-control border-secondary" name="professional-experience" id="professional-experience" rows="4" placeholder="Digite seu resumo profissional"></textarea>
+                <textarea class="form-control border-secondary" name="professional_experience" id="professional_experience" rows="4" placeholder="Digite seu resumo profissional">{{isset($candidato->professional_experience) ? $candidato->professional_experience : ''}}</textarea>
             </div>
 
             <div class="empresa form-group px-1 mx-4">
                 <label class="pr-2 pt-2" for="company">Empresa</label>
-                <input type="text" class="form-control border-secondary" name="company" id="company" placeholder="">
+                <input type="text" class="form-control border-secondary" name="company" id="company" placeholder="" value="{{isset($candidato->company) ? $candidato->company : ''}}">
             </div>
 
             <div class="cargo form-group px-1 mx-4">
                 <label class="pr-2 pt-2" for="cargo">Cargo</label>
-                <input type="text" class="form-control border-secondary" name="job-role" id="job-role" placeholder="">
+                <input type="text" class="form-control border-secondary" name="job_role" id="job_role" placeholder="" value="{{isset($candidato->job_role) ? $candidato->job_role : ''}}">
             </div>
 
             <div class="data form-row pt-2 mx-4">
@@ -251,7 +252,7 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="job-description">Descrição</label>
-                <textarea class="form-control border-secondary" name='job-description' id="job-description" rows="4" placeholder="Descrição do cargo"></textarea>
+                <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo">{{isset($candidato->job_description) ? $candidato->job_description : ''}}</textarea>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
@@ -268,12 +269,12 @@
             <form class="formacaoAcademica mx-4" method="GET">
                 <div class="instituicao form-group pt-3">
                     <label class="pr-2" for="instituicao">Instituição</label>
-                    <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="">
+                    <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="" value="{{isset($candidato->instution) ? $candidato->instution : ''}}">
                 </div>
 
                 <div class="formacao form-group">
                     <label class="pr-2 pt-2" for="formation">Formação</label>
-                    <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="">
+                    <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="" value="{{isset($candidato->formation) ? $candidato->formation : ''}}">
                 </div>
             </form>
 
@@ -291,7 +292,7 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="course-description">Descrição</label>
-                <textarea class="form-control border-secondary" name="course-description" id="course-description" rows="4" placeholder="Descrição do curso"></textarea>
+                <textarea class="form-control border-secondary" name="course_description" id="course_description" rows="4" placeholder="Descrição do curso">{{isset($candidato->course_description) ? $candidato->course_description : ''}}</textarea>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="GET">

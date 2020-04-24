@@ -13,23 +13,16 @@ class CurriculoController extends Controller
         return view('curriculo-index', compact('candidatos'));
     }
 
-    public function curriculoUsuario() 
+    public function adicionar() 
     {
         return view('curriculo');
     }
 
-    public function adicionarCurriculoPost(Request $request)
+    public function salvar(Request $request)
     {
         $curriculo = $request->all();
         $novoCurriculo = new Candidato();
-        $novoCurriculo->fill($request->all())->save();
-        return view('curriculo')->with('mensagem', 'Formulario salvo!');
-
-    }    
-
-    public function salvar(Request $request)
-    {
-        $dados = $request->all();
+        $novoCurriculo->fill($curriculo);
         if($request->hasFile('image')){
             $imagem = $request->file('image');
             $num = rand(1111,9999);
@@ -39,12 +32,10 @@ class CurriculoController extends Controller
             $imagem->move($dir, $nomeImagem);
             $dados['image'] = $dir."/".$nomeImagem;
         }
-
-        $dados = Candidato::create($request->all());
-        return redirect()->routes('curriculo');
-    }
+        Candidato::create($novoCurriculo);
         
+        return view('curriculo')->with('mensagem', 'Formulario salvo!');
 
-    
-    
-}
+    }    
+
+    }

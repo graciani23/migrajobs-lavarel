@@ -81,10 +81,10 @@
             </div>
             @endforeach
 
-                <div class="button d-flex justify-content-end py-4 mr-4" method="">
+                <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                     <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                     <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-                </div>
+                </div>-->
         </section>
 
         <section class="endereco border mt-3">
@@ -137,20 +137,15 @@
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" {{ $candidatos->complement }}>
             </div>
 
-            <div class="button d-flex justify-content-end py-4 mr-4" method="">
+            <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </div>
+            </div>-->
         </section>
 
         <section class="contato border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
-            </div>
-
-            <div class="email form-group mx-4 pt-3 px-1">
-                <label class="pr-2" for="email">E-mail</label>
-            <input type="mail" class="form-control border-secondary" name="email" id="email" placeholder="name@example.com" value="{{ $candidatos->email }}">
             </div>
 
             <div class="form-row pt-3 mx-4">
@@ -185,10 +180,10 @@
                 </div>
             </div>
 
-            <div class="button d-flex justify-content-end py-4 mr-4" method="">
+    <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </div>
+            </div>-->
         </section>
 
         <section class="objetivo-profissional border mt-3">
@@ -245,10 +240,10 @@
                 <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo"> {{ $candidatos->job_description }} </textarea>
             </div>
 
-            <div class="button d-flex justify-content-end py-4 mr-4" method="">
+            <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </div>
+            </div>-->
         </section>
 
         <section class="formacao-academica border mt-3">

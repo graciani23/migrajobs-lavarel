@@ -23,12 +23,12 @@ class CurriculoController extends Controller
     {   
         //dd('olá');
         $curriculo = $request->all();
-        $user = new User();
-        $user->fill($curriculo);
-        $user->save();
+        /* $usuario = new User();
+        $usuario->fill($curriculo);
+        $usuario->save(); */
         $novoCurriculo = new Candidato();
         $novoCurriculo->fill($curriculo);
-        $novoCurriculo->users_id = $user->id; 
+       // $novoCurriculo->usuario_id = $usuario->id; 
         $novoCurriculo->save();
         return redirect()->back();
        

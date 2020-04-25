@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Candidato extends Model
 {
     protected $fillable = [
+                            'id',
                             'image',
                             'name',
                             'nationality',
@@ -23,7 +24,6 @@ class Candidato extends Model
                             'adress',
                             'number',
                             'complement',
-                            'email',
                             'telephone',
                             'cell_phone',
                             'linkedin',
@@ -39,7 +39,8 @@ class Candidato extends Model
                             'job_description',
                             'instution',
                             'formation',
-                            'course_description'
+                            'course_description',
+                            'usuario_id'
 
 ];
     

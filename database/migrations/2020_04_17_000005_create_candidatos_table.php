@@ -39,7 +39,6 @@ class CreateCandidatosTable extends Migration
             $table->string('adress', 45);
             $table->integer('number');
             $table->string('complement', 45)->nullable();
-            $table->string('email')->nullable();
             $table->integer('telephone')->nullable();
             $table->integer('cell_phone')->nullable();
             $table->string('linkedin', 45)->nullable();

@@ -19,10 +19,6 @@
     </header>
 <form action="curriculo" method="post" enctype="multipart/form-data">
     @csrf
-    @if(session('mensagem'))
-    <div class="alert alert-success"> {{session('mensagem')}}</div>
-    @endif
-    <table class="table">
     <div class="container">
         <div class="fundo">
             @if(isset($candidato->image))
@@ -31,14 +27,13 @@
             </div>
             @endif
         </div>
-        <form>
+        {{csrf_field()}}
 
-            {{csrf_field()}}
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
-        </form>
+
         <section class="dados-pessoais border">
 
             
@@ -82,21 +77,21 @@
                 </div>
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
-                    <select class="estadoCivil bg-white border-secondary " name="status" id="status" required="required">
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Estado Civil</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Solteiro(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Casado(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Separado(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}">Divorciado(a)</option>
-                        <option value="{{isset($candidato->status) ? $candidato->status : ''}}"> Viúvo(a)></option>
+                    <select class="estadoCivil bg-white border-secondary " name="status" id="status" >
+                        <option value="">Estado Civil</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="separado">Separado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo"> Viúvo(a)></option>
                     </select><br>
                 </div>
             </div>
 
-                <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
+                <div class="button d-flex justify-content-end py-4 mr-4" method="">
                     <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                     <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-                </form>
+                </div>
         </section>
 
         <section class="endereco border mt-3">
@@ -151,10 +146,10 @@
             </div>
 
 
-            <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
+            <div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </form>
+            </div>
         </section>
 
         <section class="contato border mt-3">
@@ -199,10 +194,10 @@
                 </div>
             </div>
 
-            <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
+            <div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </form>
+            </div>
         </section>
 
         <section class="objetivo-profissional border mt-3">
@@ -217,7 +212,7 @@
 
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Areas de interesse</label>
-                <select class="bg-light border-secondary" name="areas" id="areas" required="required">
+                <select class="bg-light border-secondary" name="areas" id="areas" >
                     <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Selecione a área</option>
                     <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Administrativo</option>
                     <option value="{{isset($candidato->areas) ? $candidato->areas : ''}}">Financeiro</option>
@@ -259,10 +254,10 @@
                 <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo">{{isset($candidato->job_description) ? $candidato->job_description : ''}}</textarea>
             </div>
 
-            <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
+            <div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </form>
+            </div>
         </section>
 
         <section class="formacao-academica border mt-3">
@@ -270,7 +265,7 @@
                 <h4>Formação Acadêmica</h4>
             </div>
 
-            <form class="formacaoAcademica mx-4" method="GET">
+            <form class="formacaoAcademica mx-4" method="">
                 <div class="instituicao form-group pt-3">
                     <label class="pr-2" for="instituicao">Instituição</label>
                     <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="" value="{{isset($candidato->instution) ? $candidato->instution : ''}}">
@@ -299,7 +294,7 @@
                 <textarea class="form-control border-secondary" name="course_description" id="course_description" rows="4" placeholder="Descrição do curso">{{isset($candidato->course_description) ? $candidato->course_description : ''}}</textarea>
             </div>
 
-            <form class="button d-flex justify-content-end py-4 mr-4" method="GET">
+            <form class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </form>

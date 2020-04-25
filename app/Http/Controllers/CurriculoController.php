@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Candidato;
+use App\User;
 
 class CurriculoController extends Controller
 {
@@ -19,16 +20,25 @@ class CurriculoController extends Controller
     }
 
     public function store(Request $request)
-    {
+    {   
+        //dd('olá');
         $curriculo = $request->all();
+        $user = new User();
+        $user->fill($curriculo);
+        $user->save();
         $novoCurriculo = new Candidato();
         $novoCurriculo->fill($curriculo);
-        
-        Candidato::create($novoCurriculo);
-        //dd($novoCurriculo);
-
-        return view('curriculo')->with('mensagem', 'Formulario salvo!');
-
-    }    
-
+        $novoCurriculo->users_id = $user->id; 
+        $novoCurriculo->save();
+        return redirect()->back();
+       
+        //return view('curriculo')->with('mensagem', 'Formulario salvo!');
     }
+
+    public function show(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view ('candidato', compact('candidatos')); 
+    }
+
+
+}

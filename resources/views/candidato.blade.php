@@ -30,16 +30,16 @@
                 <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
         </form>
+
         <section class="dados-pessoais border">
-)
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
-                <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{ $candidatos->name }}">
+                    <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{ $candidatos->name }}">
                 </div>
                 <div class="col">
                     <label class="label-nome pt-5" id="nationality" for="nationality">Nacionalidade</label>
-                <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{ $candidatos->nationality }}">
+                    <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{ $candidatos->nationality }}">
                 </div>
             </div>
 
@@ -50,17 +50,17 @@
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
-                <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidatos->birth }}">
+                    <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidatos->birth }}">
                 </div>
                 <div class="col">
                     <label class="idade" id="idade" for="idade">Idade</label>
-                <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{ $candidatos->age }}">
+                    <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{ $candidatos->age }}">
                 </div>
             </div>
 
             <div class="sexo form-row pt-4 mx-4">
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{ $candidatos->genre_female }}">
+                    <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{ $candidatos->genre_female }}">
                     <label class="custom-control-label" for="genre_female">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
@@ -79,15 +79,14 @@
                     </select><br>
                 </div>
             </div>
-            @endforeach
 
                 <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                     <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                     <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
                 </div>-->
-        </section>
+        
 
-        <section class="endereco border mt-3">
+        <!--<section class="endereco border mt-3">-->
             <div class="pt-3 mx-4">
                 <h4>Endereço</h4>
             </div>
@@ -95,7 +94,7 @@
             <div class="form-row mx-4">
                 <div class="form-group col-md-4">
                     <label for="zip-code">CEP</label>
-                <input type="text" class="form-control border-secondary" name="zip_code" id="cep" value="{{ $candidatos->zip_code }}">
+                    <input type="text" class="form-control border-secondary" name="zip_code" id="cep" value="{{ $candidatos->zip_code }}">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -141,9 +140,9 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
-        </section>
+        
 
-        <section class="contato border mt-3">
+        <!--<section class="contato border mt-3">-->
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
             </div>
@@ -184,9 +183,9 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
-        </section>
+        
 
-        <section class="objetivo-profissional border mt-3">
+        <!--<section class="objetivo-profissional border mt-3">-->
             <div class="Experiência pt-3 mx-4">
                 <h4>Experiência</h4>
             </div>
@@ -244,9 +243,8 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
-        </section>
 
-        <section class="formacao-academica border mt-3">
+        <!--<section class="formacao-academica border mt-3">-->
             <div class="formacaoAcademica pt-3 mx-4">
                 <h4>Formação Acadêmica</h4>
             </div>
@@ -259,7 +257,7 @@
 
                 <div class="formacao form-group">
                     <label class="pr-2 pt-2" for="formation">Formação</label>
-                <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="" value=" {{ $candidatos->formation }} ">
+                    <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="" value=" {{ $candidatos->formation }} ">
                 </div>
             </form>
 
@@ -280,12 +278,15 @@
                 <textarea class="form-control border-secondary" name="course_description" id="course_description" rows="4" placeholder="Descrição do curso"> {{ $candidatos->course_description }} </textarea>
             </div>
 
-            <div class="button d-flex justify-content-end py-4 mr-4" method="GET">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </div>
+            <form class="button d-flex justify-content-end py-4 mr-4" method="post">
+
+                <a href="{{route('candidatoEditar', $curriculo)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
+                <a href="{{route('index')}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
+            
+            </form>
         </section>
     </div>
+
 
     <div class="rodape mt-3">
         <footer>

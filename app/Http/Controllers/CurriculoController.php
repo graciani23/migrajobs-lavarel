@@ -21,18 +21,16 @@ class CurriculoController extends Controller
 
     public function store(Request $request)
     {   
-        //dd('olá');
+        
         $curriculo = $request->all();
-        /* $usuario = new User();
+        $usuario = new User();
         $usuario->fill($curriculo);
-        $usuario->save(); */
+        $usuario->save();
         $novoCurriculo = new Candidato();
         $novoCurriculo->fill($curriculo);
-       // $novoCurriculo->usuario_id = $usuario->id; 
+        $novoCurriculo->usuario_id = $usuario->id; 
         $novoCurriculo->save();
         return redirect()->back();
-       
-        //return view('curriculo')->with('mensagem', 'Formulario salvo!');
     }
 
     public function show(Request $request, $id){
@@ -40,5 +38,18 @@ class CurriculoController extends Controller
         return view ('candidato', compact('candidatos')); 
     }
 
+    public function edit($id) 
+    {
+        $candidatos = Candidato::find($id);
+        return view('candidatoEditar',compact('candidatos'));
+    }
+
+    public function atualizar(Request $request, $id){
+        $curriculo = $request->all();
+        Candidato::find($id)->update($curriculo);
+
+        return redirect()->route('curriculoIndex');
+        
+    }
 
 }

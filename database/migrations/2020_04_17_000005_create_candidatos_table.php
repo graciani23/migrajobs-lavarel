@@ -32,7 +32,7 @@ class CreateCandidatosTable extends Migration
             $table->string('genre_female', 8);
             $table->string('genre_male', 9);
             $table->string('status', 45);
-            $table->string('document', 45)->unique;
+            $table->string('document', 45);
             $table->integer('zip_code');
             $table->string('city', 45);
             $table->string('uf', 2);
@@ -59,14 +59,14 @@ class CreateCandidatosTable extends Migration
 
             $table->timestamps();
 
-            $table->index(["usuario_id"], 'fk_candidatos_usuario1_idx');
+            $table->index(["usuario_id"], 'fk_candidatos_USUARIO11_idx');
 
-            //$table->unique(["id"], 'id_UNIQUE');
+            $table->unique(["id"], 'ID_UNIQUE');
 
             $table->unique(["document"], 'document_UNIQUE');
 
 
-            $table->foreign('usuario_id', 'fk_candidatos_usuario1_idx')
+            $table->foreign('usuario_id', 'fk_candidatos_USUARIO11_idx')
                 ->references('id')->on('users')
                 ->onDelete('no action')
                 ->onUpdate('no action');

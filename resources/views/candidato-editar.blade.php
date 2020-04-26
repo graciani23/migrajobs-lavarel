@@ -17,7 +17,7 @@
             </div>
         </div>
     </header>
-<form action="curriculo" method="post" enctype="multipart/form-data">
+<form action="{{route('candidatoEditar', $candidatos->id)}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="container">
         <div class="fundo">

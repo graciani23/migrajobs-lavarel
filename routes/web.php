@@ -28,6 +28,8 @@ Route::get('/curriculo-index', 'CurriculoController@index')->name('curriculoInde
 Route::get('/curriculo', 'CurriculoController@create');
 Route::post('/curriculo', 'CurriculoController@store');
 Route::get('/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
+Route::get('/candidato-editar{id}', 'CurriculoController@editar')->name('candidatoEditar');
+Route::put('/curriculo/atualizar/{id}', 'CurriculoController@atualizar')->name('candidatoAtualizar');
 
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');

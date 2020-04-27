@@ -39,11 +39,11 @@
             
             <div class="form-row pt-4 mx-4">
                 <div class="col">
-                    <label class="label-nome pt-5" for="nome">Nome</label>
+                    <label class="label-nome pt-3" for="nome">Nome</label>
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{isset($candidato->name) ? $candidato->name : ''}}">
                 </div>
                 <div class="col">
-                    <label class="label-nome pt-5" id="nationality" for="nationality">Nacionalidade</label>
+                    <label class="label-nome pt-3" id="nationality" for="nationality">Nacionalidade</label>
                     <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidato->nationality) ? $candidato->nationality : ''}}">
                 </div>
             </div>
@@ -56,12 +56,12 @@
             
             <div class="form-row pt-2 mx-4">
                 <div class="col">
-                    <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
-                    <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidato->birth) ? $candidato->birth : ''}}">
+                    <label class="documento" id="document" for="document">Documento</label>
+                    <input type="text" class="form-control border-secondary" name="document" id="document" placeholder="Digite seu documento" value="{{isset($candidato->document) ? $candidato->document : ''}}">
                 </div>
                 <div class="col">
-                    <label class="idade" id="idade" for="idade">Idade</label>
-                    <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{isset($candidato->age) ? $candidato->age : ''}}">
+                    <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
+                    <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidato->birth) ? $candidato->birth : ''}}">
                 </div>
             </div>
             
@@ -76,15 +76,15 @@
                     <label class="custom-control-label" for="genre_male">Masculino</label>
                 </div>-->
 
-                <div class="estadoCivil">
+                <div class="estadoCivil pb-4">
                     <label class=""for="estadoCivil">Estado Civil</label>
-                    <select class="estadoCivil bg-white border-secondary " name="status" id="status" >
+                    <select class="estadoCivil bg-white border-secondary" name="status" id="status" >
                         <option value="">Estado Civil</option>
                         <option value="solteiro">Solteiro(a)</option>
                         <option value="casado">Casado(a)</option>
                         <option value="separado">Separado(a)</option>
                         <option value="divorciado">Divorciado(a)</option>
-                        <option value="viuvo"> Viúvo(a)></option>
+                        <option value="viuvo"> Viúvo(a)</option>
                     </select><br>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="form-group mx-4 px-1">
+            <div class="form-group mx-4 px-1 pb-3">
                 <label for="complement">Complemento</label>
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" value="{{isset($candidato->complement) ? $candidato->complement : ''}}">
             </div>
@@ -182,7 +182,7 @@
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($candidato->instagram) ? $candidato->instagram : ''}}">
                 </div>
-                    <div class="col">
+                    <div class="col pb-4">
                     <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
@@ -237,7 +237,7 @@
 
                 </div><br>
 
-            <div class="form-group pt-3 mx-4">
+            <div class="form-group pt-3 pb-3 mx-4">
                 <label for="job-description">Descrição</label>
                 <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo">{{isset($candidato->job_description) ? $candidato->job_description : ''}}</textarea>
             </div>

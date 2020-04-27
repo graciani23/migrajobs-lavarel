@@ -48,12 +48,12 @@ class CurriculoController extends Controller
         $curriculo = $request->all();
         Candidato::find($id)->update($curriculo);
 
-        return redirect()->route('curriculoIndex');
+        return redirect()->route('curriculo-index');
         
     }
 
     public function destroy($id){
-        $candidatos = Candidato::find($id)->delete();
+        Candidato::find($id)->delete();
         return redirect()->route('index'); 
     }
 

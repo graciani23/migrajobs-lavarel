@@ -32,7 +32,7 @@
         </form>
 
         <section class="dados-pessoais border">
-            <div class="form-row pt-4 mx-4">
+            <div class="form-row mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{ $candidatos->name }}">
@@ -53,13 +53,13 @@
                     <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidatos->birth }}">
                 </div>
                 <div class="col">
-                    <label class="idade" id="idade" for="idade">Idade</label>
-                    <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{ $candidatos->age }}">
+                    <label class="document" id="document" for="idade">Documento</label>
+                    <input type="text" class="form-control border-secondary" name="document" id="document" placeholder="Digite seu documento" value="{{ $candidatos->document }}">
                 </div>
             </div>
 
-           <!-- <div class="sexo form-row pt-4 mx-4">
-                <div class="custom-control custom-radio custom-control-inline pt-1 ">
+            <div class="sexo form-row pt-4 mx-4">
+                <!--<div class="custom-control custom-radio custom-control-inline pt-1 ">
                     <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{ $candidatos->genre_female }}">
                     <label class="custom-control-label" for="genre_female">Feminino</label>
                 </div>
@@ -67,26 +67,26 @@
                     <input type="radio" id="genre_male" name="genre_male" class="custom-control-input" value="{{ $candidatos->genre_male }}">
                     <label class="custom-control-label" for="genre_male">Masculino</label>
                 </div>-->
-                <div class="estadoCivil">
+                <div class="estadoCivil pb-4">
                     <label class=""for="estadoCivil">Estado Civil</label>
                     <select class="estadoCivil bg-white border-secondary " name="status" id="status" >
-                        <option value="{{ $candidatos->status }}">Estado Civil</option>
-                        <option value="{{ $candidatos->status }}">Solteiro(a)</option>
-                        <option value="{{ $candidatos->status }}">Casado(a)</option>
-                        <option value="{{ $candidatos->status }}">Separado(a)</option>
-                        <option value="{{ $candidatos->status }}">Divorciado(a)</option>
-                        <option value="{{ $candidatos->status }}"> Viúvo(a)></option>
+                        <option value="">Estado Civil</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="separado">Separado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo"> Viúvo(a)</option>
                     </select><br>
                 </div>
-            </div>
 
                 <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                     <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                     <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
                 </div>-->
+        </section>
         
 
-        <!--<section class="endereco border mt-3">-->
+        <section class="endereco border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Endereço</h4>
             </div>
@@ -131,7 +131,7 @@
 
             </div>
 
-            <div class="form-group mx-4 px-1">
+            <div class="form-group mx-4 px-1 pb-3">
                 <label for="complement">Complemento</label>
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" {{ $candidatos->complement }}>
             </div>
@@ -140,9 +140,11 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
+        </section>
+        
         
 
-        <!--<section class="contato border mt-3">-->
+        <section class="contato border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
             </div>
@@ -158,21 +160,21 @@
                 </div>
             </div>
 
-            <div class="redes-sociais form-row mx-4">
+            <div class="redes-sociais form-row mx-4 pb-4">
                 <div class="col">
-                    <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
+                    <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
                     <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{ $candidatos->linkedin }}">
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
+                    <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{ $candidatos->instagram }}">
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
+                    <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
                     <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{ $candidatos->facebook }}">
@@ -183,9 +185,10 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
+        </section>
         
 
-        <!--<section class="objetivo-profissional border mt-3">-->
+        <section class="objetivo-profissional border mt-3">
             <div class="Experiência pt-3 mx-4">
                 <h4>Experiência</h4>
             </div>
@@ -234,7 +237,7 @@
 
                 </div><br>
 
-            <div class="form-group pt-3 mx-4">
+            <div class="form-group pt-3 mx-4 pb-3">
                 <label for="job-description">Descrição</label>
                 <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo"> {{ $candidatos->job_description }} </textarea>
             </div>
@@ -243,8 +246,9 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
+        </section>
 
-        <!--<section class="formacao-academica border mt-3">-->
+        <section class="formacao-academica border mt-3">
             <div class="formacaoAcademica pt-3 mx-4">
                 <h4>Formação Acadêmica</h4>
             </div>
@@ -281,11 +285,11 @@
             <form class="button d-flex justify-content-end py-4 mr-4" method="post">
 
                 <a href="{{route('candidatoEdit', $candidatos)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
-                <a href="{{route('index')}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
-            
+                <a href="{{route('curriculoDestroy', $candidatos->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>            
             </form>
         </section>
     </div>
+
 
 
     <div class="rodape mt-3">
@@ -294,7 +298,6 @@
             <br>© MigraJobs atividades de Internet, Ltda. Todos os direitos reservados.
         </footer>
     </div>
-</div>
 
 <script src="/js/buscaCep.js"></script>
 

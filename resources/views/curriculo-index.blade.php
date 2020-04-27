@@ -32,10 +32,11 @@
                 <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
         </form>
+        
         <section class="dados-pessoais border">
 
             @foreach ($candidatos as $candidato)
-            <div class="form-row pt-4 mx-4">
+            <div class="form-row mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{ $candidato->name }}">
@@ -54,33 +55,33 @@
             @foreach ($candidatos as $candidato)
             <div class="form-row pt-2 mx-4">
                 <div class="col">
+                    <label class="idade" id="idade" for="idade">Documento</label>
+                <input type="text" class="form-control border-secondary" name="document" id="document" placeholder="Digite seu socumento" value="{{ $candidato->document }}">
+                </div>
+                <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
                     <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidato->birth }}">
                 </div>
-                <div class="col">
-                    <label class="idade" id="idade" for="idade">Idade</label>
-                <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{ $candidato->age }}">
-                </div>
             </div>
 
-            <div class="sexo form-row pt-4 mx-4">
-                <div class="custom-control custom-radio custom-control-inline pt-1 ">
+            <div class="sexo form-row pt-4 pb-4 mx-4">
+                <!--<div class="custom-control custom-radio custom-control-inline pt-1 ">
                 <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{ $candidato->genre_female }}">
                     <label class="custom-control-label" for="genre_female">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="genre_male" name="genre_male" class="custom-control-input" value="{{ $candidato->genre_male }}">
                     <label class="custom-control-label" for="genre_male">Masculino</label>
-                </div>
+                </div>-->
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
                     <select class="estadoCivil bg-white border-secondary " name="status" id="status" required="required">
-                        <option value="{{ $candidato->status }}">Estado Civil</option>
-                        <option value="{{ $candidato->status }}">Solteiro(a)</option>
-                        <option value="{{ $candidato->status }}">Casado(a)</option>
-                        <option value="{{ $candidato->status }}">Separado(a)</option>
-                        <option value="{{ $candidato->status }}">Divorciado(a)</option>
-                        <option value="{{ $candidato->status }}"> Viúvo(a)></option>-->
+                        <option value="">Estado Civil</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="separado">Separado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo"> Viúvo(a)</option>-->
                     </select><br>
                 </div>
             </div>
@@ -138,7 +139,7 @@
 
             </div>
 
-            <div class="form-group mx-4 px-1">
+            <div class="form-group mx-4 pb-3 px-1">
                 <label for="complement">Complemento</label>
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" {{ $candidato->complement }}>
             </div>
@@ -169,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="redes-sociais form-row mx-4">
+            <div class="redes-sociais form-row mx-4 pb-4">
                 <div class="col">
                     <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
@@ -249,7 +250,7 @@
 
                 </div><br>
 
-            <div class="form-group pt-3 mx-4">
+            <div class="form-group pt-3 pb-3 mx-4">
                 <label for="job-description">Descrição</label>
                 <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo">@foreach ($candidatos as $candidato) {{ $candidato->job_description }} @endforeach</textarea>
             </div>
@@ -295,10 +296,8 @@
             </div>
             @endforeach
 
-            <div class="button d-flex justify-content-end py-4 mr-4" method="">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </div>
+            <a href="{{route('candidatoEdit', $candidatos->id)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
+            <a href="{{route('curriculoDestroy', $candidatos->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
         </section>
     </div>
 

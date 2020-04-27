@@ -30,7 +30,7 @@ Route::post('/curriculo', 'CurriculoController@store');
 Route::get('/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
 Route::get('/candidato-editar/{id}', 'CurriculoController@edit')->name('candidatoEdit');
 Route::put('/curriculo/update/{id}', 'CurriculoController@update')->name('curriculoUpdate');
-Route::get('/curriculo/delete/{id}', 'CurriculoController@delete')->name('curriculoDelete');
+Route::get('/curriculo/destroy/{id}', 'CurriculoController@destroy')->name('curriculoDestroy');
 
 Route::get('/search', 'SearchController@buscarVagasUsuario');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');

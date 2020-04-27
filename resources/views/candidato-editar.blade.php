@@ -38,7 +38,7 @@
         <section class="dados-pessoais border">
 
             
-            <div class="form-row pt-4 mx-4">
+            <div class="form-row mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" for="nome">Nome</label>
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{isset($candidatos->name) ? $candidatos->name : ''}}">
@@ -58,11 +58,11 @@
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
-                    <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidatos->birth) ? $candidatos->birth : ''}}">
+                    <input type="date" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidatos->birth) ? $candidatos->birth : ''}}">
                 </div>
                 <div class="col">
-                    <label class="idade" id="idade" for="idade">Idade</label>
-                    <input type="text" class="form-control border-secondary" name="age" id="age" placeholder="Digite sua idade" value="{{isset($candidatos->age) ? $candidatos->age : ''}}">
+                    <label class="idade" id="idade" for="idade">Documento</label>
+                    <input type="text" class="form-control border-secondary" name="document" id="document" placeholder="Digite seu documento" value="{{isset($candidatos->document) ? $candidatos->document : ''}}">
                 </div>
             </div>
             
@@ -77,7 +77,7 @@
                     <label class="custom-control-label" for="genre_male">Masculino</label>
                 </div>-->
 
-                <div class="estadoCivil">
+                <div class="estadoCivil pb-4">
                     <label class=""for="estadoCivil">Estado Civil</label>
                     <select class="estadoCivil bg-white border-secondary " name="status" id="status" >
                         <option value="">Estado Civil</option>
@@ -85,7 +85,7 @@
                         <option value="casado">Casado(a)</option>
                         <option value="separado">Separado(a)</option>
                         <option value="divorciado">Divorciado(a)</option>
-                        <option value="viuvo"> Viúvo(a)></option>
+                        <option value="viuvo"> Viúvo(a)</option>
                     </select><br>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="form-group mx-4 px-1">
+            <div class="form-group mx-4 px-1 pb-3">
                 <label for="complement">Complemento</label>
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" value="{{isset($candidatos->complement) ? $candidatos->complement : ''}}">
             </div>
@@ -170,21 +170,21 @@
                 </div>
             </div>
 
-            <div class="redes-sociais form-row mx-4">
+            <div class="redes-sociais form-row mx-4 pb-4">
                 <div class="col">
-                    <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
+                    <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
                     <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($candidatos->linkedin) ? $candidatos->linkedin : ''}}">
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
+                    <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($candidatos->instagram) ? $candidatos->instagram : ''}}">
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
+                    <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
                     <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($candidatos->facebook) ? $candidatos->facebook : ''}}">
@@ -238,7 +238,7 @@
 
                 </div><br>
 
-            <div class="form-group pt-3 mx-4">
+            <div class="form-group pt-3 mx-4 pb-4">
                 <label for="job-description">Descrição</label>
                 <textarea class="form-control border-secondary" name='job_description' id="job_description" rows="4" placeholder="Descrição do cargo">{{isset($candidatos->job_description) ? $candidatos->job_description : ''}}</textarea>
             </div>
@@ -282,8 +282,9 @@
                 <label for="course-description">Descrição</label>
                 <textarea class="form-control border-secondary" name="course_description" id="course_description" rows="4" placeholder="Descrição do curso">{{isset($candidatos->course_description) ? $candidatos->course_description : ''}}</textarea>
             </div>
-
-            <button class="editar btn btn-primary pl-3 m-1" type> Editar</button>
+            <div class="button d-flex justify-content-end py-4 mr-4" method="">
+                <button class="editar btn btn-primary pl-3 m-1" type> Editar</button>
+            </div>
         </section>
     </div>
 </form>

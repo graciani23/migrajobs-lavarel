@@ -43,17 +43,28 @@ class PerfilEmpresaController extends Controller{
         $dados = $req->all();
         DetalhesEmpresa::find($id)->update($dados);
 
-        return redirect()->route('empresaIndex');
+        return redirect()->back();
+
+
         //return redirect('/empresa-index');
     }
 
     
     public function deletar($id){
         DetalhesEmpresa::find($id)->delete();
-        return redirect()->route('empresa-index'); 
+        return redirect()->route('index'); 
     }
 
 }
 
 
+/*
+ //Pegando o nome original do arquivo
+ $nomeOriginal = $request->file('imagem')->getClientOriginalName();
+ //Montando a url necessária para acessar o arquivo corretamente
+ $caminhoimg  = '/storage/img/' . $nomeOriginal;
+ //Salvando apenas a imagem
+ $save = $request->file('imagem')->storeAs('public/img', $nomeOriginal);
+ $novoProduto->imagem = $caminhoimg;
 
+ */

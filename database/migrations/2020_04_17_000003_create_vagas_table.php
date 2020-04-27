@@ -24,9 +24,18 @@ class CreateVagasTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->unsignedInteger('empresa_id');
-            $table->string('nome_empresa', 45);
+            $table->string('area_de_atuacao', 2000)->nullable();
             $table->string('descricao', 45)->nullable();
             $table->string('idioma_requerido', 45)->nullable();
+            $table->string('portugues', 45);
+            $table->string('ingles', 45);
+            $table->string('espanhol', 45);
+            $table->string('frances', 45);
+            $table->string('outros', 45);
+
+            $table->timestamps();
+
+
         });
     }
 

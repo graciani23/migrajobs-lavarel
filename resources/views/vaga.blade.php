@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
-    <title>Publicar vaga</title>
+    <link rel="stylesheet" href="/css/curriculo.css">
+    <title>Vaga</title>
 </head>
 
 <body>
 @include('includes/menuVagas')
-    <form action="publicar-vagas" method="post" enctype="multipart/form-data">
     @csrf 
     <div class="container">
         <div class="fundo">
@@ -22,9 +21,6 @@
         </div>
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
-                <div>
-                    <h4>Publique uma vaga!</h4>
-                </div>
             </div>
        
         <section class="dados-pessoais border">
@@ -34,49 +30,41 @@
             <div class="form-group px-1 mx-4">
 
             <div class="areasInteresses pb-2 px-1 mx-4">
-                <label for="areas">Área de atuação</label>
-                    <select class="bg-light border-secondary" name="area_de_atuacao" id="area_de_atuacao">
-                        <option value="">Selecione a área</option>
-                        <option value="administrativo">Administrativo</option>
-                        <option value="financeiro">Financeiro</option>
-                        <option value="recursosHumanos">Recursos Humanos</option>
-                        <option value="setorComercial">Setor Comercial</option>
-                        <option value="setorOperacional">Setor Operacional</option>
-                        <option value="tecnologia">Tecnologia</option>
-                        <option value="tecnologia">Outras</option>
+                <label for="areas" style="font-weight:bold">Área de atuação:</label>
+                <div style="color:black"> {{$dadosVaga->area_de_atuacao}}</div> 
+
                     </select><br>
             </div>
             <div class="form-group pt-3 px-1 mx-4">
-                <label for="descricao">Descrição da vaga</label>
-                <textarea class="form-control border-secondary" name="descricao" id="descricao" rows="4" placeholder="Descreva todas as informações sobre a vaga" value="{{isset($registro->descricao) ? $registro->descricao : ''}}"></textarea>
+                <label for="descricao" style="font-weight:bold">Descrição da vaga</label>
+                <div style="color:black"> {{$dadosVaga->descricao}}</div> 
             </div>
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="descricao-vaga">Idiomas requeridos:</label>
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
                     <input type="radio" id="portugues" name="portugues" class="custom-control-input">
-                    <label class="custom-control-label" for="portugues">Português</label>
+                    <div style="color:black"> {{$dadosVaga->portugues}}</div> 
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="espanhol" name="espanhol" class="custom-control-input">
-                    <label class="custom-control-label" for="espanhol">Espanhol</label>
+                    <div style="color:black"> {{$dadosVaga->espanhol}}</div> 
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="ingles" name="ingles" class="custom-control-input">
-                    <label class="custom-control-label" for="ingles">Inglês</label>
+                    <div style="color:black"> {{$dadosVaga->ingles}}</div> 
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="frances" name="frances" class="custom-control-input">
-                    <label class="custom-control-label" for="frances">Francês</label>
+                    <div style="color:black"> {{$dadosVaga->frances}}</div> 
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="outros" name="outros" class="custom-control-input">
-                    <label class="custom-control-label" for="male">Outros</label>
+                    <div style="color:black"> {{$dadosVaga->outros}}</div> 
                 </div>
             </div>    
        
-                <input class="salvar btn btn-primary pl-3 m-4" type="submit" value="Salvar" onCLick="">
-            </form>
+            <a href="{{route('vagaDeletar',$dadosVaga->id)}}" class="editar btn btn-danger btn-block" type> Deletar</a>
         </section>
         
     </div>

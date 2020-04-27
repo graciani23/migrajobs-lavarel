@@ -41,10 +41,10 @@ class CurriculoController extends Controller
     public function edit($id) 
     {
         $candidatos = Candidato::find($id);
-        return view('candidatoEditar',compact('candidatos'));
+        return view('candidato-editar', compact('candidatos'));
     }
 
-    public function atualizar(Request $request, $id){
+    public function update(Request $request, $id){
         $curriculo = $request->all();
         Candidato::find($id)->update($curriculo);
 
@@ -52,4 +52,10 @@ class CurriculoController extends Controller
         
     }
 
+    public function destroy($id){
+        $candidatos = Candidato::find($id)->delete();
+        return redirect()->route('index'); 
+    }
+
+ 
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
 
     <title>Curriculo</title>
 </head>
@@ -48,7 +48,7 @@
             @endforeach
 
             <div class="form-group pt-3 mx-4 px-1">
-                <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">@foreach ($candidatos as $candidato) {{ $candidado->about_you }} @endforeach</textarea>
+                <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">@foreach ($candidatos as $candidato) {{ $candidato->about_you }} @endforeach</textarea>
             </div>
 
             @foreach ($candidatos as $candidato)
@@ -75,12 +75,12 @@
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
                     <select class="estadoCivil bg-white border-secondary " name="status" id="status" required="required">
-                        <option value="{{ $candidado->status }}">Estado Civil</option>
-                        <option value="{{ $candidado->status }}">Solteiro(a)</option>
-                        <option value="{{ $candidado->status }}">Casado(a)</option>
-                        <option value="{{ $candidado->status }}">Separado(a)</option>
-                        <option value="{{ $candidado->status }}">Divorciado(a)</option>
-                        <option value="{{ $candidado->status }}"> Viúvo(a)></option>-->
+                        <option value="{{ $candidato->status }}">Estado Civil</option>
+                        <option value="{{ $candidato->status }}">Solteiro(a)</option>
+                        <option value="{{ $candidato->status }}">Casado(a)</option>
+                        <option value="{{ $candidato->status }}">Separado(a)</option>
+                        <option value="{{ $candidato->status }}">Divorciado(a)</option>
+                        <option value="{{ $candidato->status }}"> Viúvo(a)></option>-->
                     </select><br>
                 </div>
             </div>

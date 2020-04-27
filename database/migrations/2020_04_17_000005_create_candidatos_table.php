@@ -61,9 +61,9 @@ class CreateCandidatosTable extends Migration
 
             $table->index(["usuario_id"], 'fk_candidatos_USUARIO11_idx');
 
-            $table->unique(["id"], 'ID_UNIQUE');
+            //$table->unique(["id"], 'ID_UNIQUE');
 
-            $table->unique(["document"], 'document_UNIQUE');
+            //$table->unique(["document"], 'document_UNIQUE');
 
 
             $table->foreign('usuario_id', 'fk_candidatos_USUARIO11_idx')

@@ -21,11 +21,11 @@
     @csrf
     <div class="container">
         <div class="fundo">
-            @if(isset($candidato->image))
+            
             <div class="foto">
-                <img src="{{ asset($candidato->image) }}" alt="">
+                <img src="assets/img/refugiado.jpg" alt="">
             </div>
-            @endif
+            
         </div>
         {{csrf_field()}}
 

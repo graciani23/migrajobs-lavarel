@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./public/assets/css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
 
     <title>Curriculo</title>
 </head>
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="fundo">
             <div class="foto">
-                <img src="{{ asset($candidato->image) }}" alt="">
+                <img src="assets/img/refugiado.jpg" alt="">
             </div>
         </div>
         <form>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="form-group pt-3 mx-4 px-1">
-                <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{ $candidados->about_you }}</textarea>
+                <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{ $candidatos->about_you }}</textarea>
             </div>
 
             <div class="form-row pt-2 mx-4">
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="sexo form-row pt-4 mx-4">
+           <!-- <div class="sexo form-row pt-4 mx-4">
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
                     <input type="radio" id="genre_female" name="genre_female" class="custom-control-input" value="{{ $candidatos->genre_female }}">
                     <label class="custom-control-label" for="genre_female">Feminino</label>
@@ -66,16 +66,16 @@
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="genre_male" name="genre_male" class="custom-control-input" value="{{ $candidatos->genre_male }}">
                     <label class="custom-control-label" for="genre_male">Masculino</label>
-                </div>
+                </div>-->
                 <div class="estadoCivil">
                     <label class=""for="estadoCivil">Estado Civil</label>
                     <select class="estadoCivil bg-white border-secondary " name="status" id="status" >
-                        <option value="{{ $candidados->status }}">Estado Civil</option>
-                        <option value="{{ $candidados->status }}">Solteiro(a)</option>
-                        <option value="{{ $candidados->status }}">Casado(a)</option>
-                        <option value="{{ $candidados->status }}">Separado(a)</option>
-                        <option value="{{ $candidados->status }}">Divorciado(a)</option>
-                        <option value="{{ $candidados->status }}"> Viúvo(a)></option>
+                        <option value="{{ $candidatos->status }}">Estado Civil</option>
+                        <option value="{{ $candidatos->status }}">Solteiro(a)</option>
+                        <option value="{{ $candidatos->status }}">Casado(a)</option>
+                        <option value="{{ $candidatos->status }}">Separado(a)</option>
+                        <option value="{{ $candidatos->status }}">Divorciado(a)</option>
+                        <option value="{{ $candidatos->status }}"> Viúvo(a)></option>
                     </select><br>
                 </div>
             </div>
@@ -192,7 +192,7 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
-                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional"> {{ $candidatos->professional_goal}} @endforeach</textarea>
+                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional"> {{ $candidatos->professional_goal}}</textarea>
             </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">
@@ -280,7 +280,7 @@
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="post">
 
-                <a href="{{route('candidatoEditar', $curriculo)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
+                <a href="{{route('candidatoEdit', $candidatos)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
                 <a href="{{route('index')}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
             
             </form>

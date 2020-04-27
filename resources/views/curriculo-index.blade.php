@@ -60,7 +60,7 @@
                 </div>
                 <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
-                    <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidato->birth }}">
+                    <input type="date" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{ $candidato->birth }}">
                 </div>
             </div>
 
@@ -166,7 +166,7 @@
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{ $candidato->cel_phone }}">
+                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{ $candidato->cell_phone }}">
                 </div>
             </div>
 
@@ -269,7 +269,7 @@
             <form class="formacaoAcademica mx-4" method="">
                 <div class="instituicao form-group pt-3">
                     <label class="pr-2" for="instituicao">Instituição</label>
-                    <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="">
+                    <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="" value=" {{ $candidato->instution }} ">
                 </div>
 
                 <div class="formacao form-group">

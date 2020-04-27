@@ -48,7 +48,7 @@ class CurriculoController extends Controller
         $curriculo = $request->all();
         Candidato::find($id)->update($curriculo);
 
-        return redirect()->route('curriculo-index');
+        return redirect()->back();
         
     }
 

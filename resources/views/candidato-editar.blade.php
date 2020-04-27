@@ -205,7 +205,7 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
-                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{isset($candidatos->profissional_goal) ? $candidatos->profissional_goal : ''}}</textarea>
+                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{isset($candidatos->professional_goal) ? $candidatos->professional_goal : ''}}</textarea>
             </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">

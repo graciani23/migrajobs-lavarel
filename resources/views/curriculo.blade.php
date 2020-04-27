@@ -61,7 +61,7 @@
                 </div>
                 <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
-                    <input type="text" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidato->birth) ? $candidato->birth : ''}}">
+                    <input type="date" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidato->birth) ? $candidato->birth : ''}}">
                 </div>
             </div>
             

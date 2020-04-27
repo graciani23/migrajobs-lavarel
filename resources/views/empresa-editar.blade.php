@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
     <title>Editar</title>
 </head>
 
@@ -111,30 +111,30 @@
                 <h4>Contato</h4>
             </div>
             <div class="redes-sociais form-row mx-4">
-                <div class="col">
-                    <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
+                <div class="col mb-2">
+                    <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
                     <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($registros->linkedin) ? $registros->linkedin : ''}}" >
                 </div>
-                    <div class="col">
-                    <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
+                    <div class="col mb-2">
+                    <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($registros->instagram) ? $registros->instagram : ''}}">
                 </div>
-                    <div class="col">
-                    <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
+                    <div class="col mb-2">
+                    <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
                     <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($registros->facebook) ? $registros->facebook : ''}}">
                 </div>
             </div>
             
+      </section>
+            <br>
             <button class="editar btn btn-primary pl-3 m-1" type> Editar</button>
     
-      </section>
-
     </div>
     </form>  
     <br>

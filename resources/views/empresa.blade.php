@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
 
     <title>Empresa</title>
 </head>
@@ -20,93 +20,105 @@
                 <img src="{{asset($registros->imagem)}}" alt="">
             </div>
         </div>
+
+
         <form>
-            
-            
-            
-        <section class="endereco border mt-3">
-            <h4>Sobre a empresa</h4>
-            </div>
-            <div class="areasInteresses pb-2 px-1 mx-4">
-                <label for="areas">Área de atuação</label>
-                <div style="color:black"> {{$registros->area_de_atuacao}}  </div> 
-            </div>
-            <div class="form-row pt-4 mx-4">
+
+        <div class="container">
+            <div class="row">
                 <div class="col">
-                    <label class="label-nome pb-2" for="nome">Razão Social</label>
-                    <div style="color:black"> {{$registros->razao_social}} </div>
+                    <section class="container endereco border mt-5">
+                        <h4 class="m-3 mx-auto">Sobre a empresa</h4>
+                        <div class="col mb-2">
+                            <label for="areas" style="font-weight:bold">Área de atuação:</label>
+                            <div style="color:black"> {{$registros->area_de_atuacao}}  </div> 
+                        </div>
+
+                        <div class="col mb-2">
+                            <label class="label-nome" for="nome" style="font-weight:bold">Razão Social:</label>
+                            <div style="color:black"> {{$registros->razao_social}} </div>
+                        </div>
+            
+                        <div class="col mb-2">
+                            <label class="label-nome" id="cnpj" for="cnpj" style="font-weight:bold">CNPJ:</label>
+                            <div style="color:black"> {{$registros->cnpj}}</div> 
+                        </div>
+                    </section>
+
+                    <section class="contato border mt-4">
+                        <div class="pt-3 mx-4">
+                            <h4>Contato</h4>
+                        </div>
+
+                        <div class="redes-sociais form-row mx-4">
+                            <div class="col mb-3">
+                                <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
+                                <a href="http://{{$registros->likedin}}">Likedin</a>
+                        </div>
+
+                        <div class="col mb-3">
+                            <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
+                            <a href="http://{{$registros->instagram}}">Instagram</a>
+                        </div>
+
+                        <div class="col mb-3">
+                            <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
+                            <a href="http://{{$registros->facebook}}">Facebook</a>
+                         </div>
+                    </section>
+
+                    <div class="col mr">
+                    <form class="button mx-auto" method="post">
+                    <br>
+                        <a href="{{route('empresaEditar', $registros)}}" class="editar btn btn-primary btn-block" type> Editar</a>
+                        <a href="{{route('empresaDeletar',$registros->id)}}" class="editar btn btn-danger btn-block" type> Deletar</a>
+
+                    </form>                
                 </div>
-                    <label class="label-nome pb-2" id="sobrenome" for="sobrenome">CNPJ</label>
-                    <div style="color:black"> {{$registros->cnpj}}</div> 
                 </div>
-            </div>
-        </section>
-        
-        <section class="endereco border mt-3">
-            <div class="pt-3 mx-4">
-                <h4 class="pt-3 mx-4">Endereço</h4>
 
-           
-                <div style="color:black">
-                {{$registros->CEP}}
-                {{$registros->UF}}
-                {{$registros->city}}
-                {{$registros->rua}}
-                {{$registros->numero}}
-                {{$registros->complemento}}
-                </div>
-            </div>
-
-
-          
-        </section>
-
-
-        <section class="contato border mt-3">
-            <div class="pt-3 mx-4">
-                <h4>Contato</h4>
-            </div>
-
-            <div class="redes-sociais form-row mx-4">
                 <div class="col">
-                    <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
-                    <a href="https://www.linkedin.com"></a>
-                    <label class="linkedin pt-4" for="linkedin">Linkedin</label>
-                    <div style="color:black">
-                    {{$registros->linkedin}}
-                    </div>
+                    <section class="endereco border mt-3">
+                        <div class="pt-3 mx-4 ">
+                            <h4 class="m-3 mx-auto">Endereço</h4>
+                            <div class="col mb-2">
+                                <label for="cep" style="font-weight:bold">CEP:</label>
+                                <div style="color:black">{{$registros->cep}} </div> 
+                            </div>
+
+                            <div class="col mb-2">
+                                <label for="cep" style="font-weight:bold">Rua:</label>
+                                <div style="color:black">{{$registros->rua}} </div> 
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="cep" style="font-weight:bold">Número:</label>
+                                <div style="color:black">{{$registros->numero}} </div> 
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="cep" style="font-weight:bold">Complemento:</label>
+                                <div style="color:black">{{$registros->complemento}} </div> 
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="cep" style="font-weight:bold">Cidade:</label>
+                                <div style="color:black">{{$registros->city}} </div> 
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="cep" style="font-weight:bold">Estado:</label>
+                                <div style="color:black">{{$registros->uf}} </div> 
+                            </div>
+
+                        </div>
+                    </section>
+
+                    
                 </div>
-                    <div class="col">
-                    <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
-                    <a href="https://www.instagram.com/"></a>
-                    <label class="instagram pt-4" for="instagram">Instagram</label>
-                    <div style="color:black">
-                    {{$registros->instagram}}
-                    </div>
-                </div>
-                    <div class="col">
-                    <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
-                    <a href="https://www.facebook.com/"></a>
-                    <label class="facebook pt-4" for="facebook">Facebook</label>
-                    <div style="color:black">
-                    {{$registros->facebook}}
-                    </div>
-
-                </div>
-
-            </div>
-
-            <form class="button d-flex justify-content-end py-4 mr-4" method="post">
-
-            <a href="{{route('empresaEditar', $registros)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
-            <a href="{{route('index')}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
-
-            </form>
-
-        </section>
-
-  
+        </div>
     </div>
+</div>
     <br>
 
     <div class="rodape mt-3">

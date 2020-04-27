@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
     <title>Empresa</title>
 </head>
 
@@ -70,7 +70,7 @@
 
             <div class="redes-sociais form-row mx-4">
                 <div class="col">
-                    <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
+                    <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
                     <div style="color:black">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
+                    <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <div style="color:black">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
+                    <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
                     <div style="color:black">

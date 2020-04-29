@@ -22,7 +22,7 @@ class VagasController extends Controller
         $novoDado = new Vaga();
         $novoDado -> fill($dados);
         $novoDado -> save();
-        return redirect()->route('empresa/{id}');
+        return redirect()->route('vagaMostrar', [$novoDado -> id]);
     } 
 
     public function mostrar(Request $req, $id){

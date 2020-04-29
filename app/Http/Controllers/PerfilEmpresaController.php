@@ -23,9 +23,13 @@ class PerfilEmpresaController extends Controller{
         $user -> save();
         $novoDado = new DetalhesEmpresa();
         $novoDado -> fill($dados);
+        if($req -> hasFile ('imagem')){
+            $path = $req->file('imagem')->store('img', 'public');
+            $novoDado->imagem = $path;
+        }
         $novoDado -> users_id = $user -> id; 
         $novoDado -> save();
-        return redirect()->back();
+        return redirect()->route('empresaMostrar', [$novoDado -> id]);
     }
 
     public function mostrar(Request $req, $id){
@@ -40,10 +44,15 @@ class PerfilEmpresaController extends Controller{
     }
 
     public function atualizar(Request $req, $id){
+        $registros = DetalhesEmpresa::find($id);
         $dados = $req->all();
+        if($req -> hasFile ('imagem')){
+            $path = $req->file('imagem')->store('img', 'public');
+            $registros->imagem = $path;
+        }
         DetalhesEmpresa::find($id)->update($dados);
-
-        return redirect()->back();
+       
+        return redirect()->route('empresaMostrar', [$registros -> id]);
 
 
         //return redirect('/empresa-index');
@@ -58,13 +67,6 @@ class PerfilEmpresaController extends Controller{
 }
 
 
-/*
- //Pegando o nome original do arquivo
- $nomeOriginal = $request->file('imagem')->getClientOriginalName();
- //Montando a url necessária para acessar o arquivo corretamente
- $caminhoimg  = '/storage/img/' . $nomeOriginal;
- //Salvando apenas a imagem
- $save = $request->file('imagem')->storeAs('public/img', $nomeOriginal);
- $novoProduto->imagem = $caminhoimg;
 
- */
+
+ 

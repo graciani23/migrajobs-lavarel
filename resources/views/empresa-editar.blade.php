@@ -19,11 +19,9 @@
     <input type="hidden" name="_method" value="PUT">
     <div class="container">
         <div class="fundo">
-            @if(isset($registros->imagem))
             <div class="foto">
-                <img src="{{asset($registros->imagem)}}">
+                <img src="{{asset("storage/".$registros->imagem)}}" alt="">
             </div>
-            @endif
         </div>
 
     
@@ -40,13 +38,13 @@
                 <label for="area_de_atuacao">Área de atuação</label>
                     <select class="bg-light border-secondary" name="area_de_atuacao" id="area_de_atuacao">
                         <option value="">Selecione a área</option>
-                        <option value="administrativo">Administrativo</option>
-                        <option value="financeiro">Financeiro</option>
-                        <option value="recursosHumanos">Recursos Humanos</option>
-                        <option value="setorComercial">Setor Comercial</option>
-                        <option value="setorOperacional">Setor Operacional</option>
-                        <option value="tecnologia">Tecnologia</option>
-                        <option value="tecnologia">Outras</option>
+                        <option value="Administrativo">Administrativo</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="RH">Recursos Humanos</option>
+                        <option value="Comercial">Setor Comercial</option>
+                        <option value="Operacional">Setor Operacional</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Outras">Outras</option>
                     </select><br>
             </div>
             <div class="form-row pt-4 mx-4">

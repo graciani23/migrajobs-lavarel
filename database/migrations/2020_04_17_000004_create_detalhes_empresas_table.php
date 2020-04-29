@@ -24,7 +24,7 @@ class CreateDetalhesEmpresasTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('razao_social', 45);
-            $table->string('imagem', 45)->nullable();
+            $table->string('imagem')->nullable();
             $table->string('cnpj', 45);
             $table->string('endereco', 45)->nullable();
             $table->string('area_de_atuacao', 45)->nullable();

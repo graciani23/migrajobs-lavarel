@@ -17,7 +17,7 @@
     <div class="container">
         <div class="fundo">
             <div class="foto">
-                <img src="{{asset($registros->imagem)}}" alt="">
+                <img src="{{asset("storage/".$registros->imagem)}}" alt="">
             </div>
         </div>
 

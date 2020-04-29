@@ -8,7 +8,7 @@
                         <li><a href="/index">Home</a></li>
                         <li><a href="/publicar-vagas">Publicar vagas</a></li>
                         <li><a href="/area_empresa">Buscar candidatos</a></li>
-                        <li><a href="empresaMostrar">Meu perfil</a></li>
+                        <li><a href="/empresaMostrar">Meu perfil</a></li>
                     </ul>
                 </nav>
 

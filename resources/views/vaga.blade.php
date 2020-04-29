@@ -44,24 +44,8 @@
                 <label for="descricao-vaga">Idiomas requeridos:</label>
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
                     <input type="radio" id="portugues" name="portugues" class="custom-control-input">
-                    <div style="color:black"> {{$dadosVaga->portugues}}</div> 
-                </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="espanhol" name="espanhol" class="custom-control-input">
-                    <div style="color:black"> {{$dadosVaga->espanhol}}</div> 
-                </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="ingles" name="ingles" class="custom-control-input">
-                    <div style="color:black"> {{$dadosVaga->ingles}}</div> 
-                </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="frances" name="frances" class="custom-control-input">
-                    <div style="color:black"> {{$dadosVaga->frances}}</div> 
-                </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="outros" name="outros" class="custom-control-input">
-                    <div style="color:black"> {{$dadosVaga->outros}}</div> 
-                </div>
+                    <div style="color:black"> {{$dadosVaga->idioma_requerido}}</div> 
+               
             </div>    
        
             <a href="{{route('vagaDeletar',$dadosVaga->id)}}" class="editar btn btn-danger btn-block" type> Deletar</a>

@@ -37,13 +37,13 @@
                 <label for="areas">Área de atuação</label>
                     <select class="bg-light border-secondary" name="area_de_atuacao" id="area_de_atuacao">
                         <option value="">Selecione a área</option>
-                        <option value="administrativo">Administrativo</option>
-                        <option value="financeiro">Financeiro</option>
-                        <option value="recursosHumanos">Recursos Humanos</option>
-                        <option value="setorComercial">Setor Comercial</option>
-                        <option value="setorOperacional">Setor Operacional</option>
-                        <option value="tecnologia">Tecnologia</option>
-                        <option value="tecnologia">Outras</option>
+                        <option value="Administrativo">Administrativo</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="RH">Recursos Humanos</option>
+                        <option value="Comercial">Setor Comercial</option>
+                        <option value="Operacional">Setor Operacional</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Outros">Outras</option>
                     </select><br>
             </div>
             <div class="form-group pt-3 px-1 mx-4">
@@ -52,25 +52,25 @@
             </div>
 
             <div class="form-group pt-3 px-1 mx-4">
-                <label for="descricao-vaga">Idiomas requeridos:</label>
+                <label for="idioma_requerido">Idiomas requeridos:</label>
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="portugues" name="portugues" class="custom-control-input">
+                    <input type="radio" id="portugues" name="idioma_requerido" class="custom-control-input" value="Português">
                     <label class="custom-control-label" for="portugues">Português</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="espanhol" name="espanhol" class="custom-control-input">
+                    <input type="radio" id="espanhol" name="idioma_requerido" class="custom-control-input"  value="Espanhol">
                     <label class="custom-control-label" for="espanhol">Espanhol</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="ingles" name="ingles" class="custom-control-input">
+                    <input type="radio" id="ingles" name="idioma_requerido" class="custom-control-input"  value="Inglês" >
                     <label class="custom-control-label" for="ingles">Inglês</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="frances" name="frances" class="custom-control-input">
+                    <input type="radio" id="frances" name="idioma_requerido" class="custom-control-input"  value="Francês">
                     <label class="custom-control-label" for="frances">Francês</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="outros" name="outros" class="custom-control-input">
+                    <input type="radio" id="outros" name="idioma_requerido" class="custom-control-input"  value="Outros">
                     <label class="custom-control-label" for="male">Outros</label>
                 </div>
             </div>    

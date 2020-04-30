@@ -195,25 +195,25 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
-                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional"> {{ $candidatos->professional_goal}}</textarea>
+                <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{ $candidatos->professional_goal}}</textarea>
             </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Areas de interesse</label>
                 <select class="bg-light border-secondary" name="areas" id="areas" >
-                    <option value="{{ $candidatos->areas }}">Selecione a área</option>
-                    <option value="{{ $candidatos->areas }}">Administrativo</option>
-                    <option value="{{ $candidatos->areas }}">Financeiro</option>
-                    <option value="{{ $candidatos->areas }}">Recursos Humanos</option>
-                    <option value="{{ $candidatos->areas }}">Setor Comercial</option>
-                    <option value="{{ $candidatos->areas }}">Setor Operacional</option>
-                    <option value="{{ $candidatos->areas }}">Tecnologia</option>
+                    <option value="">Selecione a área</option>
+                    <option value="adm">Administrativo</option>
+                    <option value="financ">Financeiro</option>
+                    <option value="rh">Recursos Humanos</option>
+                    <option value="sc">Setor Comercial</option>
+                    <option value="so">Setor Operacional</option>
+                    <option value="ti">Tecnologia</option>
                 </select><br>
             </div>
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="experience">Experiência</label>
-                <textarea class="form-control border-secondary" name="professional_experience" id="professional_experience" rows="4" placeholder="Digite seu resumo profissional"> {{ $candidatos->professional_experience }} </textarea>
+                <textarea class="form-control border-secondary" name="professional_experience" id="professional_experience" rows="4" placeholder="Digite seu resumo profissional">{{ $candidatos->professional_experience }} </textarea>
             </div>
 
             <div class="empresa form-group px-1 mx-4">

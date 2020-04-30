@@ -208,7 +208,7 @@
                 <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">@foreach ($candidatos as $candidato) {{ $candidato->professional_goal}} @endforeach</textarea>
             </div>
 
-            @foreach ($candidatos as $candidato)
+            
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Areas de interesse</label>
                 <select class="bg-light border-secondary" name="areas" id="areas" required="required">
@@ -221,7 +221,7 @@
                     <option value="{{ $candidato->areas }}">Tecnologia</option>
                 </select><br>
             </div>
-            @endforeach
+            
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="experience">Experiência</label>

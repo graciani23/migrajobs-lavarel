@@ -203,6 +203,19 @@
                 <h4>Experiência</h4>
             </div>
 
+            <div class="areasInteresses pb-2 px-1 mx-4">
+                <label for="areas">Areas de interesse</label>
+                <select class="bg-light border-secondary" name="areas" id="areas" >
+                    <option value="">Selecione a área</option>
+                    <option value="administrativo">Administrativo</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="rh">Recursos Humanos</option>
+                    <option value="sc">Setor Comercial</option>
+                    <option value="so">Setor Operacional</option>
+                    <option value="tecnologia">Tecnologia</option>
+                </select><br>
+            </div>
+            
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
                 <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{isset($candidatos->professional_goal) ? $candidatos->professional_goal : ''}}</textarea>

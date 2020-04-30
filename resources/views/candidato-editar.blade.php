@@ -68,24 +68,23 @@
             
 
             <div class="sexo form-row pt-4 mx-4">
-                <!--<div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="checkbox" id="genre_female" name="genre_female" class="custom-control-input" value="{{isset($candidatos->genre_female) ? $candidatos->genre_female : ''}}">
-                    <label class="custom-control-label" for="genre_female">Feminino</label>
+                <div class="custom-control custom-radio custom-control-inline pt-1 ">
+                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
+                    <label class="custom-control-label" for="genre">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="checkbox" id="genre_male" name="genre_male" class="custom-control-input" value="{{isset($candidatos->genre_male) ? $candidatos->genre_male : ''}}">
-                    <label class="custom-control-label" for="genre_male">Masculino</label>
-                </div>-->
+                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
+                    <label class="custom-control-label" for="genre">Masculino</label>
+                </div>
 
                 <div class="estadoCivil pb-4">
                     <label class=""for="estadoCivil">Estado Civil</label>
-                    <select class="estadoCivil bg-white border-secondary " name="status" id="status" >
+                    <select class="estadoCivil bg-white border-secondary" name="status" id="status" >
                         <option value="">Estado Civil</option>
-                        <option value="solteiro">Solteiro(a)</option>
-                        <option value="casado">Casado(a)</option>
-                        <option value="separado">Separado(a)</option>
-                        <option value="divorciado">Divorciado(a)</option>
-                        <option value="viuvo"> Viúvo(a)</option>
+                        <option value="Solteiro(a)">Solteiro(a)</option>
+                        <option value="Casado(a)">Casado(a)</option>
+                        <option value="Divorciado(a)">Divorciado(a)</option>
+                        <option value="Viuvo(a)"> Viúvo(a)</option>
                     </select><br>
                 </div>
             </div>
@@ -207,15 +206,16 @@
                 <label for="areas">Areas de interesse</label>
                 <select class="bg-light border-secondary" name="areas" id="areas" >
                     <option value="">Selecione a área</option>
-                    <option value="administrativo">Administrativo</option>
-                    <option value="financeiro">Financeiro</option>
-                    <option value="rh">Recursos Humanos</option>
-                    <option value="sc">Setor Comercial</option>
-                    <option value="so">Setor Operacional</option>
-                    <option value="tecnologia">Tecnologia</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Financeiro">Financeiro</option>
+                    <option value="RH">Recursos Humanos</option>
+                    <option value="Comercial">Setor Comercial</option>
+                    <option value="Operacional">Setor Operacional</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Outras">Outras</option>
                 </select><br>
             </div>
-            
+
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
                 <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{isset($candidatos->professional_goal) ? $candidatos->professional_goal : ''}}</textarea>

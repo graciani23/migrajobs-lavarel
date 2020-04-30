@@ -28,9 +28,14 @@ class CurriculoController extends Controller
         $usuario->save();
         $novoCurriculo = new Candidato();
         $novoCurriculo->fill($curriculo);
+        if($request->hasFile('image')){
+            $path = $request->file('image')->store('img', 'public');
+            $novoCurriculo->image = $path;
+        }
+        
         $novoCurriculo->usuario_id = $usuario->id; 
         $novoCurriculo->save();
-        return redirect()->back();
+        return redirect()->route('candidatoShow',[$novoCurriculo->id]);
     }
 
     public function show(Request $request, $id){
@@ -45,10 +50,10 @@ class CurriculoController extends Controller
     }
 
     public function update(Request $request, $id){
-        $curriculo = $request->all();
+        $candidatos = $request->all();
         Candidato::find($id)->update($curriculo);
 
-        return redirect()->back();
+        return redirect()->route('candidadoShow', [$candidatos -> id]);
         
     }
 

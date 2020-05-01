@@ -23,11 +23,9 @@
     <input type="hidden" name="_method" value="PUT">
     <div class="container">
         <div class="fundo">
-            @if(isset($candidato->image))
             <div class="foto">
-                <img src="{{ asset($candidato->image) }}" alt="">
+                <img src="{{asset("storage/".$candidatos->image)}}" alt="">
             </div>
-            @endif
         </div>
 
         <div class="editar-foto form-group">
@@ -68,12 +66,13 @@
             
 
             <div class="sexo form-row pt-4 mx-4">
+                <label for="genre">Sexo</label>
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
                     <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
                     <label class="custom-control-label" for="genre">Feminino</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
+                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
                     <label class="custom-control-label" for="genre">Masculino</label>
                 </div>
 

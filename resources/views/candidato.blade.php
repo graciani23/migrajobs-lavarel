@@ -61,13 +61,14 @@
             </div>
 
             <div class="sexo form-row pt-4 mx-4">
+                <label for="gender">Sexo</label>
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="genre_female" name="genre" class="custom-control-input">
+                    <input type="radio" id="genge" name="genre" class="custom-control-input">
                     <div style="color:black"> {{ $candidatos->genre }}</div>
                 </div>
                 
-                <div class="estadoCivil pb-4 pl-5">
-                    <label class="" style="font-weight:bold" for="estadoCivil">Estado Civil</label>
+                <div class="estadoCivil pb-4">
+                    <label class="" style="font-weight:bold" for="status">Estado Civil</label>
                     <div style="color:black"> {{$candidatos->status}}  </div> 
                 </div>
         </section>
@@ -97,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col">2
+                <div class="form-group col">
                     <label for="uf" style="font-weight:bold">UF</label>
                     <div style="color:black"> {{$candidatos->uf}}  </div> 
                     <div class="form-group pt-4">

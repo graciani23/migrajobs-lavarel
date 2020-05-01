@@ -50,11 +50,15 @@ class CurriculoController extends Controller
     }
 
     public function update(Request $request, $id){
-        $candidatos = $request->all();
+        $candidatos = Candidato::find($id);
+        $curriculo = $request->all();
+        if($request -> hasFile ('image')){
+            $path = $request->file('image')->store('img', 'public');
+            $candidatos->image = $path;
+        }
         Candidato::find($id)->update($curriculo);
 
-        return redirect()->route('candidadoShow', [$candidatos -> id]);
-        
+        return redirect()->route('candidatoShow', [$candidatos -> id]);  
     }
 
     public function destroy($id){

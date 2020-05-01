@@ -29,7 +29,7 @@
                 <h4>Quero mudar minha vida</h4>
                 <div class="form">
                     <h5 class="card-title">SOU IMIGRANTE</h5>
-                <form action="{{ route('admin.login.valida') }}" method="post">
+                <form action="{{ route('login') }}" method="post" method="post" enctype="multipart/form-data">
                     @csrf
 
                     @if($errors->all())

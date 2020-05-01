@@ -3,24 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facade\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
     public function dashboard()
     {
-        // verifica se existe usuário logado
+        // verifica se a sessão é válida
         if(Auth::check() === true) {
-            // retorna o usuário que está na sessão
+            //identifica usuário logado
             dd(Auth::user());
             return view('admin.dashboard');
+
         }
         return redirect()->route('admin.login');
     }
 
-    //se não estiver logado, vai para rota index
     public function showLoginForm()
     {
+        //dd(Auth::user());
         return view('admin.formLogin');
     }
 
@@ -28,16 +29,18 @@ class AuthController extends Controller
     {
         var_dump($request->all());
 
-        $credenciais = [
+        $credentials = [
             'email' => $request->email,
             'password' => $request->password
         ];
 
-        if(Auth::attempt($credenciais)) {
+        //dd(Auth::attempt($credentials));
+
+        //se os dados foram validados
+        if(Auth::attempt($credentials)){
             return redirect()->route('admin');
         }
-        //back volta uma URL
-        return redirect()->back()->withInput()->withErrors(['Os dados informados não conferem']);
+        return redirect()->back()->withInput()->withErrors(['Os dados encontrados não conferem']);
     }
 
     public function logout()
@@ -45,5 +48,4 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('admin');
     }
-
 }

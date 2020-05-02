@@ -61,7 +61,7 @@
             </div>
 
             <div class="sexo form-row pt-4 mx-4">
-                <label for="genre">Sexo</label>
+                <label class="" for="genre">Sexo</label>
                 <div class="custom-control custom-radio custom-control-inline pt-1 ">
                     <input type="radio" id="genre_female" name="genre" class="custom-control-input">
                     <div style="color:black"> {{ $candidatos->genre }}</div>

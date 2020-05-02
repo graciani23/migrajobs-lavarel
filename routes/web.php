@@ -32,7 +32,10 @@ Route::get('/candidato-editar/{id}', 'CurriculoController@edit')->name('candidat
 Route::put('/curriculo/update/{id}', 'CurriculoController@update')->name('curriculoUpdate');
 Route::get('/curriculo/destroy/{id}', 'CurriculoController@destroy')->name('curriculoDestroy');
 
-Route::get('/search', 'SearchController@buscarVagasUsuario');
+Route::get('/homeCandidato/{id}', 'CurriculoController@homeShow')->name('homeCandidatoShow');
+Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name('menuShow');
+
+Route::get('/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
 Route::get('/empresa-index', 'PerfilEmpresaController@index')->name('empresaIndex');

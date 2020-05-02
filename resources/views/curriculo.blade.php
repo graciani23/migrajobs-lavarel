@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
 
     <title>Curriculo</title>
 </head>
@@ -21,7 +21,7 @@
     @csrf
     <div class="container">
         <div class="fundo">
-            @if(isset($candidato    ->image))
+            @if(isset($candidato->image))
             <div class="foto">
                 <img src="{{asset($candidato->image)}}">
             </div>
@@ -68,18 +68,22 @@
             
 
             <div class="sexo form-row pt-4 mx-4">
-                <label for="genre">Sexo</label>
-                <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
-                    <label class="custom-control-label" for="genre">Feminino</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
-                    <label class="custom-control-label" for="genre">Masculino</label>
+                <div class="col">
+                    <label class="ml-1 mr-2" for="genre">Sexo</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
+                        <label class="custom-control-label" for="genre">Feminino</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
+                        <label class="custom-control-label" for="genre">Masculino</label>
+                    </div>
                 </div>
 
-                <div class="estadoCivil pb-4">
-                    <label class=""for="estadoCivil">Estado Civil</label>
+                <div class="col form-row estadoCivil pb-4 ">
+                    <div class="pr-2">
+                        <label class="" for="estadoCivil">Estado Civil</label>
+                    </div>
                     <select class="estadoCivil bg-white border-secondary" name="status" id="status" >
                         <option value="">Estado Civil</option>
                         <option value="Solteiro(a)">Solteiro(a)</option>
@@ -268,7 +272,7 @@
                 <h4>Formação Acadêmica</h4>
             </div>
 
-            <form class="formacaoAcademica mx-4" method="">
+            <div class="formacaoAcademica" method="">
                 <div class="instituicao form-group pt-3 mx-4">
                     <label class="pr-2" for="instituicao">Instituição</label>
                     <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="" value="{{isset($candidato->instution) ? $candidato->instution : ''}}">
@@ -278,7 +282,7 @@
                     <label class="pr-2 pt-2" for="formation">Formação</label>
                     <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="" value="{{isset($candidato->formation) ? $candidato->formation : ''}}">
                 </div>
-            </form>
+            </div>
 
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" for="dataInicio">Data início:</label>

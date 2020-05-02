@@ -66,18 +66,22 @@
             
 
             <div class="sexo form-row pt-4 mx-4">
-                <label for="genre">Sexo</label>
-                <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
-                    <label class="custom-control-label" for="genre">Feminino</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
-                    <label class="custom-control-label" for="genre">Masculino</label>
+                <div class="col">
+                    <label class="ml-1 mr-2" for="genre">Sexo</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
+                        <label class="custom-control-label" for="genre">Feminino</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
+                        <label class="custom-control-label" for="genre">Masculino</label>
+                    </div>
                 </div>
 
-                <div class="estadoCivil pb-4">
-                    <label class=""for="estadoCivil">Estado Civil</label>
+                <div class="col form-row estadoCivil pb-4 ">
+                    <div class="pr-2">
+                        <label class="" for="estadoCivil">Estado Civil</label>
+                    </div>
                     <select class="estadoCivil bg-white border-secondary" name="status" id="status" >
                         <option value="">Estado Civil</option>
                         <option value="Solteiro(a)">Solteiro(a)</option>

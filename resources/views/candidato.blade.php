@@ -24,12 +24,12 @@
                 <img src="{{asset("storage/".$candidatos->image)}}" alt="">
             </div>
         </div>
-        <form>
+        <div>
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
-        </form>
+        </div>
 
         <section class="dados-pessoais border">
             <div class="form-row mx-4">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="form-group mx-4 px-1">
-                <label class="label-nome pt-5" style="font-weight:bold" id="about_you" for="about_you">Sobre você</label>
+                <label class="label-nome pt-4" style="font-weight:bold" id="about_you" for="about_you">Sobre você</label>
                 <div style="color:black"> {{ $candidatos->about_you }}</div> 
             </div>
 
@@ -61,16 +61,19 @@
             </div>
 
             <div class="sexo form-row pt-4 mx-4">
-                <label for="gender">Sexo</label>
-                <div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="radio" id="genge" name="genre" class="custom-control-input">
-                    <div style="color:black"> {{ $candidatos->genre }}</div>
+                <div class="col form-row">
+                    <label class="pl-1" style="font-weight:bold" for="gender">Sexo</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genge" name="genre" class="custom-control-input">
+                        <div style="color:black"> {{ $candidatos->genre }}</div>
+                    </div>
                 </div>
-                
-                <div class="estadoCivil pb-4">
-                    <label class="" style="font-weight:bold" for="status">Estado Civil</label>
-                    <div style="color:black"> {{$candidatos->status}}  </div> 
+            
+                <div class="estadoCivil col form-row pb-4 mx-4">
+                    <label class="pl-1" style="font-weight:bold" for="status">Estado Civil</label>
+                    <div class="pl-3" style="color:black"> {{$candidatos->status}}  </div> 
                 </div>
+            </div>
         </section>
         
 

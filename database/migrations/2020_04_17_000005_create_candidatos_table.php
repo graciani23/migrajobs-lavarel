@@ -48,8 +48,8 @@ class CreateCandidatosTable extends Migration
             $table->longText('professional_experience')->nullable();
             $table->string('company', 45)->nullable();
             $table->string('job_role', 45)->nullable();
-            $table->string('month', 20)->nullable();
-            $table->string('year', 20)->nullable();
+            $table->string('month')->nullable();
+            $table->string('year')->nullable();
             $table->longText('job_description')->nullable();
             $table->string('instution', 45)->nullable();
             $table->string('formation', 45)->nullable();

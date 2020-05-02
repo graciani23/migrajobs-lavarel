@@ -1,3 +1,5 @@
+
+
 <header>
         <div class="container">
             <div class="principal">
@@ -12,5 +14,5 @@
                 </nav>
 
                 <div class="user">
-                    Olá, Jeferson
+                    <label class="" for="">Olá {{$candidatos->name}}</label>
                 </div>

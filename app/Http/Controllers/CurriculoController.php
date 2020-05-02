@@ -33,14 +33,24 @@ class CurriculoController extends Controller
             $novoCurriculo->image = $path;
         }
         
-        $novoCurriculo->usuario_id = $usuario->id; 
+        $novoCurriculo-> usuario_id = $usuario-> id; 
         $novoCurriculo->save();
-        return redirect()->route('candidatoShow',[$novoCurriculo->id]);
+        return redirect()->route('candidatoShow',[$novoCurriculo-> id]);
     }
 
     public function show(Request $request, $id){
         $candidatos = Candidato::find($id);
-        return view ('candidato', compact('candidatos')); 
+        return view('candidato', compact('candidatos')); 
+    }
+
+    public function homeShow(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view('homeCandidato', compact('candidatos')); 
+    }
+
+    public function menuShow(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view('includes.menuCurriculo', compact('candidatos')); 
     }
 
     public function edit($id) 
@@ -54,7 +64,7 @@ class CurriculoController extends Controller
         $curriculo = $request->all();
         if($request -> hasFile ('image')){
             $path = $request->file('image')->store('img', 'public');
-            $candidatos->image = $path;
+            $candidatos-> image = $path;
         }
         Candidato::find($id)->update($curriculo);
 
@@ -65,6 +75,8 @@ class CurriculoController extends Controller
         Candidato::find($id)->delete();
         return redirect()->route('index'); 
     }
+
+    
 
  
 }

@@ -54,7 +54,7 @@ Route::get('/vaga/deletar/{id}', 'VagasController@deletar')->name('vagaDeletar')
 
 
 Route::get('/index', 'AuthController@index')->name('index');
-Route::get('/login', 'AuthController@showIndexLogin')->name('login');
+Route::get('/index/login', 'AuthController@showIndexLogin')->name('index.login');
 Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
 
 Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');

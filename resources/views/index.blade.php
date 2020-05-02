@@ -60,7 +60,7 @@
                         @endif
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário" name="email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário" name="email" value="{{ old('email') }}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1"></label>

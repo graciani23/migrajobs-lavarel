@@ -42,10 +42,11 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        // if (Auth()->user()->tipo === "Empresa") {
-        //     return redirect()->route();
-        // }
-        // return redirect()->route();
+        if (Auth()->user()->tipo === "Empresa") {
+            return redirect()->route('perfil-empresa');
+        }
+        // $id = Auth()->user()->id;
+        return redirect()->route('curriculoIndex');
         // dd(Auth::user());
         //dd(Auth()->user()->name); retornou nome!! \o/
     }

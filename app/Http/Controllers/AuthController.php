@@ -12,13 +12,13 @@ class AuthController extends Controller
         // verifica se a sessão é válida
         if(Auth::check() === true) {
             //identifica usuário logado
-            dd(Auth::user());
+            //dd(Auth::user());
             //se user = empresa view = area_empresa
             //se urser = canditado view = area_candidato
             return view('admin.dashboard');
 
         }
-        return redirect()->route('login');
+        return redirect()->route('index.login');
     }
 
     public function showIndexLogin()

@@ -31,8 +31,8 @@
                 <input type="password" id="inputConfirmPassword" placeholder="Confirme sua senha" name="password_confirmation">
             </div>
             <div class="form-group">
-                <label for="tipo">Quem você é?</label>
-                <select name="tipo" id="tipo">
+                <select name="tipo" id="tipo" class="form-group">
+                    <option value="">Quem você é?</option>
                     <option value="Empresa">Empresa</option>
                     <option value="Candidato">Candidato</option>
                 </select>

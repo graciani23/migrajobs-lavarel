@@ -29,11 +29,11 @@
                 <h4>Quero mudar minha vida</h4>
                 <div class="form">
                     <h5 class="card-title">SOU IMIGRANTE</h5>
-                <form action="{{ route('admin.login.valida') }}" method="post">
+                <form action="{{ route('login') }}" method="post" method="post" enctype="multipart/form-data">
                     @csrf
 
                     @if($errors->all())
-                        @foreach ($errors->all() as $errors)
+                        @foreach ($errors->all() as $error)
                             <div class="alert alert-danger" role="alert">
                                 {{ $error }}
                             </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1"></label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="password">
                     <br>
                     </div>
                     <div class="form-group form-check">

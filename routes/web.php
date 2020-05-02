@@ -50,15 +50,16 @@ Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar')->n
 
 Route::get('/vaga-index', 'VagasController@index')->name('vagaIndex');
 Route::get('/publicar-vagas', 'VagasController@publicar')->name('vagasPublicar');
-Route::post('/publicar-vagas', 'VagasController@publicarSubmitPost'); 
+Route::post('/publicar-vagas', 'VagasController@publicarSubmitPost');
 Route::get('/publicar-vagar-salvar', 'VagasController@salvar')->name('vagasSalvar');
 Route::get('/vaga/{id}', 'VagasController@mostrar')->name('vagaMostrar');
 Route::get('/vaga/deletar/{id}', 'VagasController@deletar')->name('vagaDeletar');
 
 
-Route::get('/admin', 'AuthController@dashboard')->name('admin');
-Route::get('/admin/login', 'AuthController@showLoginForm')->name('admin.login');
+Route::get('/index', 'AuthController@index')->name('index');
+Route::get('/index/login', 'AuthController@showIndexLogin')->name('index.login');
 Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
+
 Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');
 
 

@@ -283,12 +283,12 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" for="dataInicio">Data início:</label>
+                <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
 
                 <br>
-                <label class="termino pr-2" for="dataTermino">Data término:</label>
+                <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
 
                     @include('./includes/comboBoxMesAno')
 

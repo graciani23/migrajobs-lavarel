@@ -21,7 +21,6 @@ class CurriculoController extends Controller
 
     public function store(Request $request)
     {   
-        
         $curriculo = $request->all();
         $usuario = new User();
         $usuario->fill($curriculo);
@@ -33,9 +32,9 @@ class CurriculoController extends Controller
             $novoCurriculo->image = $path;
         }
         
-        $novoCurriculo-> usuario_id = $usuario-> id; 
+        $novoCurriculo-> usuario_id = $usuario -> id; 
         $novoCurriculo->save();
-        return redirect()->route('candidatoShow',[$novoCurriculo-> id]);
+        return redirect()->route('candidatoShow',[$novoCurriculo -> id]);
     }
 
     public function show(Request $request, $id){

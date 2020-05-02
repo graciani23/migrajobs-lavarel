@@ -14,5 +14,5 @@
                 </nav>
 
                 <div class="user">
-                    <label class="" for="">Olá {{$candidatos->name}}</label>
+                    <label class="" for="">Olá </label>
                 </div>

@@ -12,32 +12,33 @@
         @include('includes/menuNav')
 
     <div class="corpo-form">
-        <form method="POST" action="{{ action('ImigranteController@store') }}" enctype="multpart/form-data">
+        <form method="POST" action="{{ route('register') }}" enctype="multpart/form-data">
             @csrf
             <h2><strong>Cadastre seu currículo e tenha acesso aos nossos serviços</strong></h2>
-            <input type="text" id="inputName" placeholder="Digite seu nome completo" name="name" value="{{ old('name') }}">
-            {!! $errors->first('name', '<small>:message</small>') !!}<br>
-            <div class="genero">
-                <input type="radio" name="genero" id="masculino" value="masculino" checked>
-                <label for="masculino">Masculino</label>
-                <input type="radio" name="genero" id="feminino" value="feminino">
-                <label for="feminino">Feminino</label>
+            <div class="form-group">
+                <input type="text" id="inputName" placeholder="Digite seu nome completo" name="name" value="{{ old('name') }}">
+                {!! $errors->first('name', '<small>:message</small>') !!}<br>
             </div>
-            <!--
-            <div class="nasc">
-                <label class="labelForm" for="nascimento">Data de nascimento</label>
-                <input type="date" value="2011-08-19" id="nascimento" placeholder="Data de nascimentos" name="nascimento">
+            <div class="form-group">
+                <input type="email" id="inputEmail" placeholder="Email" name="email" value="{{ old('email') }}">
+                {!! $errors->first('email', '<small>:message</small>') !!}<br>
             </div>
-            -->
-            <input type="email" id="inputEmail" placeholder="Email" name="email" value="{{ old('email') }}">
-            {!! $errors->first('email', '<small>:message</small>') !!}<br>
-            <input type="password" id="inputPassword" placeholder="Senha" name="senha">
-            {!! $errors->first('senha', '<small>:message</small>') !!}<br>
-            <input type="password" id="inputConfirmPassword" placeholder="Confirme sua senha" name="confSenha">
+            <div class="form-group">
+                <input type="password" id="inputPassword" placeholder="Senha" name="password">
+                {!! $errors->first('senha', '<small>:message</small>') !!}<br>
+            </div>
+            <div class="form-group">
+                <input type="password" id="inputConfirmPassword" placeholder="Confirme sua senha" name="password_confirmation">
+            </div>
+            <div class="form-group">
+                <label for="tipo">Quem você é?</label>
+                <select name="tipo" id="tipo">
+                    <option value="Empresa">Empresa</option>
+                    <option value="Candidato">Candidato</option>
+                </select>
+            </div>
 
-                @include('includes/comboBoxPaises')
-
-            <button type="submit" class="btn btn-light">Cadastrar</button>
+            <button type="submit" class="btn btn-light">{{ __('Register') }}</button>
         </form>
     </div>
 

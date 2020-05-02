@@ -53,8 +53,8 @@ Route::get('/vaga/{id}', 'VagasController@mostrar')->name('vagaMostrar');
 Route::get('/vaga/deletar/{id}', 'VagasController@deletar')->name('vagaDeletar');
 
 
-Route::get('/admin', 'AuthController@dashboard')->name('admin');
-Route::get('/admin/login', 'AuthController@showLoginForm')->name('admin.login');
+Route::get('/index', 'AuthController@index')->name('index');
+Route::get('/login', 'AuthController@showIndexLogin')->name('login');
 Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
 
 Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');

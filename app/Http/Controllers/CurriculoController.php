@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Candidato;
 use App\User;
+use App\Vaga;
+use App\Http\Controllers\VagasController;
+use App\Http\Controller\VagaResourceInterface;
 
 class CurriculoController extends Controller
 {
@@ -84,6 +87,13 @@ class CurriculoController extends Controller
 
     }
  */
+
+    public function vagaShow(Request $request, VagaResourceInterface $dadosVaga, $id)
+    {
+        $dadosVaga = $dadosVaga->vagaShow($request->all());
+        //$dadosVaga = Vaga::find($id);
+        return redirect('vagaShow', compact('dadosVaga')); 
+    }
 }
     
 

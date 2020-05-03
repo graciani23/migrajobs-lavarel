@@ -89,12 +89,18 @@
         </div>
 
         <div class="vagas">
-            <div class="titulo"> Atendente de Chat</div>
-            <div class="subtitulo">Telemarketing - SAC</div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus debitis ullam labore architecto assumenda unde. Commodi ea asperiores, quidem vel amet.
-                O Profissional Irá Executar Atividades Relacionadas A Vendas Dos Produtos Onde Seu Foco É Satisfazer As Necessidades Dos Clientes. Captação E Formação De Carteira De Futuros Clientes Para Os Projetos Pelo Telefone, Chat E Pessoal. Ter Habilidade Na Interpretação Das Informações Técnicas Referen ... <a href="#">Visualizar Vaga</a>
-            </p>
+            <div class="areaAtuacao">
+                <label class="titulo">Área de Atuação</label>
+                <div class="subtitulo" style="color:black"> {{$dadosVaga->area_de_atuacao}}</div>
+            </div>
+            <div class="descricaoVaga">
+                <label for="">Descrição da Vaga</label>
+                <div style="color:black">{{$dadosVaga->descricao}}</div>    
+            </div>
+            <div class="idiomaRequerido">
+                <label for="">Idiomas requeridos</label>
+                <div style="color:black">{{$dadosVaga->idioma_requerido}}</div>    
+            </div>
         </div>
 
         <div class="vagas">

@@ -14,7 +14,7 @@
                 </nav>
 
                 <div class="user">
-                <label class="" for="">Olá </label>
+                <label class="" for="">Olá  </label>
                 </div>
 
                 <div class="logout">

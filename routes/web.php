@@ -35,6 +35,7 @@ Route::get('/curriculo/destroy/{id}', 'CurriculoController@destroy')->name('curr
 Route::get('/homeCandidato/{id}', 'CurriculoController@homeShow')->name('homeCandidatoShow');
 Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name('menuShow');
 //Route::get('/index/logout', 'CurriculoController@logout')->name('index.logout');
+Route::get('search/{id}', 'CurriculoController@vagaShow')->name('vagaShow');
 
 Route::get('/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');

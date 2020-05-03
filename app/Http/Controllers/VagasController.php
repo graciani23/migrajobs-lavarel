@@ -33,7 +33,7 @@ class VagasController extends Controller
 
     public function deletar($id){
          Vaga::find($id)->delete();
-        return redirect()->route('index'); 
+        return redirect()->back(); 
     }
 }
 

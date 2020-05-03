@@ -46,8 +46,6 @@ class LoginController extends Controller
             return redirect()->route('perfil-empresa');
         }
         // $id = Auth()->user()->id;
-        return redirect()->route('curriculoIndex');
-        // dd(Auth::user());
-        //dd(Auth()->user()->name); retornou nome!! \o/
+        return redirect()->route('curriculo');
     }
 }

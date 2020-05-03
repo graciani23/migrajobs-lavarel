@@ -24,8 +24,8 @@ Route::post('/cad-log-empresa', 'EmpresaController@store');
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
-Route::get('/candidatoShow', 'CurriculoController@index')->name('curriculoIndex');
-Route::get('/curriculo', 'CurriculoController@create');
+Route::get('/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
+Route::get('/curriculo', 'CurriculoController@create')->name('curriculo');
 Route::post('/curriculo', 'CurriculoController@store');
 Route::get('/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
 Route::get('/candidato-editar/{id}', 'CurriculoController@edit')->name('candidatoEdit');
@@ -40,8 +40,8 @@ Route::get('search/{id}', 'CurriculoController@vagaShow')->name('vagaShow');
 Route::get('/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
-Route::get('/empresa-index', 'PerfilEmpresaController@index')->name('empresaIndex');
-Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
+Route::get('/empresa-index/{id}', 'PerfilEmpresaController@index')->name('empresaIndex');
+Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar')->name('perfil-empresa');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
 
@@ -49,6 +49,8 @@ Route::get('/empresa/{id}', 'PerfilEmpresaController@mostrar')->name('empresaMos
 Route::get('/empresa-editar/{id}', 'PerfilEmpresaController@editar')->name('empresaEditar');
 Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar');
 Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar')->name('empresaDeletar');
+
+
 
 Route::get('/vaga-index', 'VagasController@index')->name('vagaIndex');
 Route::get('/publicar-vagas', 'VagasController@publicar')->name('vagasPublicar');
@@ -68,3 +70,4 @@ Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.va
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

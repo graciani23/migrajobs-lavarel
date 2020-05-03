@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="./css/empresa.css">
     <title>Publicar vaga</title>
 </head>
 
@@ -16,20 +16,14 @@
     @csrf 
     <div class="container">
         <div class="fundo">
-            <div class="foto">
-                <img src="https://pbs.twimg.com/profile_images/1129626341370933250/dizro5ap_400x400.jpg" alt="">
+            <div class="publiqueVaga">
+                <h4 class="h4">Publique uma vaga</h4>
             </div>
         </div>
-            <div class="editar-foto form-group">
-                <label for="edit-photo"></label>
-                <div>
-                    <h4>Publique uma vaga!</h4>
-                </div>
-            </div>
-       
+                  
         <section class="dados-pessoais border">
         <div class="pt-3 mx-4">
-                <h4>Sobre a vaga</h4>
+                <h4 class="sobreAVaga">Sobre a vaga</h4>
             </div>
             <div class="form-group px-1 mx-4">
 

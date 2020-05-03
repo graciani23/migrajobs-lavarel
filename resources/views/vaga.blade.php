@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/curriculo.css">
+    <link rel="stylesheet" href="/css/empresa.css">
     <title>Vaga</title>
 </head>
 
@@ -47,8 +47,9 @@
                     <div style="color:black"> {{$dadosVaga->idioma_requerido}}</div> 
                
             </div>    
-       
-            <a href="{{route('vagaDeletar',$dadosVaga->id)}}" class="editar btn btn-danger btn-block" type> Deletar</a>
+       <div>
+            <a href="{{route('vagaIndex')}}" class="editar btn btn-info mt-3" type> Veja todas as suas vagas pulicadas!</a>
+       </div>
         </section>
         
     </div>

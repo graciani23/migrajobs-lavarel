@@ -47,8 +47,9 @@
                     <div style="color:black"> {{$dadosVaga->idioma_requerido}}</div> 
                
             </div>    
-       
-            <a href="{{route('vagaDeletar',$dadosVaga->id)}}" class="editar btn btn-danger btn-block" type> Deletar</a>
+       <div>
+            <a href="{{route('vagaIndex')}}" class="editar btn btn-info mt-3" type> Veja todas as suas vagas pulicadas!</a>
+       </div>
         </section>
         
     </div>

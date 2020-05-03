@@ -7,11 +7,7 @@ use App\DetalhesEmpresa;
 use App\User;
 
 class PerfilEmpresaController extends Controller{
-    public function index() {
-        $registros = DetalhesEmpresa::all();
-        return view('empresa-index', compact('registros'));
-    }
-
+ 
     public function adicionar() {
         return view('perfil-empresa');
     }
@@ -29,12 +25,18 @@ class PerfilEmpresaController extends Controller{
         }
         $novoDado -> users_id = $user -> id; 
         $novoDado -> save();
-        return redirect()->route('empresaMostrar', [$novoDado -> id]);
+        return redirect()->route('empresaIndex', [$novoDado -> id]);
     }
+
 
     public function mostrar(Request $req, $id){
         $registros = DetalhesEmpresa::find($id);
         return view ('empresa',compact('registros')); 
+    }
+
+    public function index(Request $req, $id) {
+        $registros = DetalhesEmpresa::find($id);
+        return view('empresa-index', compact('registros'));
     }
 
 

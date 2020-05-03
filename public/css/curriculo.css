@@ -125,6 +125,7 @@ nav ul li a:hover {
     
 }
 
+
 header img {
     border: 1px solid #FFF;
     width: 50px;
@@ -239,3 +240,19 @@ footer {
     
   
 }
+
+.caminhoEmpresa{
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.btn-danger{
+    padding-left: 90px!important;
+    padding-right: 90px!important;
+    margin-top: 30px!important;
+    margin-bottom: 50px!important;
+
+
+}
+
+

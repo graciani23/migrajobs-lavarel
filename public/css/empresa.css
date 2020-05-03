@@ -205,3 +205,23 @@ footer {
     display: inline-block;
     
 }
+
+.publiqueVaga {
+    padding-top: 160px;
+    margin-left: 30px;
+    color: white;
+
+}
+
+.h4 {
+    background-color: #6c195d;
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    color: #f1eeee;
+}
+
+.sobreAVaga {
+    margin-top: 10px;
+    margin-left: 10px;
+}

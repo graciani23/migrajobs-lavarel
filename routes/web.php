@@ -38,7 +38,7 @@ Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name
 Route::get('/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
-Route::get('/empresa-index', 'PerfilEmpresaController@index')->name('empresaIndex');
+Route::get('/empresa-index/{id}', 'PerfilEmpresaController@index')->name('empresaIndex');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
@@ -47,6 +47,8 @@ Route::get('/empresa/{id}', 'PerfilEmpresaController@mostrar')->name('empresaMos
 Route::get('/empresa-editar/{id}', 'PerfilEmpresaController@editar')->name('empresaEditar');
 Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar');
 Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar')->name('empresaDeletar');
+
+
 
 Route::get('/vaga-index', 'VagasController@index')->name('vagaIndex');
 Route::get('/publicar-vagas', 'VagasController@publicar')->name('vagasPublicar');
@@ -66,3 +68,4 @@ Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.va
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

@@ -113,7 +113,8 @@ nav ul li a:hover {
     border-radius: 10px;
     height: 30px;
     line-height: 30px;
-    width: 120px;
+    padding-left: 2px;
+    padding-right: 2px;
     text-align: center;
     color: #03BBDB;
     font-weight: bold;
@@ -172,12 +173,9 @@ header img {
     color: black;
 }
 
-.estadoCivil > label{
-    margin-left: 150px;
-}
 
 .estadoCivil > select {
-    width: 600px;
+    width: 430px;
 }
 
 /* Contato */
@@ -204,4 +202,40 @@ footer {
     font-size: 12px;
     display: inline-block;
     
+}
+
+/* Home candidato */
+
+.home_name{
+    padding-top: 65px;
+    padding-left: 25px;
+}
+
+.homeCandidato{
+    background-image: url("/assets/img/estrada.jpg");
+    background-size: cover;
+}
+
+.escolha{
+    padding-top: 150px;
+}
+
+.escolha > h1{
+    color: black;
+    font-family: fantasy;
+
+}
+
+.caminhoCurriculo{
+    padding-top: 130px;
+    padding-bottom: 300px;
+}
+
+.vagas{
+    font-size: x-large;
+    background-color: black;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    
+  
 }

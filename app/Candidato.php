@@ -8,14 +8,14 @@ class Candidato extends Model
 {
     protected $fillable = [
                             'id',
-                            'image',
                             'name',
                             'nationality',
                             'about_you',
                             'birth',
                             'age',
-                            'genre_female',
-                            'genre_male',
+                            'genre',
+                            'feminino',
+                            'masculino',
                             'status',
                             'document',
                             'zip_code',
@@ -41,6 +41,7 @@ class Candidato extends Model
                             'formation',
                             'course_description',
                             'usuario_id'
+
 
 ];
     

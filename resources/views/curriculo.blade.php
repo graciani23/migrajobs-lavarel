@@ -6,28 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/curriculo.css">
+    <link rel="stylesheet" href="/css/curriculo.css">
 
     <title>Curriculo</title>
 </head>
 
 <body>
 @include('includes/menuCurriculo')
-                <img src="assets/icones/user.svg" alt="">
-            </div>
-        </div>
+              
     </header>
 <form action="curriculo" method="post" enctype="multipart/form-data">
     @csrf
     <div class="container">
         <div class="fundo">
-            
+            @if(isset($candidato->image))
             <div class="foto">
-                <img src="assets/img/refugiado.jpg" alt="">
+                <img src="{{asset($candidato->image)}}">
             </div>
+            @endif
             
         </div>
-        {{csrf_field()}}
+       
 
         <div class="editar-foto form-group">
             <label for="edit-photo"></label>    
@@ -67,24 +66,28 @@
             
 
             <div class="sexo form-row pt-4 mx-4">
-                <!--<div class="custom-control custom-radio custom-control-inline pt-1 ">
-                    <input type="checkbox" id="genre_female" name="genre_female" class="custom-control-input" value="{{isset($candidato->genre_female) ? $candidato->genre_female : ''}}">
-                    <label class="custom-control-label" for="genre_female">Feminino</label>
+                <div class="col">
+                    <label class="ml-1 mr-2" for="genre">Sexo</label>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
+                        <label class="custom-control-label" for="genre">Feminino</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
+                        <label class="custom-control-label" for="genre">Masculino</label>
+                    </div>
                 </div>
-                <div class="custom-control custom-radio custom-control-inline pt-1">
-                    <input type="checkbox" id="genre_male" name="genre_male" class="custom-control-input" value="{{isset($candidato->genre_male) ? $candidato->genre_male : ''}}">
-                    <label class="custom-control-label" for="genre_male">Masculino</label>
-                </div>-->
 
-                <div class="estadoCivil pb-4">
-                    <label class=""for="estadoCivil">Estado Civil</label>
+                <div class="col form-row estadoCivil pb-4 ">
+                    <div class="pr-2">
+                        <label class="" for="estadoCivil">Estado Civil</label>
+                    </div>
                     <select class="estadoCivil bg-white border-secondary" name="status" id="status" >
                         <option value="">Estado Civil</option>
-                        <option value="solteiro">Solteiro(a)</option>
-                        <option value="casado">Casado(a)</option>
-                        <option value="separado">Separado(a)</option>
-                        <option value="divorciado">Divorciado(a)</option>
-                        <option value="viuvo"> Viúvo(a)</option>
+                        <option value="Solteiro(a)">Solteiro(a)</option>
+                        <option value="Casado(a)">Casado(a)</option>
+                        <option value="Divorciado(a)">Divorciado(a)</option>
+                        <option value="Viuvo(a)"> Viúvo(a)</option>
                     </select><br>
                 </div>
             </div>
@@ -114,7 +117,7 @@
 
                 <div class="form-group col-md-2">
                     <label for="city">UF</label>
-                        <input type="text" class="form-control border-secondary" name="uf" id="uf" value="{{isset($candidato->uf) ? $candidato->uf : ''}}">
+                    <input type="text" class="form-control border-secondary" name="uf" id="uf" value="{{isset($candidato->uf) ? $candidato->uf : ''}}">
                 </div>
                 <!--
                 <div class="form-group col-md-4">
@@ -202,6 +205,20 @@
                 <h4>Experiência</h4>
             </div>
 
+            <div class="areasInteresses pb-2 px-1 mx-4">
+                <label for="areas">Areas de interesse</label>
+                <select class="bg-light border-secondary" name="areas" id="areas" >
+                    <option value="">Selecione a área</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Financeiro">Financeiro</option>
+                    <option value="RH">Recursos Humanos</option>
+                    <option value="Comercial">Setor Comercial</option>
+                    <option value="Operacional">Setor Operacional</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Outras">Outras</option>
+                </select><br>
+            </div>
+
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal">Objetivo Profissional</label>
                 <textarea class="form-control border-secondary" name="professional_goal" id="professional_goal" rows="4" placeholder="Digite seu objetivo profissional">{{isset($candidato->profissional_goal) ? $candidato->profissional_goal : ''}}</textarea>
@@ -227,11 +244,11 @@
             </div>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" for="dataInicio">Data início:</label>
+                <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
 
-                <label class="termino pr-2" for="dataTermino">Data término:</label>
+                <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
 
                     @include('./includes/comboBoxMesAno')
 
@@ -253,7 +270,7 @@
                 <h4>Formação Acadêmica</h4>
             </div>
 
-            <form class="formacaoAcademica mx-4" method="">
+            <div class="formacaoAcademica" method="">
                 <div class="instituicao form-group pt-3 mx-4">
                     <label class="pr-2" for="instituicao">Instituição</label>
                     <input type="text" class="form-control border-secondary" name="instution" id="instution" placeholder="" value="{{isset($candidato->instution) ? $candidato->instution : ''}}">
@@ -263,15 +280,15 @@
                     <label class="pr-2 pt-2" for="formation">Formação</label>
                     <input type="text" class="form-control border-secondary" name="formation" id="formation" placeholder="" value="{{isset($candidato->formation) ? $candidato->formation : ''}}">
                 </div>
-            </form>
+            </div>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" for="dataInicio">Data início:</label>
+                <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
 
                 <br>
-                <label class="termino pr-2" for="dataTermino">Data término:</label>
+                <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
 
                     @include('./includes/comboBoxMesAno')
 

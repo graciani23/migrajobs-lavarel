@@ -21,21 +21,35 @@ class CurriculoController extends Controller
 
     public function store(Request $request)
     {   
-        
         $curriculo = $request->all();
         $usuario = new User();
         $usuario->fill($curriculo);
         $usuario->save();
         $novoCurriculo = new Candidato();
         $novoCurriculo->fill($curriculo);
-        $novoCurriculo->usuario_id = $usuario->id; 
+        if($request->hasFile('image')){
+            $path = $request->file('image')->store('img', 'public');
+            $novoCurriculo->image = $path;
+        }
+        
+        $novoCurriculo-> usuario_id = $usuario -> id; 
         $novoCurriculo->save();
-        return redirect()->back();
+        return redirect()->route('candidatoShow',[$novoCurriculo -> id]);
     }
 
     public function show(Request $request, $id){
         $candidatos = Candidato::find($id);
-        return view ('candidato', compact('candidatos')); 
+        return view('candidato', compact('candidatos')); 
+    }
+
+    public function homeShow(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view('homeCandidato', compact('candidatos')); 
+    }
+
+    public function menuShow(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view('includes.menuCurriculo', compact('candidatos')); 
     }
 
     public function edit($id) 
@@ -45,17 +59,23 @@ class CurriculoController extends Controller
     }
 
     public function update(Request $request, $id){
+        $candidatos = Candidato::find($id);
         $curriculo = $request->all();
+        if($request -> hasFile ('image')){
+            $path = $request->file('image')->store('img', 'public');
+            $candidatos-> image = $path;
+        }
         Candidato::find($id)->update($curriculo);
 
-        return redirect()->back();
-        
+        return redirect()->route('candidatoShow', [$candidatos -> id]);  
     }
 
     public function destroy($id){
         Candidato::find($id)->delete();
         return redirect()->route('index'); 
     }
+
+    
 
  
 }

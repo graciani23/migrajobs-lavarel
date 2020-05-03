@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    text-decoration: none;
+}
+
+body {
+    background-color:#f6f7f9;
+
+}
+
+.dados-pessoais, .endereco, .contato, .objetivo-profissional, .formacao-academica {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+h3, h4, h5 {
+    color: black;
+}
+
+.cancelar, .salvar {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Para todos */
+label{
+    color: black;
+}
+
+select {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    padding-right: 2px;
+    color: black;
+}
+
+input {
+    height: 35px;   
+}
+
+option {
+    color: black;
+}
+
+
+/* header */
+header {
+    width: 100%;
+    height: 80px;
+    background: #343A40;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.principal {
+    color: 1px solid #FFF;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 50px;
+}
+
+.principal img {
+    background-color: white;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+nav {
+    margin: auto 120px;
+    display: inline-block;
+}
+
+nav ul li {
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+    display: inline-block;
+  
+}
+
+nav ul li a {
+    color: #03BBDB; 
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+    background-color: #03BBDB;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.user {
+    font-size: 16px;
+    background-color: #F7F5F5;
+    border-radius: 10px;
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+    text-align: center;
+    color: #03BBDB;
+    font-weight: bold;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    margin-left: 60px;
+    
+}
+
+header img {
+    border: 1px solid #FFF;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: #FFF;
+    border-radius: 100%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Dados Pessoais */
+.fundo {
+    background-image: url("/assets/img/quebracabeca.jpg");
+    background-size: cover;
+    height: 180px;
+    margin-top: 50px;
+    
+}
+
+.foto img{
+    width: 170px;
+    height: 160px;
+    border-radius: 100%;
+    border: 3px solid #f1eeee;
+    object-fit: cover;
+    bottom: 45%;
+    margin-left: 20px;
+    position: absolute;
+    z-index: 5;
+}  
+
+.editar-foto {
+    padding-left: 170px;
+    font-size: small;
+    
+}
+
+.editar-foto > input {
+    color: black;
+}
+
+
+.estadoCivil {
+    color: black;
+}
+
+.estadoCivil > label{
+    margin-left: 150px;
+}
+
+.estadoCivil > select {
+    width: 600px;
+}
+
+/* Contato */
+.redes-sociais img{
+    width: 25px;
+}
+
+
+/* Profissional */
+.areasInteresses > select {
+    width: 100%;
+}
+
+.termino {
+    margin-left: 102px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: #343A40;
+    font-family: Montserrat;
+    font-size: 12px;
+    display: inline-block;
+    
+}

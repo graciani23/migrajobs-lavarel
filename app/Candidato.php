@@ -9,6 +9,7 @@ class Candidato extends Model
     protected $fillable = [
                             'id',
                             'name',
+                            'surname',
                             'nationality',
                             'about_you',
                             'birth',

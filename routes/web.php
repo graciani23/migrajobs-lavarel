@@ -24,7 +24,7 @@ Route::post('/cad-log-empresa', 'EmpresaController@store');
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
-Route::get('/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
+Route::get('/candidatoShow', 'CurriculoController@index')->name('curriculoIndex');
 Route::get('/curriculo', 'CurriculoController@create');
 Route::post('/curriculo', 'CurriculoController@store');
 Route::get('/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
@@ -34,6 +34,7 @@ Route::get('/curriculo/destroy/{id}', 'CurriculoController@destroy')->name('curr
 
 Route::get('/homeCandidato/{id}', 'CurriculoController@homeShow')->name('homeCandidatoShow');
 Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name('menuShow');
+//Route::get('/index/logout', 'CurriculoController@logout')->name('index.logout');
 
 Route::get('/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');

@@ -69,12 +69,12 @@
                 <div class="col">
                     <label class="ml-1 mr-2" for="genre">Sexo</label>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
-                        <label class="custom-control-label" for="genre">Feminino</label>
+                        <input type="radio" id="feminino" name="genre" class="custom-control-input" value="Feminino">
+                        <label class="custom-control-label" for="feminino">Feminino</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
-                        <label class="custom-control-label" for="genre">Masculino</label>
+                        <input type="radio" id="masculino" name="genre" class="custom-control-input" value="Masculino">
+                        <label class="custom-control-label" for="masculino">Masculino</label>
                     </div>
                 </div>
 

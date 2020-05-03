@@ -26,7 +26,18 @@ class ConfirmPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo()
+    {
+        dd("aqui... confirmPassword");
+        if (Auth()->user()->tipo === "Empresa") {
+            return redirect()->route('perfil-empresa');
+        }
+        // $id = Auth()->user()->id;
+        return redirect()->route('curriculo');
+        // dd(Auth::user());
+        //dd(Auth()->user()->name); retornou nome!! \o/
+    }
 
     /**
      * Create a new controller instance.

@@ -25,7 +25,7 @@ Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
 Route::get('/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
-Route::get('/curriculo', 'CurriculoController@create');
+Route::get('/curriculo', 'CurriculoController@create')->name('curriculo');
 Route::post('/curriculo', 'CurriculoController@store');
 Route::get('/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
 Route::get('/candidato-editar/{id}', 'CurriculoController@edit')->name('candidatoEdit');
@@ -39,7 +39,7 @@ Route::get('/search', 'SearchController@buscarVagasUsuario')->name('searchVagas'
 Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
 
 Route::get('/empresa-index/{id}', 'PerfilEmpresaController@index')->name('empresaIndex');
-Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar');
+Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar')->name('perfil-empresa');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
 

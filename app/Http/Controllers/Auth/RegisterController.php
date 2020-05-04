@@ -33,10 +33,10 @@ class RegisterController extends Controller
     protected function redirectTo()
     {
         if (Auth()->user()->tipo === "Empresa") {
-            return redirect()->route('perfil-empresa');
+            return 'perfil-empresa';
         }
         // $id = Auth()->user()->id;
-        return redirect()->route('curriculo');
+        return 'curriculo';
         // dd(Auth::user());
         //dd(Auth()->user()->name); retornou nome!! \o/
     }

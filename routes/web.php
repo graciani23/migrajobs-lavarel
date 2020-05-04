@@ -39,7 +39,9 @@ Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name
 
 Route::get('/vagasCandidato/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
 Route::get('/vagasCandidato/vagasInscritas', 'SearchController@vagasInscritas')->name('vagasInscritas');
-Route::get('/area_empresa', 'AreaEmpresaController@areaEmpresa');
+
+Route::get('/empresaCandidato/area_empresa', 'AreaEmpresaController@areaEmpresa')->name('areaEmpresa');
+Route::get('/empresaCandidato/perfilCandidato', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');
 
 Route::get('/empresa-index/{id}', 'PerfilEmpresaController@index')->name('empresaIndex');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar')->name('perfil-empresa');

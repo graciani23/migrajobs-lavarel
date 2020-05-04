@@ -12,7 +12,7 @@
 </head>
 
 <body>
-@include('includes/menuCurriculo')
+@include('includes/menuNewCurriculo')
               
     </header>
 <form action="curriculo" method="post" enctype="multipart/form-data">
@@ -29,30 +29,32 @@
        
 
         <div class="editar-foto form-group">
-            <label for="edit-photo"></label>    
+            <label class=" pr-3" for="edit-photo"></label>    
             <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
         </div>
 
         <section class="dados-pessoais border">
 
-            
             <div class="form-row pt-4 mx-4">
                 <div class="col">
                     <label class="label-nome pt-3" for="nome">Nome</label>
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{isset($candidato->name) ? $candidato->name : ''}}">
                 </div>
                 <div class="col">
-                    <label class="label-nome pt-3" id="nationality" for="nationality">Nacionalidade</label>
-                    <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidato->nationality) ? $candidato->nationality : ''}}">
+                    <label class="label-nome pt-3" id="surname" for="surname">Sobrenome</label>
+                    <input type="text" class="form-control border-secondary" name="surname" id="surname" placeholder="Sobrenome" value="{{isset($candidato->surname) ? $candidato->surname : ''}}">
                 </div>
             </div>
+            <div class="mx-4 px-1 pb-2">
+                <label class="label-nome pt-3" id="nationality" for="nationality">Nacionalidade</label>
+                <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidato->nationality) ? $candidato->nationality : ''}}">
+            </div>
             
-
             <div class="form-group pt-3 mx-4 px-1">
+                <label class="label-nome" id="about_you" for="about_you">Sobre você</label>
                 <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{isset($candidato->about_you) ? $candidato->about_you : ''}}</textarea>
             </div>
-
-            
+    
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="documento" id="document" for="document">Documento</label>
@@ -63,20 +65,21 @@
                     <input type="date" class="form-control border-secondary" name="birth" id="birth" placeholder="dd/mm/aaaa" value="{{isset($candidato->birth) ? $candidato->birth : ''}}">
                 </div>
             </div>
-            
 
             <div class="sexo form-row pt-4 mx-4">
                 <div class="col">
                     <label class="ml-1 mr-2" for="genre">Sexo</label>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
-                        <label class="custom-control-label" for="genre">Feminino</label>
+                        <input type="radio" id="feminino" name="genre" class="custom-control-input" value="Feminino">
+                        <label class="custom-control-label" for="feminino">Feminino</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
-                        <label class="custom-control-label" for="genre">Masculino</label>
+                        <input type="radio" id="masculino" name="genre" class="custom-control-input" value="Masculino">
+                        <label class="custom-control-label" for="masculino">Masculino</label>
                     </div>
                 </div>
+
+               
 
                 <div class="col form-row estadoCivil pb-4 ">
                     <div class="pr-2">
@@ -174,19 +177,19 @@
 
             <div class="redes-sociais form-row mx-4">
                 <div class="col">
-                    <img src="./assets/icones/quadrado-linkedin.png" alt="linkedin">
+                    <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
                     <a href="https://www.linkedin.com"></a>
                     <label class="linkedin pt-4" for="linkedin">Linkedin</label>
                     <input type="text" class="form-control border-secondary" name="linkedin" id="linkedin" placeholder="Linkedin" value="{{isset($candidato->linkedin) ? $candidato->linkedin : ''}}">
                 </div>
                     <div class="col">
-                    <img src="./assets/icones/quadrado-Instagram.png" alt="instagram">
+                    <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
                     <a href="https://www.instagram.com/"></a>
                     <label class="instagram pt-4" for="instagram">Instagram</label>
                     <input type="text" class="form-control border-secondary" name="instagram" id="instagram" placeholder="Instagram" value="{{isset($candidato->instagram) ? $candidato->instagram : ''}}">
                 </div>
                     <div class="col pb-4">
-                    <img src="./assets/icones/quadrado-facebook.png" alt="facebook">
+                    <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
                     <a href="https://www.facebook.com/"></a>
                     <label class="facebook pt-4" for="facebook">Facebook</label>
                     <input type="text" class="form-control border-secondary" name="facebook" id="facebook" placeholder="Facebook" value="{{isset($candidato->facebook) ? $candidato->facebook : ''}}">

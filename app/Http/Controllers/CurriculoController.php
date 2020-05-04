@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Candidato;
 use App\User;
+use App\Vaga;
+//use App\Http\Controllers\VagasController;
+
 
 class CurriculoController extends Controller
 {
@@ -16,7 +19,7 @@ class CurriculoController extends Controller
 
     public function create() 
     {
-        return view('curriculo');
+        return view('candidatos/curriculo');
     }
 
     public function store(Request $request)
@@ -39,23 +42,14 @@ class CurriculoController extends Controller
 
     public function show(Request $request, $id){
         $candidatos = Candidato::find($id);
-        return view('candidato', compact('candidatos')); 
+        return view('/candidatos/candidato', compact('candidatos')); 
     }
 
-    public function homeShow(Request $request, $id){
-        $candidatos = Candidato::find($id);
-        return view('homeCandidato', compact('candidatos')); 
-    }
-
-    public function menuShow(Request $request, $id){
-        $candidatos = Candidato::find($id);
-        return view('includes.menuCurriculo', compact('candidatos')); 
-    }
-
+    
     public function edit($id) 
     {
         $candidatos = Candidato::find($id);
-        return view('candidato-editar', compact('candidatos'));
+        return view('/candidatos/candidato-editar', compact('candidatos'));
     }
 
     public function update(Request $request, $id){
@@ -66,16 +60,41 @@ class CurriculoController extends Controller
             $candidatos-> image = $path;
         }
         Candidato::find($id)->update($curriculo);
-
+        
         return redirect()->route('candidatoShow', [$candidatos -> id]);  
     }
-
+    
     public function destroy($id){
         Candidato::find($id)->delete();
         return redirect()->route('index'); 
     }
+    
+    public function homeShow(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view('/candidatos/homeCandidato', compact('candidatos')); 
+    }
 
+    public function menuShow(Request $request, $id){
+        $candidatos = Candidato::find($id);
+        return view('includes.menuCurriculo', compact('candidatos')); 
+    }
+
+    /* public function logout()
+    {
+        Auth::logout();
+
+        return redirect()->route('index');
+
+    }
+ */
+
+    /* public function vagaShow(Request $request, VagaResourceInterface $dadosVaga, $id)
+    {
+        $dadosVaga = $dadosVaga->vagaShow($request->all());
+        //$dadosVaga = Vaga::find($id);
+        return redirect('vagaShow', compact('dadosVaga')); 
+    } */
+}
     
 
  
-}

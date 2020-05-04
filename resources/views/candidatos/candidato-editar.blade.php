@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/curriculo.css">
 
-    <title>Curriculo</title>
+    <title>Candidato-Editar</title>
 </head>
 
 <body>
@@ -30,11 +30,10 @@
 
         <div class="editar-foto form-group">
             <label for="edit-photo"></label>    
-            <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
+            <input type="file" class="form-control-file pr-5" name="edit_photo" id="edit_photo">
         </div>
 
         <section class="dados-pessoais border">
-
             
             <div class="form-row mx-4">
                 <div class="col">
@@ -42,17 +41,19 @@
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{isset($candidatos->name) ? $candidatos->name : ''}}">
                 </div>
                 <div class="col">
+                    <label class="label-nome pt-5" id="surname" for="surname">Sobrenome</label>
+                    <input type="text" class="form-control border-secondary" name="surname" id="surname" placeholder="Sobrenome" value="{{isset($candidatos->surname) ? $candidatos->surname : ''}}">
+                </div>
+            </div>
+                <div class="mx-4 px-1 pb-2">
                     <label class="label-nome pt-5" id="nationality" for="nationality">Nacionalidade</label>
                     <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidatos->nationality) ? $candidatos->nationality : ''}}">
                 </div>
-            </div>
             
-
             <div class="form-group pt-3 mx-4 px-1">
                 <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{isset($candidatos->about_you) ? $candidatos->about_you : ''}}</textarea>
             </div>
 
-            
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="data-nascimento" for="data-nascimento">Data de Nascimento</label>
@@ -64,17 +65,16 @@
                 </div>
             </div>
             
-
             <div class="sexo form-row pt-4 mx-4">
                 <div class="col">
                     <label class="ml-1 mr-2" for="genre">Sexo</label>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Feminino">
-                        <label class="custom-control-label" for="genre">Feminino</label>
+                        <input type="radio" id="feminino" name="genre" class="custom-control-input" value="Feminino">
+                        <label class="custom-control-label" for="feminino">Feminino</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genre" name="genre" class="custom-control-input" value="Masculino">
-                        <label class="custom-control-label" for="genre">Masculino</label>
+                        <input type="radio" id="masculino" name="genre" class="custom-control-input" value="Masculino">
+                        <label class="custom-control-label" for="masculino">Masculino</label>
                     </div>
                 </div>
 
@@ -102,7 +102,6 @@
             <div class="pt-3 mx-4">
                 <h4>Endereço</h4>
             </div>
-
 
             <div class="form-row mx-4">
                 <div class="form-group col-md-4">
@@ -153,13 +152,11 @@
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
         </section>
-        
 
         <section class="contato border mt-3">
             <div class="pt-3 mx-4">
                 <h4>Contato</h4>
             </div>
-
 
             <div class="form-row pt-3 mx-4">
                 <div class="col">
@@ -198,7 +195,6 @@
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
         </section>
-        
 
         <section class="objetivo-profissional border mt-3">
             <div class="Experiência pt-3 mx-4">
@@ -304,8 +300,6 @@
         </section>
     </div>
 </form>
-
- 
 
     <div class="rodape mt-3">
         <footer>

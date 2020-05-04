@@ -19,20 +19,17 @@
         <div class="container">
 
             <div class="escolha d-flex justify-content-center">
-                <h1 class="" >QUEM FAZ O SEU CAMINHO É VOCÊ  </h1>
+                <p class="" >QUEM FAZ O SEU CAMINHO É VOCÊ</p>
             </div>
 
             <div class="caminhoCurriculo d-flex justify-content-center">
-                <div>
-                    <a href="{{route('candidatoShow', $candidatos)}}" class="btn btn-dark font-weight-bold mr-5">Vizualize o seu currículo</a>
+                <div class="linkCurriculo">
+                    <a href="{{route('candidatoShow', $candidatos)}}" class="btn font-weight-bold mr-5">Vizualize o seu currículo</a>
                 </div>
-                <div>
-                    <a href="{{route('candidatoEdit', $candidatos)}}" class="btn btn-dark font-weight-bold">Atualize o seu currículo</a>
+                <div class="linkCurriculo">
+                    <a href="{{route('candidatoEdit', $candidatos)}}" class="btn font-weight-bold ml-5">Atualize o seu currículo</a>
                 </div>
             </div>
-            
-    
-
 
             <div class="d-flex justify-content-center pb-5">
                 <div class="d-flex align-items-center">

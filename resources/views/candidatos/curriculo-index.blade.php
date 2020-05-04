@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/curriculo.css">
 
-    <title>Curriculo</title>
+    <title>Curriculo-Index</title>
 </head>
 
 <body>
@@ -20,16 +20,16 @@
 
     <div class="container">
         <div class="fundo">
-            <div class="foto">
-                <img src="{{asset("storage/".$candidatos->image)}}" alt="">
+            @foreach($candidatos as $candidato)
+                <img src="{{asset($candidato->image)}}" alt="">
             </div>
         </div>
-        <div>
+        <form>
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
                 <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
             </div>
-        </div>
+        </form>
 
         <section class="dados-pessoais border">
             <div class="form-row mx-4">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="form-group mx-4 px-1">
-                <label class="label-nome pt-4" style="font-weight:bold" id="about_you" for="about_you">Sobre você</label>
+                <label class="label-nome pt-5" style="font-weight:bold" id="about_you" for="about_you">Sobre você</label>
                 <div style="color:black"> {{ $candidatos->about_you }}</div> 
             </div>
 
@@ -61,19 +61,16 @@
             </div>
 
             <div class="sexo form-row pt-4 mx-4">
-                <div class="col form-row">
-                    <label class="pl-1" style="font-weight:bold" for="gender">Sexo</label>
-                    <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="genge" name="genre" class="custom-control-input">
-                        <div style="color:black"> {{ $candidatos->genre }}</div>
-                    </div>
+                <label class="" for="genre">Sexo</label>
+                <div class="custom-control custom-radio custom-control-inline pt-1 ">
+                    <input type="radio" id="genre_female" name="genre" class="custom-control-input">
+                    <div style="color:black"> {{ $candidatos->genre }}</div>
                 </div>
-            
-                <div class="estadoCivil col form-row pb-4 mx-4">
-                    <label class="pl-1" style="font-weight:bold" for="status">Estado Civil</label>
-                    <div class="pl-3" style="color:black"> {{$candidatos->status}}  </div> 
+                
+                <div class="estadoCivil pb-4 pl-5">
+                    <label class="" style="font-weight:bold" for="estadoCivil">Estado Civil</label>
+                    <div style="color:black"> {{$candidatos->status}}  </div> 
                 </div>
-            </div>
         </section>
         
 
@@ -101,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col">
+                <div class="form-group col">2
                     <label for="uf" style="font-weight:bold">UF</label>
                     <div style="color:black"> {{$candidatos->uf}}  </div> 
                     <div class="form-group pt-4">

@@ -25,6 +25,7 @@ class CreateCandidatosTable extends Migration
             $table->increments('id');
             $table->string('image')->nullable();
             $table->string('name', 45);
+            $table->string('surname', 45);
             $table->string('nationality', 45);
             $table->string('about_you', 500);
             $table->date('birth');
@@ -44,7 +45,7 @@ class CreateCandidatosTable extends Migration
             $table->string('instagram', 45)->nullable();;
             $table->string('facebook', 45)->nullable();
             $table->string('professional_goal', 200)->nullable();
-            $table->string('areas',45);
+            $table->string('areas',45)->nullable();
             $table->longText('professional_experience')->nullable();
             $table->string('company', 45)->nullable();
             $table->string('job_role', 45)->nullable();

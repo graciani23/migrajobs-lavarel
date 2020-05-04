@@ -14,6 +14,8 @@
 
 @include('includes/menuResponsivo')
 
+<div class="container">
+    <main>
 <div class="buscadecandidato">
 	<div class="encontreCandidato">
 				<p>ENCONTRE O SEU CANDIDATO</p>
@@ -33,8 +35,6 @@
 		</form>
 	</div>
 
-    <div class="container">
-        <main>
 
             <div id="resultado">
                 <p>
@@ -49,7 +49,7 @@
                     <h3>Omar Al-Amin</h3>
                     <p>50 anos</p>
                     <p>Idiomas: Inglês e árabe</p>
-                    <a href="curriculo.php">Saiba mais</a>
+                    <a href="{{('perfilCandidato')}}">Saiba mais</a>
                 </div>
 
                 <div class="candidato">
@@ -117,7 +117,7 @@
 
 	<!-- numeração de página a ser implementada com Laravel -->
 
-        @include('includes/footer')
+    @include('includes/footer')
 
         <link rel="stylesheet" href="/css/estiloFooter.css">
     </body>

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Vaga; 
+use App\Vaga;
+//use App\Http\Controllers\CurriculoController;
+
 
 class VagasController extends Controller
 {
@@ -36,6 +38,11 @@ class VagasController extends Controller
          Vaga::find($id)->delete();
         return redirect()->back(); 
     }
+
+    /* public function mostrarVagasCandidato(Request $req, $id){
+        $dadosVaga = Vaga::find($id);
+        return reditect()->route('search', compact('vagaCandidato')); 
+    } */
 }
 
 

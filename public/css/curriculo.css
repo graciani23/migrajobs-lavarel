@@ -136,6 +136,7 @@ nav ul li a:hover {
 }
 
 
+
 header img {
     border: 1px solid #FFF;
     width: 50px;
@@ -145,8 +146,6 @@ header img {
     border-radius: 100%;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
-
 
 /* Dados Pessoais */
 .fundo {
@@ -169,7 +168,7 @@ header img {
 }  
 
 .editar-foto {
-    padding-left: 170px;
+    padding-left: 185px;
     font-size: small;
 }
 
@@ -259,9 +258,6 @@ footer {
     background-color: black;
     padding-bottom: 3px;
     border-radius: 5px;
-<<<<<<< HEAD
-}
-=======
     
   
 }
@@ -270,6 +266,7 @@ footer {
     padding-top: 60px;
     padding-bottom: 40px;
 }
+
 
 .btn-danger{
     padding-left: 90px!important;
@@ -281,4 +278,3 @@ footer {
 }
 
 
->>>>>>> master

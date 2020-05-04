@@ -12,7 +12,7 @@
 </head>
 
 <body>
-@include('includes/menuCurriculo')
+@include('includes/menuNewCurriculo')
               
     </header>
 <form action="curriculo" method="post" enctype="multipart/form-data">
@@ -29,7 +29,7 @@
        
 
         <div class="editar-foto form-group">
-            <label for="edit-photo"></label>    
+            <label class=" pr-3" for="edit-photo"></label>    
             <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
         </div>
 

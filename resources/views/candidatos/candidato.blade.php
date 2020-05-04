@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/curriculo.css">
 
-    <title>Curriculo</title>
+    <title>Candidato</title>
 </head>
 
 <body>
@@ -24,14 +24,8 @@
                 <img src="{{asset("storage/".$candidatos->image)}}" alt="">
             </div>
         </div>
-        <div>
-            <div class="editar-foto form-group">
-                <label for="edit-photo"></label>
-                <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
-            </div>
-        </div>
 
-        <section class="dados-pessoais border">
+        <section class="dados-pessoais border pt-4">
             <div class="form-row mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" style="font-weight:bold" for="nome">Nome</label>
@@ -75,7 +69,6 @@
                 </div>
             </div>
         </section>
-        
 
         <section class="endereco border mt-3 d-flex flex-column">
             <div class="pt-3 mx-4">
@@ -117,9 +110,7 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
-        </section>
-        
-        
+        </section> 
 
         <section class="contato border mt-3 display">
             <div class=" align-self-start pt-3 mx-4">
@@ -158,8 +149,7 @@
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
-        </section>
-        
+        </section>  
 
         <section class="objetivo-profissional border mt-3">
             <div class="Experiência pt-3 mx-4">
@@ -254,8 +244,6 @@
             </form>
         </section>
     </div>
-
-
 
     <div class="rodape mt-3">
         <footer>

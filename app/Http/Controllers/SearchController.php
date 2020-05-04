@@ -10,7 +10,14 @@ use App\Vaga;
 class SearchController extends Controller
 {
     public function buscarVagasUsuario() {
-        return view('search');
+        return view('vagasCandidato/search');
     }
+
+    public function vagasInscritas() {
+        return view('vagasCandidato/vagasInscritas');
+    }
+
+    
+
 
 }

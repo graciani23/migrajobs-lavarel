@@ -14,7 +14,7 @@ class PerfilEmpresaController extends Controller{
 
     public function adicionarSubmitPost(Request $req){
         $dados = $req->all();
-        $user = new User();
+        $user = auth()->user();
         $user ->fill($dados);
         $user -> save();
         $novoDado = new DetalhesEmpresa();
@@ -29,13 +29,15 @@ class PerfilEmpresaController extends Controller{
     }
 
 
-    public function mostrar(Request $req, $id){
-        $registros = DetalhesEmpresa::find($id);
+    public function mostrar(Request $req){
+        $registros = auth()->user()->empresa;
+        //dd(auth()->user()->empresa);
         return view ('empresa',compact('registros')); 
     }
 
     public function index(Request $req, $id) {
         $registros = DetalhesEmpresa::find($id);
+    
         return view('empresa-index', compact('registros'));
     }
 
@@ -48,12 +50,12 @@ class PerfilEmpresaController extends Controller{
     public function atualizar(Request $req, $id){
         $registros = DetalhesEmpresa::find($id);
         $dados = $req->all();
+        $registros ->fill ($dados); 
         if($req -> hasFile ('imagem')){
             $path = $req->file('imagem')->store('img', 'public');
             $registros->imagem = $path;
         }
-        DetalhesEmpresa::find($id)->update($dados);
-       
+        $registros -> save(); 
         return redirect()->route('empresaMostrar', [$registros -> id]);
 
 

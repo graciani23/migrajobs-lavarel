@@ -37,8 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function DetalheEmpresa()
+    public function empresa()
     {
-        return $this->hasOne('App\DetalhesEmpresa', 'foreign_key', 'users_id');
+        return $this->hasOne('App\DetalhesEmpresa', 'users_id');
     }
 }

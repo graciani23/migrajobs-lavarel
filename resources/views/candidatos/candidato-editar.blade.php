@@ -41,10 +41,14 @@
                     <input type="text" class="form-control border-secondary" name="name" id="name" placeholder="Nome" value="{{isset($candidatos->name) ? $candidatos->name : ''}}">
                 </div>
                 <div class="col">
+                    <label class="label-nome pt-5" id="surname" for="surname">Sobrenome</label>
+                    <input type="text" class="form-control border-secondary" name="surname" id="surname" placeholder="Sobrenome" value="{{isset($candidatos->surname) ? $candidatos->surname : ''}}">
+                </div>
+            </div>
+                <div class="mx-4 px-1 pb-2">
                     <label class="label-nome pt-5" id="nationality" for="nationality">Nacionalidade</label>
                     <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidatos->nationality) ? $candidatos->nationality : ''}}">
                 </div>
-            </div>
             
             <div class="form-group pt-3 mx-4 px-1">
                 <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{isset($candidatos->about_you) ? $candidatos->about_you : ''}}</textarea>

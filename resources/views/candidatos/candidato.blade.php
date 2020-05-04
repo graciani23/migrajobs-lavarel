@@ -30,7 +30,10 @@
                 <div class="col">
                     <label class="label-nome pt-5" style="font-weight:bold" for="nome">Nome</label>
                     <div style="color:black"> {{ $candidatos->name }}</div> 
-                    
+                </div>
+                <div class="col">
+                    <label class="label-nome pt-5" style="font-weight:bold" for="surname">Sobrenome</label>
+                    <div style="color:black"> {{ $candidatos->surname }}</div> 
                 </div>
                 <div class="col">
                     <label class="label-nome pt-5" style="font-weight:bold" id="nationality" for="nationality">Nacionalidade</label>
@@ -178,7 +181,7 @@
 
             <div class="cargo form-group px-1 mx-4">
                 <label class="pr-2 pt-2" style="font-weight:bold" for="jobe_role">Cargo</label>
-                <div style="color:black"> {{ $candidatos->jobe_role }}  </div> 
+                <div style="color:black"> {{ $candidatos->job_role }}  </div> 
             </div>
             
             <div class="data form-row pt-2 mx-4">

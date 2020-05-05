@@ -18,7 +18,7 @@
         <div class="container">
 
             <div class="escolha d-flex justify-content-center">
-                <h1 class="" >AJUDE A CONSTRUIR UM NOVO CAMINHO</h1>
+                <h1 class="novoCaminho" >AJUDE A CONSTRUIR UM NOVO CAMINHO</h1>
             </div>
 
             <div class="caminhoEmpresa d-flex justify-content-center">

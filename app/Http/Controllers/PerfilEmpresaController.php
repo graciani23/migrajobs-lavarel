@@ -35,20 +35,26 @@ class PerfilEmpresaController extends Controller{
         return view ('empresa',compact('registros')); 
     }
 
-    public function index(Request $req, $id) {
-        $registros = DetalhesEmpresa::find($id);
+    public function index(Request $req) {
+        $registros = auth()->user()->empresa;
+        
+        //DetalhesEmpresa::find($id);
     
         return view('empresa-index', compact('registros'));
     }
 
 
-    public function editar ($id){
-        $registros = DetalhesEmpresa::find($id);
+    public function editar (){
+        $registros = auth()->user()->empresa;
+        
+        //DetalhesEmpresa::find($id);
         return view('empresa-editar',compact('registros'));
     }
 
-    public function atualizar(Request $req, $id){
-        $registros = DetalhesEmpresa::find($id);
+    public function atualizar(Request $req){
+        $registros = auth()->user()->empresa;
+        
+        //DetalhesEmpresa::find($id);
         $dados = $req->all();
         $registros ->fill ($dados); 
         if($req -> hasFile ('imagem')){
@@ -56,15 +62,18 @@ class PerfilEmpresaController extends Controller{
             $registros->imagem = $path;
         }
         $registros -> save(); 
-        return redirect()->route('empresaMostrar', [$registros -> id]);
+        return redirect()->route('empresaMostrar', [$registros]);
 
 
         //return redirect('/empresa-index');
     }
 
     
-    public function deletar($id){
-        DetalhesEmpresa::find($id)->delete();
+    public function deletar(){
+        $registros = auth()->user()->empresa;
+        $registros -> delete();
+
+        //DetalhesEmpresa::find($id)->delete();
         return redirect()->route('index'); 
     }
 

@@ -43,15 +43,15 @@ Route::get('/vagasCandidato/vagasInscritas', 'SearchController@vagasInscritas')-
 Route::get('/empresaCandidato/area_empresa', 'AreaEmpresaController@areaEmpresa')->name('areaEmpresa');
 Route::get('/empresaCandidato/perfilCandidato', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');
 
-Route::get('/empresa-index/{id}', 'PerfilEmpresaController@index')->name('empresaIndex');
+Route::get('/empresa-index', 'PerfilEmpresaController@index')->name('empresaIndex')->middleware('auth');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar')->name('perfil-empresa');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
 
 Route::get('/empresa', 'PerfilEmpresaController@mostrar')->name('empresaMostrar')->middleware('auth');
-Route::get('/empresa-editar/{id}', 'PerfilEmpresaController@editar')->name('empresaEditar');
-Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar');
-Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar')->name('empresaDeletar');
+Route::get('/empresa-editar', 'PerfilEmpresaController@editar')->name('empresaEditar')->middleware('auth');
+Route::put('/perfil-empresa/atualizar', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar')->middleware('auth');
+Route::get('/perfil-empresa/deletar', 'PerfilEmpresaController@deletar')->name('empresaDeletar')->middleware('auth');
 
 
 

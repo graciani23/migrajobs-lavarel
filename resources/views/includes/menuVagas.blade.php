@@ -6,7 +6,7 @@
                 <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="perfil-empresa">Área da empresa</a></li>
+                        <li><a href="empresa-index">Área da empresa</a></li>
                         <li><a href="area_empresa">Buscar candidatos</a></li>
                     </ul>
                 </nav>

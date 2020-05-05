@@ -43,8 +43,10 @@
                 </tbody>
             </table>
         </section>
-        
-   
+        <div>
+            <a  href="{{route('vagasPublicar')}}" class="btn btn-info font-weight-bold">Publique uma nova vaga!</a>
+        </div>
+
   
 </div>
     <br>

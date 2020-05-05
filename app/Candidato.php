@@ -45,6 +45,9 @@ class Candidato extends Model
 
 
 ];
-    
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'foreign_key');
+    }
             
 }

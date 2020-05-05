@@ -27,13 +27,13 @@ Route::post('/cad-log-imigrante', 'ImigranteController@store');
 Route::get('/candidatos/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
 Route::get('/candidatos/curriculo', 'CurriculoController@create')->name('curriculo');
 Route::post('/candidatos/curriculo', 'CurriculoController@store');
-Route::get('/candidatos/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
-Route::get('/candidatos/candidato-editar/{id}', 'CurriculoController@edit')->name('candidatoEdit');
-Route::put('/candidatos/curriculo/update/{id}', 'CurriculoController@update')->name('curriculoUpdate');
-Route::get('/candidatos/curriculo/destroy/{id}', 'CurriculoController@destroy')->name('curriculoDestroy');
+Route::get('/candidatos/candidato', 'CurriculoController@show')->name('candidatoShow')->middleware('auth');
+Route::get('/candidatos/candidato-editar', 'CurriculoController@edit')->name('candidatoEdit');
+Route::put('/candidatos/curriculo/update', 'CurriculoController@update')->name('curriculoUpdate');
+Route::get('/candidatos/curriculo/destroy', 'CurriculoController@destroy')->name('curriculoDestroy');
 
-Route::get('/candidatos/homeCandidato/{id}', 'CurriculoController@homeShow')->name('homeCandidatoShow');
-Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name('menuShow');
+Route::get('/candidatos/homeCandidato', 'CurriculoController@homeShow')->name('homeCandidatoShow');
+Route::get('/includes/menuCurriculo', 'CurriculoController@menuShow')->name('menuShow');
 //Route::get('/index/logout', 'CurriculoController@logout')->name('index.logout');
 //Route::get('search/{id}', 'CurriculoController@vagaShow')->name('vagaShow');
 
@@ -62,7 +62,7 @@ Route::post('/publicar-vagas', 'VagasController@publicarSubmitPost');
 Route::get('/publicar-vagar-salvar', 'VagasController@salvar')->name('vagasSalvar');
 Route::get('/vaga/{id}', 'VagasController@mostrar')->name('vagaMostrar');
 Route::get('/vaga/deletar/{id}', 'VagasController@deletar')->name('vagaDeletar');
-//Route::get('/search/{id}', 'VagasController@mostrarVagasCandidato')->name('vagaCandidato');
+
 
 Route::get('/index', 'AuthController@index')->name('index');
 Route::get('/index/login', 'AuthController@showIndexLogin')->name('index.login');

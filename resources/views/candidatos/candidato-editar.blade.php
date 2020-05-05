@@ -30,7 +30,7 @@
 
         <div class="editar-foto form-group">
             <label for="edit-photo"></label>    
-            <input type="file" class="form-control-file pr-5" name="edit_photo" id="edit_photo">
+            <input type="file" class="form-control-file pr-5" name="image" id="edit_photo">
         </div>
 
         <section class="dados-pessoais border">

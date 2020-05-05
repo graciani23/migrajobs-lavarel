@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\DetalhesEmpresa', 'users_id');
     }
+
+    public function candidato()
+    {
+        return $this->hasOnde('App\Candidato', 'usuario_id');
+    }
 }

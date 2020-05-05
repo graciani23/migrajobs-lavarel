@@ -5,18 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Candidato;
 use App\User;
-use App\Vaga;
-//use App\Http\Controllers\VagasController;
-
 
 class CurriculoController extends Controller
 {
-    public function index()
-    {
-        $candidatos = Candidato::all();
-        return view('curriculo-index', compact('candidatos'));
-    }
-
     public function create() 
     {
         return view('candidatos/curriculo');
@@ -25,7 +16,7 @@ class CurriculoController extends Controller
     public function store(Request $request)
     {   
         $curriculo = $request->all();
-        $usuario = new User();
+        $usuario = auth()->user();
         $usuario->fill($curriculo);
         $usuario->save();
         $novoCurriculo = new Candidato();
@@ -37,35 +28,42 @@ class CurriculoController extends Controller
         
         $novoCurriculo-> usuario_id = $usuario -> id; 
         $novoCurriculo->save();
-        return redirect()->route('candidatoShow',[$novoCurriculo -> id]);
+        return redirect()->route('curriculoIndex',[$novoCurriculo -> id]);
     }
 
-    public function show(Request $request, $id){
-        $candidatos = Candidato::find($id);
+    public function show(Request $request){
+        $candidatos = auth()->user()->candidato;
         return view('/candidatos/candidato', compact('candidatos')); 
     }
 
-    
-    public function edit($id) 
+    public function index(Request $Request)
     {
-        $candidatos = Candidato::find($id);
+        $candidatos = auth()->user()->candidato;
+        return view('curriculo-index', compact('candidatos'));
+    }
+
+    
+    public function edit() 
+    {
+        $candidatos = auth()->user()->candidato;
         return view('/candidatos/candidato-editar', compact('candidatos'));
     }
 
-    public function update(Request $request, $id){
-        $candidatos = Candidato::find($id);
+    public function update(Request $request){
+        $candidatos = auth()->user()->candidato;
         $curriculo = $request->all();
+        $candidatos->fill($curriculo);
         if($request -> hasFile ('image')){
             $path = $request->file('image')->store('img', 'public');
-            $candidatos-> image = $path;
+            $candidatos->image = $path;
         }
-        Candidato::find($id)->update($curriculo);
-        
-        return redirect()->route('candidatoShow', [$candidatos -> id]);  
+        $curriculo->save();
+        return redirect()->route('candidatoShow', [$candidatos]);  
     }
     
     public function destroy($id){
-        Candidato::find($id)->delete();
+        $candidatos = auth()->user()->candidato;
+        $candidatos->delete();
         return redirect()->route('index'); 
     }
     
@@ -79,21 +77,6 @@ class CurriculoController extends Controller
         return view('includes.menuCurriculo', compact('candidatos')); 
     }
 
-    /* public function logout()
-    {
-        Auth::logout();
-
-        return redirect()->route('index');
-
-    }
- */
-
-    /* public function vagaShow(Request $request, VagaResourceInterface $dadosVaga, $id)
-    {
-        $dadosVaga = $dadosVaga->vagaShow($request->all());
-        //$dadosVaga = Vaga::find($id);
-        return redirect('vagaShow', compact('dadosVaga')); 
-    } */
 }
     
 

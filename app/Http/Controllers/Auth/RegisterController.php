@@ -35,10 +35,9 @@ class RegisterController extends Controller
         if (Auth()->user()->tipo === "Empresa") {
             return 'perfil-empresa';
         }
-        // $id = Auth()->user()->id;
-        return 'curriculo';
-        // dd(Auth::user());
-        //dd(Auth()->user()->name); retornou nome!! \o/
+
+        return 'candidatos/curriculo';
+
     }
 
     /**

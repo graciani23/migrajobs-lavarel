@@ -18,9 +18,6 @@ Route::get('/index',  'IndexController@exibirIndex')->name('index');
 Route::post('index', 'MessageController@enviarEmail');
 Route::get('/index#link-contato', 'MessageController@enviarEmail')->name('index-contato');
 
-Route::get('/cad-log-empresa', 'EmpresaController@cadastrarEmpresa')->name('cad_empresa');
-Route::post('/cad-log-empresa', 'EmpresaController@store');
-
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 

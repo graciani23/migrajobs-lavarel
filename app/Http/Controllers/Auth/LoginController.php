@@ -46,6 +46,6 @@ class LoginController extends Controller
             return 'perfil-empresa';
         }
 
-        return 'curriculo';
+        return 'candidatos/curriculo';
     }
 }

@@ -10,7 +10,7 @@
                         <li><a href="/publicar-vagas">Publicar vagas</a></li>
                         <li><a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit(); class="sair">Sair</a></li>
+                                        document.getElementById('logout-form').submit()"; class="sair">Sair</a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>

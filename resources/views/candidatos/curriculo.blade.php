@@ -15,7 +15,7 @@
 @include('includes/menuNewCurriculo')
               
     </header>
-<form action="curriculo" method="post" enctype="multipart/form-data">
+<form action="/candidatos/curriculo" method="post" enctype="multipart/form-data">
     @csrf
     <div class="container">
         <div class="fundo">
@@ -30,7 +30,7 @@
 
         <div class="editar-foto form-group">
             <label class=" pr-3" for="edit-photo"></label>    
-            <input type="file" class="form-control-file" name="edit_photo" id="edit_photo">
+            <input type="file" class="form-control-file" name="image" id="edit_photo">
         </div>
 
         <section class="dados-pessoais border">

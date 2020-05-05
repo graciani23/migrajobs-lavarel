@@ -24,13 +24,13 @@ Route::post('/cad-log-imigrante', 'ImigranteController@store');
 Route::get('/candidatos/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
 Route::get('/candidatos/curriculo', 'CurriculoController@create')->name('curriculo');
 Route::post('/candidatos/curriculo', 'CurriculoController@store');
-Route::get('/candidatos/candidato/{id}', 'CurriculoController@show')->name('candidatoShow');
-Route::get('/candidatos/candidato-editar/{id}', 'CurriculoController@edit')->name('candidatoEdit');
-Route::put('/candidatos/curriculo/update/{id}', 'CurriculoController@update')->name('curriculoUpdate');
-Route::get('/candidatos/curriculo/destroy/{id}', 'CurriculoController@destroy')->name('curriculoDestroy');
+Route::get('/candidatos/candidato', 'CurriculoController@show')->name('candidatoShow')->middleware('auth');
+Route::get('/candidatos/candidato-editar', 'CurriculoController@edit')->name('candidatoEdit');
+Route::put('/candidatos/curriculo/update', 'CurriculoController@update')->name('curriculoUpdate');
+Route::get('/candidatos/curriculo/destroy', 'CurriculoController@destroy')->name('curriculoDestroy');
 
-Route::get('/candidatos/homeCandidato/{id}', 'CurriculoController@homeShow')->name('homeCandidatoShow');
-Route::get('/includes/menuCurriculo/{id}', 'CurriculoController@menuShow')->name('menuShow');
+Route::get('/candidatos/homeCandidato', 'CurriculoController@homeShow')->name('homeCandidatoShow');
+Route::get('/includes/menuCurriculo', 'CurriculoController@menuShow')->name('menuShow');
 //Route::get('/index/logout', 'CurriculoController@logout')->name('index.logout');
 //Route::get('search/{id}', 'CurriculoController@vagaShow')->name('vagaShow');
 
@@ -40,15 +40,16 @@ Route::get('/vagasCandidato/vagasInscritas', 'SearchController@vagasInscritas')-
 Route::get('/empresaCandidato/area_empresa', 'AreaEmpresaController@areaEmpresa')->name('areaEmpresa');
 Route::get('/empresaCandidato/perfilCandidato', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');
 
-Route::get('/empresa-index/{id}', 'PerfilEmpresaController@index')->name('empresaIndex');
+Route::get('/empresa-index', 'PerfilEmpresaController@index')->name('empresaIndex')->middleware('auth');
 Route::get('/perfil-empresa', 'PerfilEmpresaController@adicionar')->name('perfil-empresa');
 Route::post('/perfil-empresa', 'PerfilEmpresaController@adicionarSubmitPost');
 Route::get('/perfil-empresa-salvar', 'PerfilEmpresaController@salvar');
 
-Route::get('/empresa/{id}', 'PerfilEmpresaController@mostrar')->name('empresaMostrar');
-Route::get('/empresa-editar/{id}', 'PerfilEmpresaController@editar')->name('empresaEditar');
-Route::put('/perfil-empresa/atualizar/{id}', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar');
-Route::get('/perfil-empresa/deletar/{id}', 'PerfilEmpresaController@deletar')->name('empresaDeletar');
+Route::get('/empresa', 'PerfilEmpresaController@mostrar')->name('empresaMostrar')->middleware('auth');
+Route::get('/empresa-editar', 'PerfilEmpresaController@editar')->name('empresaEditar')->middleware('auth');
+Route::put('/perfil-empresa/atualizar', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar')->middleware('auth');
+Route::get('/perfil-empresa/deletar', 'PerfilEmpresaController@deletar')->name('empresaDeletar')->middleware('auth');
+Route::get('/empresa/logout', 'PerfilEmpresaController@logout')->name('empresa.logout');
 
 
 
@@ -58,7 +59,7 @@ Route::post('/publicar-vagas', 'VagasController@publicarSubmitPost');
 Route::get('/publicar-vagar-salvar', 'VagasController@salvar')->name('vagasSalvar');
 Route::get('/vaga/{id}', 'VagasController@mostrar')->name('vagaMostrar');
 Route::get('/vaga/deletar/{id}', 'VagasController@deletar')->name('vagaDeletar');
-//Route::get('/search/{id}', 'VagasController@mostrarVagasCandidato')->name('vagaCandidato');
+
 
 Route::get('/index', 'AuthController@index')->name('index');
 Route::get('/index/login', 'AuthController@showIndexLogin')->name('index.login');

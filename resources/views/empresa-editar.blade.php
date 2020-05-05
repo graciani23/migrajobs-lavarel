@@ -27,7 +27,7 @@
     
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
-                <input type="file" class="form-control-file" name="edit-photo" id="edit-photo">
+                <input type="file" class="form-control-file" name="imagem" id="imagem">
             </div>
         
         <section class="dados-pessoais border">

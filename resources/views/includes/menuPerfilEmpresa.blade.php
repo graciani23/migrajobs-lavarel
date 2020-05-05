@@ -5,15 +5,14 @@
                 <div class="logo mt-2"><a href="index">MigraJobs</a></div>
                 <nav>
                     <ul>
-                        <li><a href="/index">Home</a></li>
+                        <li><a href="/empresa-index">Home</a></li>
+                        <li><a href="/empresa">Meu perfil</a></li>
                         <li><a href="/publicar-vagas">Publicar vagas</a></li>
-                        <li><a href="/area_empresa">Buscar candidatos</a></li>
-                        <li><a href="/empresaMostrar">Meu perfil</a></li>
                     </ul>
                 </nav>
 
                 <div class="user">
-                    Olá, Empresa!
+                   Olá, {{ Auth::user()->name }}
                 </div>
 
             </div>

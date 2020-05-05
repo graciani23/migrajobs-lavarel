@@ -125,14 +125,13 @@ nav ul li a:hover {
     font-size: 16px;
     background-color: #F7F5F5;
     border-radius: 10px;
-    height: 30px;
-    line-height: 30px;
     padding-left: 2px;
     padding-right: 2px;
     text-align: center;
     color: #03BBDB;
     font-weight: bold;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 1vh;
 }
 
 
@@ -278,3 +277,6 @@ footer {
 }
 
 
+.novoCaminho {
+    color:black;
+}

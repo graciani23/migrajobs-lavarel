@@ -65,7 +65,7 @@
                 </div>
                 <div class="custom-control custom-radio custom-control-inline pt-1">
                     <input type="radio" id="outros" name="idioma_requerido" class="custom-control-input"  value="Outros">
-                    <label class="custom-control-label" for="male">Outros</label>
+                    <label class="custom-control-label" for="outros">Outros</label>
                 </div>
             </div>    
        

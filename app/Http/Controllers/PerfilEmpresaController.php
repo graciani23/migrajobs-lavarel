@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\DetalhesEmpresa;
 use App\User;
 
+
 class PerfilEmpresaController extends Controller{
  
     public function adicionar() {
@@ -75,6 +76,12 @@ class PerfilEmpresaController extends Controller{
 
         //DetalhesEmpresa::find($id)->delete();
         return redirect()->route('index'); 
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('index');
     }
 
 }

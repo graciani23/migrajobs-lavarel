@@ -42,7 +42,16 @@
             </div>
 
                 <div class="d-flex justify-content-center mt-2 ">
-                    <a href="{{route('empresaMostrar', $registros)}}" class="btn btn-danger font-weight-bold mr-2 p-4">Sair</a>
+                                    
+                        <a class="btn btn-danger font-weight-bold mr-2 p-4" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }} 
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                        </form>
                 </div> 
 
         </div>

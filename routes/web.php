@@ -52,6 +52,7 @@ Route::get('/empresa', 'PerfilEmpresaController@mostrar')->name('empresaMostrar'
 Route::get('/empresa-editar', 'PerfilEmpresaController@editar')->name('empresaEditar')->middleware('auth');
 Route::put('/perfil-empresa/atualizar', 'PerfilEmpresaController@atualizar')->name('empresaAtualizar')->middleware('auth');
 Route::get('/perfil-empresa/deletar', 'PerfilEmpresaController@deletar')->name('empresaDeletar')->middleware('auth');
+Route::get('/empresa/logout', 'PerfilEmpresaController@logout')->name('empresa.logout');
 
 
 

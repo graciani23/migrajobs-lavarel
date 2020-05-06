@@ -13,38 +13,67 @@
 <body>
 
 <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">
-    <!-- MigraJobs logo no header de navegação -->
-    <span class="logo">MigraJobs</span>
-    </a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/cad-log-imigrante">Área do Usuário</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="cad-log-empresa" tabindex="-1" aria-disabled="true">Área da Empresa</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" a href=/index#link-contato tabindex="-1" aria-disabled="true">Contato</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <div class="idioma">
-          <p style="color:white;margin-bottom:0rem;font-size:14px">Selecione o seu idioma: </p>
-        </div>
+</button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">
+        <!-- MigraJobs logo no header de navegação -->
+        <span class="logo">MigraJobs</span>
+        </a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cad-log-imigrante">Cadastro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" a href=/index#link-contato tabindex="-1" aria-disabled="true">Contato</a>
+            </li>
 
-        <img src="./assets/img/Brazil.png" alt="Bandeira do Brasil">
-        <img src="./assets/img/England.png" alt="Bandeira da Inglaterra">
-        <img src="./assets/img/France.png" alt="Bandeira da França">
-        <img src="./assets/img/Spain.png" alt="Bandeira da Espanha">
-      </form>
+
+            <ul class="navbar-nav ml-auto">
+                <!-- Authentication Links -->
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('index.login') }}">{{ __('Login') }}</a>
+                    </li>
+
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
+
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="idioma">
+            <p style="color:white;margin-bottom:0rem;font-size:14px">Selecione o seu idioma: </p>
+            </div>
+
+            <img src="/assets/img/Brazil.png" alt="Bandeira do Brasil">
+            <img src="/assets/img/England.png" alt="Bandeira da Inglaterra">
+            <img src="/assets/img/France.png" alt="Bandeira da França">
+            <img src="/assets/img/Spain.png" alt="Bandeira da Espanha">
+        </form>
     </div>
   </nav>
 

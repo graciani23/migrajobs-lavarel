@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function candidato()
     {
-        return $this->hasOnde('App\Candidato', 'usuario_id');
+        return $this->hasOne('App\Candidato', 'usuario_id');
     }
 }

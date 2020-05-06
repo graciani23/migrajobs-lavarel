@@ -18,9 +18,6 @@ Route::get('/index',  'IndexController@exibirIndex')->name('index');
 Route::post('index', 'MessageController@enviarEmail');
 Route::get('/index#link-contato', 'MessageController@enviarEmail')->name('index-contato');
 
-Route::get('/cad-log-empresa', 'EmpresaController@cadastrarEmpresa')->name('cad_empresa');
-Route::post('/cad-log-empresa', 'EmpresaController@store');
-
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
@@ -67,7 +64,7 @@ Route::get('/index', 'AuthController@index')->name('index');
 Route::get('/index/login', 'AuthController@showIndexLogin')->name('index.login');
 Route::get('/admin/logout', 'AuthController@logout')->name('admin.logout');
 
-Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');
+// Route::post('/admin/login/valida', 'AuthController@login')->name('admin.login.valida');
 
 
 Auth::routes();

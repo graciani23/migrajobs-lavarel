@@ -13,4 +13,10 @@ class DetalhesEmpresa extends Model
     {
         return $this->belongsTo('App\User', 'foreign_key');
     }
+
+public function vagas()
+{
+    return $this->hasMany('App\Vaga', 'empresa_id');
+}
+
 }

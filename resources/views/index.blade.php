@@ -134,7 +134,7 @@
         <br>
     </section>
 
-        @include('.includes/footerQS')
+        @include('includes/footerQS')
 
         <link rel="stylesheet" href="/css/estilofooterqs.css">
 </body>

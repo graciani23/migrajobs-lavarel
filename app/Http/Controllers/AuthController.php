@@ -11,11 +11,12 @@ class AuthController extends Controller
     {
         // verifica se a sessão é válida
         if(Auth::check() === true) {
-            //identifica usuário logado
-            //dd(Auth::user());
-            //se user = empresa view = area_empresa
-            //se urser = canditado view = area_candidato
-            return view('admin.dashboard');
+            if (Auth()->user()->tipo === "Empresa") {
+                return redirect()->route('perfil-empresa');
+            }
+
+            return redirect()->route('curriculoIndex');
+            //return redirect()->route('index');
 
         }
         return redirect()->route('index.login');
@@ -27,27 +28,27 @@ class AuthController extends Controller
         return view('index');
     }
 
-    public function login(Request $request)
-    {
-        var_dump($request->all());
+    // public function login(Request $request)
+    // {
+    //     var_dump($request->all());
 
-        $credentials = [
-            'email' => $request->email,
-            'password' => $request->password
-        ];
+    //     $credentials = [
+    //         'email' => $request->email,
+    //         'password' => $request->password
+    //     ];
 
-        //dd(Auth::attempt($credentials));
+    //     //dd(Auth::attempt($credentials));
 
-        //se os dados foram validados
-        if(Auth::attempt($credentials)){
-            return redirect()->route('admin');
-        }
-        return redirect()->back()->withInput()->withErrors(['Os dados encontrados não conferem']);
-    }
+    //     //se os dados foram validados
+    //     if(Auth::attempt($credentials)){
+    //         return redirect()->route('admin');
+    //     }
+    //     return redirect()->back()->withInput()->withErrors(['Os dados encontrados não conferem']);
+    // }
 
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('admin');
+        return redirect()->route('index');
     }
 }

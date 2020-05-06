@@ -8,4 +8,10 @@ class Vaga extends Model
 {
     protected $fillable = [ 'id', 'empresa_id', 'area_de_atuacao','descricao','idioma_requerido','portugues','ingles','frances','espanhol','outros'
     ];
+
+    public function empresa()
+    {
+        return $this->belongsTo('App\DetalhesEmpresa', 'foreign_key');
+    }
 }
+

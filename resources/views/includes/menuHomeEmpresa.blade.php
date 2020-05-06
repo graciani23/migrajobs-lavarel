@@ -4,7 +4,7 @@
         <div class="user">
             Olá, {{ Auth::user()->name }}
         </div>
-    </nav>    
+    </nav>
 
 </header>
 

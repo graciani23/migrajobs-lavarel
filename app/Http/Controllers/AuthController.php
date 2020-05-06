@@ -16,6 +16,7 @@ class AuthController extends Controller
             }
 
             return redirect()->route('curriculoIndex');
+            //return redirect()->route('index');
 
         }
         return redirect()->route('index.login');

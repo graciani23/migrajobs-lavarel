@@ -2,7 +2,7 @@
         <div class="container">
 
             <div class="principal">
-                <div class="logo mt-2"><a href="index">MigraJobs</a></div>
+                <div class="logo mt-2"><a href="/index">MigraJobs</a></div>
                 <nav>
                     <ul>
                         <li><a href="/empresa-index">Home</a></li>

@@ -37,7 +37,7 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('index.login') }}">{{ __('Login') }}</a>
                     </li>
 
                 @else
@@ -69,10 +69,10 @@
             <p style="color:white;margin-bottom:0rem;font-size:14px">Selecione o seu idioma: </p>
             </div>
 
-            <img src="./assets/img/Brazil.png" alt="Bandeira do Brasil">
-            <img src="./assets/img/England.png" alt="Bandeira da Inglaterra">
-            <img src="./assets/img/France.png" alt="Bandeira da França">
-            <img src="./assets/img/Spain.png" alt="Bandeira da Espanha">
+            <img src="/assets/img/Brazil.png" alt="Bandeira do Brasil">
+            <img src="/assets/img/England.png" alt="Bandeira da Inglaterra">
+            <img src="/assets/img/France.png" alt="Bandeira da França">
+            <img src="/assets/img/Spain.png" alt="Bandeira da Espanha">
         </form>
     </div>
   </nav>

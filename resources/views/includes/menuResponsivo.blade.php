@@ -32,7 +32,6 @@
                 <a class="nav-link" a href="/index#link-contato" aria-disabled="true">Contato</a>
             </li>
 
-
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
                 @guest

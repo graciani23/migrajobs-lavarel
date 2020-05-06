@@ -20,7 +20,8 @@
             <table class="table table-striped table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">Id da vaga</th>
+                        <th scope="col">Vaga</th>
+                        <th scope="col">Empresa</th>
                         <th scope="col">Área de atuação</th>
                         <th scope="col">Descrição da vaga</th>
                         <th scope="col">Ação</th>
@@ -31,6 +32,7 @@
         @foreach($dadosVaga as $dados)
                     <tr>
                         <th scope="row">{{$dados->id}}</th>
+                        <td>{{$dados->nome_empresa}}</td>
                         <td>{{$dados->area_de_atuacao}}</td>
                         <td>{{$dados->descricao}}</td>
                         <td><a href="{{route('vagaDeletar', $dados->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>

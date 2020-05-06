@@ -17,7 +17,7 @@ class AreaEmpresaController extends Controller
 
     public function showCandidato(Request $request){
         $candidatos = Candidato::all();
-        $candidatos = auth()->user()->candidato;
+        //$candidatos = auth()->user()->candidato;
         return view('/empresaCandidato/candidatos', compact('candidatos')); 
     }
 

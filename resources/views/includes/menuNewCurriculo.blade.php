@@ -3,24 +3,32 @@
 <header>
     <div class="container">
         <div class="principal d-flex align-items-center">
-        <div class="logo"><a href="/index">MigraJobs</a></div>
+        <div class="logo"><a href="/">MigraJobs</a></div>
             <nav class="pt-3">
                 <ul class="">
-                    <li><a href="{{route('curriculoIndex')}}">Home</a></li>
-                    <li><a href="#">Candidaturas</a></li>
-                    <li><a href="search">Buscar vagas</a></li>
-                    <li><a href="#">Currículo</a></li>
+                    <li><a href="/candidatos/homeCandidato">Home</a></li>
+                    <li><a href="/vagasCandidato/vagasInscritas">Candidaturas</a></li>
+                    <li><a href="/vagasCandidato/vagasEmpresa">Buscar vagas</a></li>
+                    <li><a href="/candidatos/candidato">Currículo</a></li>
+                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit()" class="sair">Sair</a>
                 </ul>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </nav>
 
             <div class="user">
-            <label class="px-1" for="">Seja bem vindo(a) </label>
-            </div>
+                Olá, {{ Auth::user()->name }}!
+             </div>
 
-            <div class="logout">
+             
+            
+             
+         
+        </ul>
+    </nav>
 
-                <li><a href="" class="sair">Sair</a>
-        
-            </div>
+
         </div>
     </div>

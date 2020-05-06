@@ -12,7 +12,7 @@
 </head>
 
 <body>
-@include('includes/menuCurriculo')
+@include('includes/menuNewCurriculo')
                 <img src="assets/icones/user.svg" alt="">
             </div>
         </div>

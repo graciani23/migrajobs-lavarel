@@ -12,13 +12,8 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 @include('includes/menuNewCurriculo')
 
-=======
-    @include('includes/menuCurriculo')
-              
->>>>>>> 923390eb874e522dd95c6e9eb0b66cda5294ee7c
     </header>
 <form action="/candidatos/curriculo" method="post" enctype="multipart/form-data">
     @csrf
@@ -172,11 +167,11 @@
             <div class="form-row pt-3 mx-4">
                 <div class="col">
                 <label class="telefone-fixo" id="telefone-fixo" for="telephone">Telefone fixo</label>
-                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000" value="{{isset($candidato->telephone) ? $candidato->telephone : ''}}">
+                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 00 000000000" value="{{isset($candidato->telephone) ? $candidato->telephone : ''}}">
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{isset($candidato->cell_phone) ? $candidato->cell_phone : ''}}">
+                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 00 0000000000" value="{{isset($candidato->cell_phone) ? $candidato->cell_phone : ''}}">
                 </div>
             </div>
 

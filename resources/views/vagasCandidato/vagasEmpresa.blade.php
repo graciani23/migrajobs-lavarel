@@ -20,7 +20,7 @@
             <table class="table table-striped table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">Favorito</th>
+                        <th scope="col">Empresa</th>
                         <th scope="col">Área de atuação</th>
                         <th scope="col">Descrição da vaga</th>
                         <th scope="col">Ação</th>
@@ -30,9 +30,7 @@
                 <tbody>
         @foreach($vagas as $vaga)
                     <tr>
-                        <th class="font-weight-bold" style="color: black" scope="row">
-                            <img class="favorito"src="/assets/icones/favorito.png" alt="favorito">
-                        </th>
+                        <td>{{$vaga->nome_empresa}}</td>
                         <td>{{$vaga->area_de_atuacao}}</td>
                         <td>{{$vaga->descricao}}</td>
                     <td><a href="{{route('showVaga', $vaga->id)}}" class="editar btn btn-info pl-3 m-1" type> Ver mais!</a>

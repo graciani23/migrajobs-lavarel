@@ -12,7 +12,7 @@
 </head>
 
 <body>
-@include('includes/menuNewCurriculo')
+    @include('includes/menuCurriculo')
               
     </header>
 <form action="/candidatos/curriculo" method="post" enctype="multipart/form-data">

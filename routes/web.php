@@ -21,20 +21,19 @@ Route::get('/index#link-contato', 'MessageController@enviarEmail')->name('index-
 Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
 Route::post('/cad-log-imigrante', 'ImigranteController@store');
 
-Route::get('/candidatos/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
+Route::get('/candidatos/homeCandidato', 'CurriculoController@index')->name('curriculoIndex');
 Route::get('/candidatos/curriculo', 'CurriculoController@create')->name('curriculo');
 Route::post('/candidatos/curriculo', 'CurriculoController@store');
 Route::get('/candidatos/candidato', 'CurriculoController@show')->name('candidatoShow')->middleware('auth');
-Route::get('/candidatos/candidato-editar', 'CurriculoController@edit')->name('candidatoEdit');
-Route::put('/candidatos/curriculo/update', 'CurriculoController@update')->name('curriculoUpdate');
-Route::get('/candidatos/curriculo/destroy', 'CurriculoController@destroy')->name('curriculoDestroy');
-
-Route::get('/candidatos/homeCandidato', 'CurriculoController@homeShow')->name('homeCandidatoShow');
+Route::get('/candidatos/candidato-editar', 'CurriculoController@edit')->name('candidatoEdit')->middleware('auth');
+Route::put('/candidatos/curriculo/update', 'CurriculoController@update')->name('curriculoUpdate')->middleware('auth');
+Route::get('/candidatos/curriculo/destroy', 'CurriculoController@destroy')->name('curriculoDestroy')->middleware('auth');
 Route::get('/includes/menuCurriculo', 'CurriculoController@menuShow')->name('menuShow');
-//Route::get('/index/logout', 'CurriculoController@logout')->name('index.logout');
+Route::get('/candidato/logout', 'CurriculoController@logout')->name('candidato.logout');
 
-Route::get('/vagasCandidato/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
-Route::get('/vagasCandidato/vagasEmpresa/{id}', 'SearchController@vagasPublicadas')->name('vagasPublicadas');
+Route::get('/vagasCandidato/vagasEmpresa', 'SearchController@vagasPublicadas')->name('vagasPublicadas');
+Route::get('/vagasCandidato/perfilVaga/{id}', 'SearchController@show')->name('showVaga');
+Route::get('/vagasCandidato/vagasInscritas', 'SearchController@vagasInscritas')->name('inscricao');
 
 Route::get('/empresaCandidato/area_empresa', 'AreaEmpresaController@areaEmpresa')->name('areaEmpresa');
 Route::get('/empresaCandidato/perfilCandidato', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');

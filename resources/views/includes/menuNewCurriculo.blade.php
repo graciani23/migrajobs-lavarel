@@ -6,7 +6,7 @@
         <div class="logo"><a href="/index">MigraJobs</a></div>
             <nav class="pt-3">
                 <ul class="">
-                    <li><a href="">Home</a></li>
+                    <li><a href="{{route('curriculoIndex')}}">Home</a></li>
                     <li><a href="#">Candidaturas</a></li>
                     <li><a href="search">Buscar vagas</a></li>
                     <li><a href="#">Currículo</a></li>
@@ -14,18 +14,13 @@
             </nav>
 
             <div class="user">
-            <label class="px-1" for="">Seja bem vindo(a), {{ Auth::user()->name }}! </label>
+            <label class="px-1" for="">Seja bem vindo(a) </label>
             </div>
 
             <div class="logout">
 
-                <li><a href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit()"; class="sair">Sair
-                </a></li>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+                <li><a href="" class="sair">Sair</a>
+        
             </div>
         </div>
     </div>

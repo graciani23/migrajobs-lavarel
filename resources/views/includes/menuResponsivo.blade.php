@@ -37,7 +37,9 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('index.login') }}">{{ __('Login') }}</a>
+                        {{-- <a class="nav-link" href="{{ route('index.login') }}">{{ __('Login') }}</a> --}}
+
+                        <a class="nav-link" href="/index#usuarios">{{ __('Login') }}</a>
                     </li>
 
                 @else

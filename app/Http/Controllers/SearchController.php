@@ -13,8 +13,20 @@ class SearchController extends Controller
         return view('vagasCandidato/search');
     }
 
-    public function vagasInscritas() {
-        return view('vagasCandidato/vagasInscritas');
+    public function vagasPublicadas() 
+    {
+        $vagas = Vaga::all();
+        return view('vagasCandidato/vagasEmpresa', compact('vagas'));    
+    }
+
+    public function show(Request $request, $id){
+        $dadosVaga = Vaga::find($id);
+        return view ('vagasCandidato/perfilVaga',compact('dadosVaga')); 
+    }
+
+    public function vagasInscritas(){
+        $vagas = Vaga::all();
+        return view ('vagasCandidato/vagasInscritas',compact('vagas')); 
     }
 
     

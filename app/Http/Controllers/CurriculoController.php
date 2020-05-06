@@ -28,7 +28,7 @@ class CurriculoController extends Controller
         
         $novoCurriculo-> usuario_id = $usuario -> id; 
         $novoCurriculo->save();
-        return redirect()->route('curriculoIndex',[$novoCurriculo -> id]);
+        return redirect()->route('candidatoShow',[$novoCurriculo -> id]);
     }
 
     public function show(Request $request){
@@ -39,7 +39,7 @@ class CurriculoController extends Controller
     public function index(Request $Request)
     {
         $candidatos = auth()->user()->candidato;
-        return view('curriculo-index', compact('candidatos'));
+        return view('candidatos/homeCandidato', compact('candidatos'));
     }
 
     
@@ -61,21 +61,24 @@ class CurriculoController extends Controller
         return redirect()->route('candidatoShow', [$candidatos]);  
     }
     
-    public function destroy($id){
+    public function destroy(){
         $candidatos = auth()->user()->candidato;
         $candidatos->delete();
         return redirect()->route('index'); 
     }
     
-    public function homeShow(Request $request, $id){
-        $candidatos = Candidato::find($id);
-        return view('/candidatos/homeCandidato', compact('candidatos')); 
-    }
-
+    
     public function menuShow(Request $request, $id){
         $candidatos = Candidato::find($id);
         return view('includes.menuCurriculo', compact('candidatos')); 
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('index');
+    }
+
 
 }
     

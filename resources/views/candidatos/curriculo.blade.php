@@ -12,8 +12,13 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 @include('includes/menuNewCurriculo')
 
+=======
+    @include('includes/menuCurriculo')
+              
+>>>>>>> 923390eb874e522dd95c6e9eb0b66cda5294ee7c
     </header>
 <form action="/candidatos/curriculo" method="post" enctype="multipart/form-data">
     @csrf

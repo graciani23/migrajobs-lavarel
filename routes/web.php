@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  'IndexController@exibirIndex');
 Route::get('/index',  'IndexController@exibirIndex')->name('index');
-Route::post('/index#link-contato', 'MessageController@enviarEmail');
-Route::get('/index#link-contato', 'MessageController@enviarEmail')->name('index-contato');
+Route::post('/index', 'MessageController@enviarEmail');
+// Route::get('/index#link-contato', 'MessageController@enviarEmail')->name('index-contato');
 
 Route::get('/cadastro', 'CadastroController@cadastrarImigrante')->name('cadastro');
 Route::post('/cadastro', 'CadastroController@store');

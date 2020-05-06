@@ -43,9 +43,9 @@ class LoginController extends Controller
     protected function redirectTo()
     {
         if (Auth()->user()->tipo === "Empresa") {
-            return 'perfil-empresa';
+            return 'empresa-index';
         }
 
-        return 'candidatos/curriculo';
+        return 'candidatos/homeCandidato';
     }
 }

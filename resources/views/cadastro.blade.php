@@ -14,7 +14,7 @@
     <div class="corpo-form">
         <form method="POST" action="{{ route('register') }}" enctype="multpart/form-data">
             @csrf
-            <h2><strong>Cadastre seu currículo e tenha acesso aos nossos serviços</strong></h2>
+            <h2><strong>Realize seu cadastro!</strong></h2>
             <div class="form-group">
                 <input type="text" id="inputName" placeholder="Digite seu nome completo" name="name" value="{{ old('name') }}">
                 {!! $errors->first('name', '<small>:message</small>') !!}<br>

@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',  'IndexController@exibirIndex');
 Route::get('/index',  'IndexController@exibirIndex')->name('index');
-Route::post('index', 'MessageController@enviarEmail');
+Route::post('/index#link-contato', 'MessageController@enviarEmail');
 Route::get('/index#link-contato', 'MessageController@enviarEmail')->name('index-contato');
 
-Route::get('/cad-log-imigrante', 'ImigranteController@cadastrarImigrante')->name('cad_imigrante');
-Route::post('/cad-log-imigrante', 'ImigranteController@store');
+Route::get('/cadastro', 'CadastroController@cadastrarImigrante')->name('cadastro');
+Route::post('/cadastro', 'CadastroController@store');
 
 Route::get('/candidatos/curriculo-index', 'CurriculoController@index')->name('curriculoIndex');
 Route::get('/candidatos/curriculo', 'CurriculoController@create')->name('curriculo');

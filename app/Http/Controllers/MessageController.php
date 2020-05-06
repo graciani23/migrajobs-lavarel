@@ -15,7 +15,7 @@ class MessageController extends Controller
             'mensagem' => 'required|min:3'
         ]);
 
-        Mail::to('migrajobscontato@gmail.com')->send( new MensagemRecebida($mensagem));
+        Mail::to('migrajobscontato@gmail.com')->send(new MensagemRecebida($mensagem));
 
 
         return redirect()->route('index-contato');

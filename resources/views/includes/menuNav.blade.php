@@ -1,9 +1,9 @@
 <nav>
     <div class="container">
         <ul>
-            <li><a href="index">Home</a></li>
-            <li><a href="cad-log-imigrante">Área do Usuário</a></li>
-            <li><a href="cad-log-empresa">Área da Empresa</a></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/cadastro">Área do Usuário</a></li>
+            <li><a href="/index#link-contato">Contado</a></li>
         </ul>
         <div class="img-cabecalho">
             <p>Selecione o seu idioma</p>

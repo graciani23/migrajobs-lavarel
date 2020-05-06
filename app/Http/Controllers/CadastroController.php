@@ -7,13 +7,13 @@ use App\User;
 use Illuminate\Http\Request;
 
 
-class ImigranteController extends Controller
+class CadastroController extends Controller
 {
     public function cadastrarImigrante(Request $request)
     {
         $candidatos = User::query()
             ->get();
-        return view('cad-log-imigrante');
+        return view('cadastro');
     }
 
     public function store(CandidatoRequest $request)

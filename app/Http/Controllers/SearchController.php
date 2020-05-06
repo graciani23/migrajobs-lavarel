@@ -27,9 +27,10 @@ class SearchController extends Controller
         return view ('vagasCandidato/perfilVaga',compact('dadosVaga')); 
     }
 
-    public function vagasInscritas(){
+    public function vagasInscritas(Request $request, $id){
+        $dados = $request->all(); 
         $vagas =  auth()->user()->candidato->vagas; 
-        $user = User::find();
+        $user = User::find($id);
         $user->vaga()->attach($vagas->id);
         return view ('vagasCandidato/vagasInscritas',compact('vagas')); 
     }

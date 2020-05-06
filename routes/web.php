@@ -35,10 +35,9 @@ Route::get('/candidatos/curriculo/destroy', 'CurriculoController@destroy')->name
 Route::get('/candidatos/homeCandidato', 'CurriculoController@homeShow')->name('homeCandidatoShow');
 Route::get('/includes/menuCurriculo', 'CurriculoController@menuShow')->name('menuShow');
 //Route::get('/index/logout', 'CurriculoController@logout')->name('index.logout');
-//Route::get('search/{id}', 'CurriculoController@vagaShow')->name('vagaShow');
 
 Route::get('/vagasCandidato/search', 'SearchController@buscarVagasUsuario')->name('searchVagas');
-Route::get('/vagasCandidato/vagasInscritas', 'SearchController@vagasInscritas')->name('vagasInscritas');
+Route::get('/vagasCandidato/vagasEmpresa/{id}', 'SearchController@vagasPublicadas')->name('vagasPublicadas');
 
 Route::get('/empresaCandidato/area_empresa', 'AreaEmpresaController@areaEmpresa')->name('areaEmpresa');
 Route::get('/empresaCandidato/perfilCandidato', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');

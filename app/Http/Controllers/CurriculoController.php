@@ -61,7 +61,7 @@ class CurriculoController extends Controller
         return redirect()->route('candidatoShow', [$candidatos]);  
     }
     
-    public function destroy($id){
+    public function destroy(){
         $candidatos = auth()->user()->candidato;
         $candidatos->delete();
         return redirect()->route('index'); 

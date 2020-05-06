@@ -15,34 +15,31 @@
     @csrf 
     <div class="container">
         <div class="fundo">
-            <div class="foto">
-                <img src="" alt="">
-            </div>
+            
         </div>
             <div class="editar-foto form-group">
                 <label for="edit-photo"></label>
             </div>
        
         <section class="dados-pessoais border">
-        <div class="pt-5 mx-4">
+        <div class="pt-4 mx-4">
                 <h4>Sobre a vaga</h4>
             </div>
             <div class="form-group px-1 mx-4">
 
             <div class="areasInteresses px-1 mx-4">
-                <label for="areas" style="font-weight:bold">Área de atuação:</label>
-                <div style="color:black">Financeiro</div> 
+                <label for="areas"name="area_de_atuacao" style="font-weight:bold">Área de atuação:</label>
+            <div style="color:black">{{$vagas->area_de_atuacao}}</div> 
 
                     </select><br>
             </div>
             <div class="form-group pt-2 px-1 mx-4">
-                <label for="descricao" style="font-weight:bold">Descrição da vaga</label>
+                <label for="descricao" name="descricao" style="font-weight:bold">Descrição da vaga</label>
                 <div style="color:black">Contas a Pagar e contas a receber</div> 
             </div>
 
             <div class="form-group pt-2 px-1 mx-4">
-                <label for="descricao-vaga"style="font-weight:bold">Idiomas requeridos:</label>
-                <div class="custom-control custom-radio custom-control-inline pt-1 ">
+                <label for="descricao-vaga" name="idioma_requerido" style="font-weight:bold">Idiomas requeridos:</label>
                     <input type="radio" id="portugues" name="portugues" class="custom-control-input">
                     <div style="color:black">Inglês</div> 
                

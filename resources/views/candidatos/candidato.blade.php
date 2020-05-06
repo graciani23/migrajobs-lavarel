@@ -12,7 +12,7 @@
 </head>
 
 <body>
-@include('includes/menuCurriculo')
+@include('includes/menuNewCurriculo')
                 <img src="assets/icones/user.svg" alt="">
             </div>
         </div>
@@ -187,11 +187,12 @@
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" name="month" style="font-weight:bold" for="dataInicio">Data início:</label>
 
-                    @include('./includes/comboBoxMesAno')
+                <div style="color:black"> {{ $candidatos->month }} / {{ $candidatos->year }}  </div> 
+
 
                 <label class="termino pr-2" name="year" style="font-weight:bold" for="dataTermino">Data término:</label>
 
-                    @include('./includes/comboBoxMesAno')
+                <div style="color:black"> {{ $candidatos->month }} / {{ $candidatos->year }}  </div> 
 
                 </div><br>
 

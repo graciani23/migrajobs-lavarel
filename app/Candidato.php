@@ -50,6 +50,9 @@ class Candidato extends Model
         return $this->belongsTo('App\User', 'foreign_key');
     }
 
+    public function vagas(){
+        return $this->belongsToMany('App\Vaga');
+    }
     
             
 }

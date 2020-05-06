@@ -14,6 +14,9 @@
         @include('includes/menuResponsivo')
     <div class="fundo">
         <h2 class="h2">Recomeço além das fronteiras</h2>
+            <div class="slogan">
+                <p class="slogan">Uma plataforma que ajuda imigrantes e empresas contruírem novos caminhos juntos!</p>
+            </div>
             <button class="botao">
                 <a href="#cadastro" class="participe">Participe</a>
             </button>
@@ -60,7 +63,7 @@
                         @endif
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário" name="email" value="{{ old('email') }}">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail cadastrado" name="email" value="{{ old('email') }}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1"></label>
@@ -82,21 +85,33 @@
                 <h4>Quero mudar outras vidas</h4>
                 <div class="form">
                     <h5 class="card-title">SOU EMPRESA</h5>
+                    <form action="{{ route('login') }}" method="post" method="post" enctype="multipart/form-data">
+                        @csrf
+
+                        @if($errors->all())
+                            @foreach ($errors->all() as $error)
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $error }}
+                                </div>
+                            @endforeach
+                        @endif
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome de usuário">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail cadastrado" name="email" value="{{ old('email') }}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1"></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                        </div>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="password">
                         <br>
-                    <div class="form-group form-check">
-                        <a href="http://" class="senha">Esqueci minha senha</a>
-                        <a href="cad-log-empresa" class="senha">Quero me cadastrar</a>
-                    <div>
-                        <button type="submit" class="entrar">Entrar</button>
-                    </div>
+                        </div>
+                        <div class="form-group form-check">
+                                <a href="" class="senha"> Esqueci minha senha</a>
+                                <a href="cad-log-imigrante" class="senha">Quero me cadastrar</a>
+                            <div>
+                                <button type="submit" class="entrar">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -125,7 +140,6 @@
                         <textarea name="mensagem" id="mensagem" cols="30" rows="6" class="form-control" placeholder="Escreva sua mensagem">{{ old('mensagem') }}</textarea>
                         {!! $errors->first('mensagem', '<small>:message</small>') !!}<br>
                         </div>
-                        <br>
                         <div class="form-group form-check">
                             <button type="submit" class="entrar">Enviar</button>
                         </div>
@@ -134,8 +148,7 @@
         <br>
     </section>
 
-        @include('includes/footerQS')
+        @include('includes/footer')
 
-        <link rel="stylesheet" href="/css/estilofooterqs.css">
 </body>
 </html>

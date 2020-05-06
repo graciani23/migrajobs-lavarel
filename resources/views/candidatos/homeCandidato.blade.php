@@ -11,7 +11,7 @@
     <title>Home - Candidato</title>
 </head>
 <body>
-    @include('includes/menuCurriculo')
+    @include('includes/menuNewCurriculo')
                
     </header>
   

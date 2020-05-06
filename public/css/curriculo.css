@@ -74,14 +74,18 @@ header {
     
 }
 
+.logo a:hover {
+    color: #03BBDB!important;
+}
+
 nav {
     margin: auto 120px;
     display: inline-block;
 }
 
 nav ul li {
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 16px;
+   
     font-weight: bold;
     display: inline-block;
   
@@ -89,20 +93,20 @@ nav ul li {
 
 nav ul li a {
     color: #03BBDB; 
-    padding: 5px;
+    padding: 10px;
 }
 
 nav ul li a:hover {
     color: #FFF;
     background-color: #03BBDB;
-    padding: 7px;
+    padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     text-decoration: none;
 }
 
 .logout li{
-    font-size: 14px;
+    font-size: 16px;
     margin-right: 10px;
     font-weight: bold;
 }
@@ -115,23 +119,38 @@ nav ul li a:hover {
 .logout li a:hover{
     color: #FFF;
     background-color: #03BBDB;
-    padding: 7px;
+    padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     text-decoration: none;
+}
+
+.sair {
+    color: #e52411!important;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.sair:hover {
+    color: white!important;
+    background-color: #e52411;
+    padding: 5px 10px;
+    border-radius: 7px;
 }
 
 .user {
     font-size: 16px;
     background-color: #F7F5F5;
     border-radius: 10px;
-    padding-left: 2px;
-    padding-right: 2px;
     text-align: center;
     color: #03BBDB;
     font-weight: bold;
+    box-sizing: border-box;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    padding: 1vh;
+    display: inline-block;
+    padding: 0 10px;
+    margin-left: 7vh;
 }
 
 
@@ -279,4 +298,15 @@ footer {
 
 .novoCaminho {
     color:black;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.logout li a {
+    color: #03BBDB;
+    padding: 30px;
+    font-size: 16px;
 }

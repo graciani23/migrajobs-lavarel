@@ -31,7 +31,11 @@
                     <tbody>
             @foreach($vagas as $vaga)
                         <tr>
+<<<<<<< HEAD
                         <th class="font-weight-bold" style="color: black" scope="row">{{$vaga->nome_empresa}}</th>
+=======
+                            <td class="font-weight-bold" style="color: black">{{$vaga->nome_empresa}}</td>
+>>>>>>> master
                             <td class="font-weight-bold" style="color: black">{{$vaga->area_de_atuacao}}</td>
                             <td class="font-weight-bold" style="color: black">{{$vaga->descricao}}</td>
                         <td><a href="{{route('showVaga', $vaga->id)}}" class="editar btn btn-info pl-3 m-1" type> Ver mais!</a>
@@ -44,7 +48,7 @@
                 </table>
             </section>
             <div>
-                <a  href="{{route('vagasPublicadas', $vaga->id)}}" class="btn btn-info font-weight-bold">Voltar para as vagas</a>
+                <a  href="{{route('vagasPublicadas')}}" class="btn btn-info font-weight-bold">Voltar para as vagas</a>
             </div>
     
       

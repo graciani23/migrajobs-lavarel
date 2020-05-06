@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    @include('includes/menuCurriculo')
-              
+@include('includes/menuNewCurriculo')
+
     </header>
 <form action="/candidatos/curriculo" method="post" enctype="multipart/form-data">
     @csrf
@@ -24,12 +24,12 @@
                 <img src="{{asset($candidato->image)}}">
             </div>
             @endif
-            
+
         </div>
-       
+
 
         <div class="editar-foto form-group">
-            <label class=" pr-3" for="edit-photo"></label>    
+            <label class=" pr-3" for="edit-photo"></label>
             <input type="file" class="form-control-file" name="image" id="edit_photo">
         </div>
 
@@ -49,12 +49,12 @@
                 <label class="label-nome pt-3" id="nationality" for="nationality">Nacionalidade</label>
                 <input type="text" class="form-control border-secondary" name="nationality" id="nationality" placeholder="Nacionalidade" value="{{isset($candidato->nationality) ? $candidato->nationality : ''}}">
             </div>
-            
+
             <div class="form-group pt-3 mx-4 px-1">
                 <label class="label-nome" id="about_you" for="about_you">Sobre você</label>
                 <textarea class="form-control border-secondary" name="about_you" id="about_you" rows="4" placeholder="Fale sobre você">{{isset($candidato->about_you) ? $candidato->about_you : ''}}</textarea>
             </div>
-    
+
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="documento" id="document" for="document">Documento</label>
@@ -79,7 +79,7 @@
                     </div>
                 </div>
 
-               
+
 
                 <div class="col form-row estadoCivil pb-4 ">
                     <div class="pr-2">
@@ -115,7 +115,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="city">Cidade</label>
-                    <input type="text" class="form-control border-secondary" name="city" id="cidade" value="{{isset($candidato->city) ? $candidato->city : ''}}">
+                    <input type="text" class="form-control border-secondary" name="city" id="city" value="{{isset($candidato->city) ? $candidato->city : ''}}">
                 </div>
 
                 <div class="form-group col-md-2">
@@ -150,13 +150,13 @@
                 <label for="complement">Complemento</label>
                 <input type="text" class="form-control border-secondary" name="complement" id="complemento" placeholder="Ex. Apartamento 23 Bloco A" value="{{isset($candidato->complement) ? $candidato->complement : ''}}">
             </div>
-                 
+
             <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
                 <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
         </section>
-        
+
 
         <section class="contato border mt-3">
             <div class="pt-3 mx-4">
@@ -167,11 +167,11 @@
             <div class="form-row pt-3 mx-4">
                 <div class="col">
                 <label class="telefone-fixo" id="telefone-fixo" for="telephone">Telefone fixo</label>
-                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000" value="{{isset($candidato->telephone) ? $candidato->telephone : ''}}">
+                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 00 000000000" value="{{isset($candidato->telephone) ? $candidato->telephone : ''}}">
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{isset($candidato->cell_phone) ? $candidato->cell_phone : ''}}">
+                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 00 0000000000" value="{{isset($candidato->cell_phone) ? $candidato->cell_phone : ''}}">
                 </div>
             </div>
 
@@ -201,7 +201,7 @@
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
         </section>
-        
+
 
         <section class="objetivo-profissional border mt-3">
             <div class="Experiência pt-3 mx-4">
@@ -228,7 +228,7 @@
             </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">
-                
+
             </div>
 
             <div class="form-group pt-4 px-1 mx-4">
@@ -310,7 +310,7 @@
     </div>
 </form>
 
- 
+
 
     <div class="rodape mt-3">
         <footer>

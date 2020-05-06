@@ -1,19 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html {
-	height:100%;
-}
 
 body {
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	height:100%;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -29,6 +20,7 @@ body {
     font-size: 18px;
     color:#ffffff;
     font-weight: bold;
+    border-radius: 7px!important;
 }
 
 .buscadecandidato p {
@@ -54,14 +46,12 @@ body {
 
 /* INÍCIO DA DIV COM O RESULTADOS DA BUSCA */
 
-.container {
-    margin: 40px auto 20px auto;
 
-}
 
 main {
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 #resultado{
     color: #3c3f44;
@@ -86,7 +76,7 @@ main {
 
 .candidato img{
     width: 180px;
-    height: 230px;
+    height: 180px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 90px;
@@ -134,16 +124,7 @@ main {
     margin-right: 20px;
 }
 
-.footer{
-    background-color: #802A73;
-    color: #ffffff;
-    height: 80px;
-}
 
-.footer p{
-   padding-top: 25px;
-   margin-left: 280px;
-}
 
 @media only screen and (max-width: 1015px){
     .lado-lado{
@@ -165,11 +146,10 @@ main {
         font-size: 18px;
         color:#ffffff;
         font-weight: bold;
+ 
     }
 
-    .buscadecandidato p {
-        margin: 0;
-    }
+
 
 }
 

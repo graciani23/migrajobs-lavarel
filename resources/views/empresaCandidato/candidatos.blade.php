@@ -9,67 +9,58 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/estiloAreaEmpresa.css">
+    <link rel="stylesheet" href="/css/empresa.css">
+
 </head>
 <body>
 
-@include('includes/menuResponsivo')
+@include('includes/menuPerfilEmpresa')
 
 <div class="container">
     <main>
+        
 <div class="buscadecandidato">
 	<div class="encontreCandidato">
 				<p>ENCONTRE O SEU CANDIDATO</p>
 	</div>
-		<form>
-		<select class="estadocidade" name="estados-brasil">
-            @include('includes/comboEstados')
-		</select>
-	</form>
-<!-- Utilização de recurso do JavaScript para habilitar a escolha das cidades a partir da seleção de um estado-->
-<!-- <select name="cidades"></select>>
-	<option value="">Selecione a cidade</option>
-</select> -->
-		<form>
-			<input class="funcao" type="text" name="buscavaga" placeholder="Vaga por palavra-chave" autocomplete="off">
-            <button class="btn-info btn-sm">Buscar</button>
-		</form>
-	</div>
+</div>
+<br>
 
 
-            <div id="resultado">
-                <p>
-                    Resultados para a pesquisa: Enfermeiro(a) em São Paulo/SP
-                </p>
-            </div>
-
+            
             <div class="lado-lado">
-
+                @foreach ( $candidatos as $candidato)
+                    
                 <div class="candidato">
-                    <img src="{{asset("storage/".$candidatos->image)}}" alt="">
+                    <img src="{{asset("storage/".$candidato->image)}}" alt="">
                     <div class="dados pt-2">
-                        <div class="dados" style="color:black">{{ $candidatos->name }}</div>
+                        <div class="dados" style="color:black">{{ $candidato->name }}</div>
                     </div>
-                    <div class="dados pt-2">
-                        <div class="dados" style="color:black">{{ $candidatos->birth }}</div>
-                    </div>
+                
                     <div class="form-group pt-3">
-                        <label class="dados d-flex justify-content-center" style="color:black" for="">Area de interesse</label>
-                        <div class="dados d-flex justify-content-center" style="color:black">{{ $candidatos->areas }}</div>
+                        <label class="dados d-flex justify-content-center" style="color:black font-style=bold" for="">Área de interesse:</label>
+                        <div class="dados d-flex justify-content-center" style="color:black">{{ $candidato->areas }}</div>
                     </div>
-                    <a href="{{route('perfilCandidato', $candidatos->id)}}">Saiba mais</a>
+                    <a href="{{route('perfilCandidato', $candidato->id)}}">Saiba mais</a>
                 </div>
-
+                @endforeach
             </div>
-                <div class="pagina">
-                    <p>1>>2>>3>>Última</p>
-                </div>
+             
+            <div>
+                <a href="{{route('vagaIndex')}}" class="editar btn btn-info mt-3 p-2" type> Voltar para a área de vagas</a>
+           </div>
         </main>
     </div>
 
 	<!-- numeração de página a ser implementada com Laravel -->
 
-    @include('includes/footer')
 
-        <link rel="stylesheet" href="/css/estiloFooter.css">
+    <div class="rodape mt-3">
+        <footer>
+            <div class="logo">MigraJobs</div>
+            <br>© MigraJobs atividades de Internet, Ltda. Todos os direitos reservados.
+        </footer>
+    </div>
+</div>
     </body>
 </html>

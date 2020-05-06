@@ -1,7 +1,7 @@
 let cep = document.querySelector('#cep')
 let rua = document.querySelector('#rua')
 let complemento = document.querySelector('#complemento')
-let cidade = document.querySelector('#cidade')
+let cidade = document.querySelector('#city')
 let uf = document.querySelector('#uf')
 
 cep.onkeyup = async (event)=> {

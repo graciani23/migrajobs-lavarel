@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Controllers\VagasController;
 use App\Vaga;
+use App\User; 
+use App\Candidato;
+
 
 
 class SearchController extends Controller
@@ -24,10 +27,17 @@ class SearchController extends Controller
         return view ('vagasCandidato/perfilVaga',compact('dadosVaga')); 
     }
 
-    public function vagasInscritas(){
-        $vagas = Vaga::all();
+    public function vagasInscritas(Request $request, $id){
+        $dados = $request->all(); 
+        $vagas =  auth()->user()->candidato->vagas; 
+        $user = User::find($id);
+        $user->vaga()->attach($vagas->id);
         return view ('vagasCandidato/vagasInscritas',compact('vagas')); 
     }
+
+    
+
+
 
     
 

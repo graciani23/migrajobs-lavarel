@@ -51,13 +51,14 @@ class CurriculoController extends Controller
 
     public function update(Request $request){
         $candidatos = auth()->user()->candidato;
+        
         $curriculo = $request->all();
         $candidatos->fill($curriculo);
         if($request -> hasFile ('image')){
             $path = $request->file('image')->store('img', 'public');
             $candidatos->image = $path;
         }
-        $curriculo->save();
+        $candidatos->save();
         return redirect()->route('candidatoShow', [$candidatos]);  
     }
     

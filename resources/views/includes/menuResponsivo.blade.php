@@ -26,10 +26,10 @@
                 <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/cad-log-imigrante">Cadastro</a>
+                <a class="nav-link" href="/cadastro">Cadastro</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" a href=/index#link-contato tabindex="-1" aria-disabled="true">Contato</a>
+                <a class="nav-link" a href="/index#link-contato" aria-disabled="true">Contato</a>
             </li>
 
 
@@ -37,7 +37,9 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('index.login') }}">{{ __('Login') }}</a>
+                        {{-- <a class="nav-link" href="{{ route('index.login') }}">{{ __('Login') }}</a> --}}
+
+                        <a class="nav-link" href="/index#usuarios">{{ __('Login') }}</a>
                     </li>
 
                 @else

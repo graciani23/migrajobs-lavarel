@@ -43,7 +43,7 @@
 
                 <div class="d-flex justify-content-center mt-2 ">
                                     
-                        <a class="btn btn-danger font-weight-bold mr-2 p-4" href="{{ route('logout') }}"
+                        <a class="botaoSair btn btn-danger font-weight-bold mr-2 p-4" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
                             {{ __('Logout') }} 

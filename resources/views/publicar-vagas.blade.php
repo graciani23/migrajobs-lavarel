@@ -25,7 +25,11 @@
         <div class="pt-3 mx-4">
                 <h4 class="sobreAVaga">Sobre a vaga</h4>
             </div>
-            <div class="form-group px-1 mx-4">
+
+            <div class="form-group pt-3 px-1 mx-4">
+                <label class="label-nome pb-2" for="nome_empresa">Nome da empresa</label>
+                <input type="text" class="form-control border-secondary" name="nome_empresa" id="nome_empresa" placeholder="Coloque o nome fantasia da empresa" value="">
+            </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas">Área de atuação</label>

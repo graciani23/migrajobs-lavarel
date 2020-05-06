@@ -36,7 +36,7 @@
                     <label class="vagas px-3 text-white font-weight-bold d-flex" for="">Procure uma oportunidade de emprego</label>
                 </div>
                 <div>
-                    <a  href="{{route('searchVagas')}}" class="btn btn-success font-weight-bold d-flex align-items-center ml-2">Vagas</a>
+                    <a  href="{{route('vagasPublicadas')}}" class="btn btn-success font-weight-bold d-flex align-items-center ml-2">Vagas</a>
                 </div>
             </div>
 

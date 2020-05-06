@@ -29,6 +29,11 @@
             </div>
             <div class="form-group px-1 mx-4">
 
+                <div class="form-group pt-3 px-1 mx-4">
+                    <label for="descricao" style="font-weight:bold">Nome empresa</label>
+                    <div style="color:black"> {{$dadosVaga->nome_empresa}}</div> 
+                </div>    
+
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas" style="font-weight:bold">Área de atuação:</label>
                 <div style="color:black"> {{$dadosVaga->area_de_atuacao}}</div> 

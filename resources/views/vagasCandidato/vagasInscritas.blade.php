@@ -21,7 +21,7 @@
                 <table class="table table-striped table-active">
                     <thead>
                         <tr>
-                            <th class="bg-dark" scope="col">Favorito</th>
+                            <th class="bg-dark" scope="col">Empresa</th>
                             <th class="bg-dark" scope="col">Área de atuação</th>
                             <th class="bg-dark" scope="col">Descrição da vaga</th>
                             <th class="bg-dark" scope="col">Ação</th>
@@ -31,9 +31,7 @@
                     <tbody>
             @foreach($vagas as $vaga)
                         <tr>
-                            <th class="font-weight-bold" style="color: black" scope="row">
-                                <img class="favorito"src="/assets/icones/favorito.png" alt="favorito">
-                            </th>
+                        <th class="font-weight-bold" style="color: black" scope="row">{{$vaga->nome_empresa}}</th>
                             <td class="font-weight-bold" style="color: black">{{$vaga->area_de_atuacao}}</td>
                             <td class="font-weight-bold" style="color: black">{{$vaga->descricao}}</td>
                         <td><a href="{{route('showVaga', $vaga->id)}}" class="editar btn btn-info pl-3 m-1" type> Ver mais!</a>

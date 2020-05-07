@@ -3,7 +3,7 @@
 <header>
         <div class="container">
             <div class="principal d-flex align-items-center">
-            <div class="logo"><a href="index">MigraJobs</a></div>
+            <div class="logo"><a href="/">MigraJobs</a></div>
                 <nav class="pt-3">
                     <ul class="">
                     <li><a href="{{route('curriculoIndex')}}">Home</a></li>

@@ -16,7 +16,7 @@ class Vaga extends Model
 
     public function candidato()
     {
-        return $this->hasMany('App\Candidato'); 
+        return $this->hasMany('App\Candidato');
     }
 }
 

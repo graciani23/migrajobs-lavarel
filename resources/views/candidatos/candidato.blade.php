@@ -49,7 +49,7 @@
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="data-nascimento" style="font-weight:bold" for="birth">Data de Nascimento</label>
-                    <div style="color:black"> {{ $candidatos->birth }}</div>
+                    <div style="color:black"> {{ date('d/m/Y', strtotime($candidatos->birth))}}</div>
                 </div>
                 <div class="col">
                     <label class="document" style="font-weight:bold" id="document" for="idade">Documento</label>

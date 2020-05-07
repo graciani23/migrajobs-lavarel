@@ -46,14 +46,17 @@ class CreateCandidatosTable extends Migration
             $table->string('facebook', 45)->nullable();
             $table->longText('professional_goal')->nullable();
             $table->string('areas',45)->nullable();
-            $table->longText('professional_experience')->nullable();
-            $table->string('company', 45)->nullable();
-            $table->string('job_role', 45)->nullable();
-            $table->date('date')->nullable();
-            $table->longText('job_description')->nullable();
-            $table->string('instution', 45)->nullable();
-            $table->string('formation', 45)->nullable();
-            $table->longText('course_description')->nullable();
+            $table->longText('professional_experience');
+            $table->string('company', 45);
+            $table->string('job_role', 45);
+            $table->date('date_inicio');
+            $table->date('date_termino');
+            $table->date('data_inicio');
+            $table->date('data_termino');
+            $table->longText('job_description');
+            $table->string('instution', 45);
+            $table->string('formation', 45);
+            $table->longText('course_description');
             $table->unsignedInteger('usuario_id');
 
             $table->timestamps();

@@ -185,24 +185,24 @@
             </div>
             
             <div class="data form-row pt-2 mx-4"> 
-                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                <div>{{ $candidatos->date }}</div>        
+                    <div class="col">
+                        <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
+                        <div style="color:black">{{ $candidatos->date_inicio }}</div>        
+                <br>
+                    </div>
+                
+                    <div class="col">
+                           <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
+                            <div style="color:black">{{ $candidatos->date_termino }}</div>
+                    </div>
+                </div>
+         
+                <div class="form-group pt-3 mx-4 pb-3">
+                    <label for="job_description" style="font-weight:bold">Descrição</label>
+                    <div style="color:black"> {{ $candidatos->job_description }}  </div> 
+                </div>
             <br>
-        
-            <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                <div>{{ $candidatos->date }}</div>
-            </div><br>
             
-
-            <div class="form-group pt-3 mx-4 pb-3">
-                <label for="job_description" style="font-weight:bold">Descrição</label>
-                <div style="color:black"> {{ $candidatos->job_description }}  </div> 
-            </div>
-
-            <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
-                <input class="cancelar btn btn-light bg-transparent text-danger p-1" type="button" value="Cancelar" onClick="">
-                <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
-            </div>-->
         </section>
 
         <section class="formacao-academica border mt-3">
@@ -223,14 +223,17 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-            
-            <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                <div>{{ $candidatos->month }}</div> 
-                <div>{{ $candidatos->year }}</div>       
-            <br>
-            <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                <div>{{ $candidatos->month }}</div> 
-                <div>{{ $candidatos->year }}</div>
+                <div class="col">
+                    <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
+                    <div style="color:black">{{ $candidatos->data_inicio }}</div> 
+                </div>
+
+                 <br>
+                 <div class="col">
+                    <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
+                    <div style="color:black">{{ $candidatos->data_termino }}</div>    
+                 </div>
+              
             </div><br>
             
 

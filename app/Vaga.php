@@ -13,5 +13,10 @@ class Vaga extends Model
     {
         return $this->belongsTo('App\DetalhesEmpresa', 'foreign_key');
     }
+
+    public function candidato()
+    {
+        return $this->hasMany('App\Candidato');
+    }
 }
 

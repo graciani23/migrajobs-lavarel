@@ -188,17 +188,16 @@
                 <div style="color:black"> {{ $candidatos->jobe_role }}  </div>
             </div>
 
-            <<div class="data form-row pt-2 mx-4">
-            
-                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                    <div>{{ $candidatos->date }}</div>
-                            
-                <br>
-                <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                <div>{{ $candidatos->date }}</div>
-                
+            <div class="data form-row pt-2 mx-4">
+                <div style="color:black"> {{ $candidatos->date_inicio }}</div>
+
+
+                <label class="termino pr-2" name="year" style="font-weight:bold" for="dataTermino">Data término:</label>
+
+                <div style="color:black"> {{ $candidatos->date_termino }}</div>
+
                 </div><br>
-                
+
             <div class="form-group pt-3 mx-4 pb-3">
                 <label for="job_description" style="font-weight:bold">Descrição</label>
                 <div style="color:black"> {{ $candidatos->job_description }}  </div>
@@ -228,14 +227,16 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-            
-                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                    <div>{{ $candidatos->date }}</div>        
+                <label class="inicio pr-2" style="font-weight:bold" for="data_inicio">Data início:</label>
+
+                <div style="color:black"> {{ $candidatos->data_inicio }}</div>
+
                 <br>
-                <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                    <div>{{ $candidatos->date }}</div>
-                </div><br>
-                
+                <label class="termino pr-2" style="font-weight:bold" for="data_termino">Data término:</label>
+
+                <div style="color:black"> {{ $candidatos->data_termino }}</div>
+
+            </div><br>
 
             <div class="form-group pt-3 mx-4">
                 <label for="course_description" style="font-weight:bold">Descrição</label>

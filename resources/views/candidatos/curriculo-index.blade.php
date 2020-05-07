@@ -35,18 +35,18 @@
             <div class="form-row mx-4">
                 <div class="col">
                     <label class="label-nome pt-5" style="font-weight:bold" for="nome">Nome</label>
-                    <div style="color:black"> {{ $candidatos->name }}</div> 
-                    
+                    <div style="color:black"> {{ $candidatos->name }}</div>
+
                 </div>
                 <div class="col">
                     <label class="label-nome pt-5" style="font-weight:bold" id="nationality" for="nationality">Nacionalidade</label>
-                    <div style="color:black"> {{ $candidatos->nationality }}</div> 
+                    <div style="color:black"> {{ $candidatos->nationality }}</div>
                 </div>
             </div>
 
             <div class="form-group mx-4 px-1">
                 <label class="label-nome pt-5" style="font-weight:bold" id="about_you" for="about_you">Sobre você</label>
-                <div style="color:black"> {{ $candidatos->about_you }}</div> 
+                <div style="color:black"> {{ $candidatos->about_you }}</div>
             </div>
 
             <div class="form-row pt-2 mx-4">
@@ -66,13 +66,13 @@
                     <input type="radio" id="genre_female" name="genre" class="custom-control-input">
                     <div style="color:black"> {{ $candidatos->genre }}</div>
                 </div>
-                
+
                 <div class="estadoCivil pb-4 pl-5">
                     <label class="" style="font-weight:bold" for="estadoCivil">Estado Civil</label>
-                    <div style="color:black"> {{$candidatos->status}}  </div> 
+                    <div style="color:black"> {{$candidatos->status}}  </div>
                 </div>
         </section>
-        
+
 
         <section class="endereco border mt-3 d-flex flex-column">
             <div class="pt-3 mx-4">
@@ -82,28 +82,28 @@
             <div class="form-row ml-4 col pr-5">
                 <div class="form-group ">
                     <label for="zip-code" style="font-weight:bold">CEP</label>
-                    <div style="color:black"> {{$candidatos->zip_code}}  </div> 
+                    <div style="color:black"> {{$candidatos->zip_code}}  </div>
                     <div class="form-group pt-4">
                         <label for="adress" style="font-weight:bold">Logradouro</label>
-                        <div style="color:black"> {{$candidatos->adress}}  </div> 
+                        <div style="color:black"> {{$candidatos->adress}}  </div>
                     </div>
                 </div>
 
                 <div class="form-group col px-5 ">
                     <label for="city" style="font-weight:bold">Cidade</label>
-                    <div style="color:black"> {{$candidatos->city}}  </div> 
+                    <div style="color:black"> {{$candidatos->city}}  </div>
                     <div class="form-group pt-4">
                         <label for="number" style="font-weight:bold">Número</label>
-                        <div style="color:black"> {{$candidatos->number}}  </div> 
+                        <div style="color:black"> {{$candidatos->number}}  </div>
                     </div>
                 </div>
 
                 <div class="form-group col">2
                     <label for="uf" style="font-weight:bold">UF</label>
-                    <div style="color:black"> {{$candidatos->uf}}  </div> 
+                    <div style="color:black"> {{$candidatos->uf}}  </div>
                     <div class="form-group pt-4">
                         <label for="complement" style="font-weight:bold">Complemento</label>
-                        <div style="color:black"> {{$candidatos->complement}}  </div> 
+                        <div style="color:black"> {{$candidatos->complement}}  </div>
                     </div>
                 </div>
             </div>
@@ -115,8 +115,8 @@
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
         </section>
-        
-        
+
+
 
         <section class="contato border mt-3 display">
             <div class=" align-self-start pt-3 mx-4">
@@ -127,18 +127,18 @@
                 <div class="form-row col align-self-center py-3 mx-4">
                     <div class="">
                         <label class="telefone-fixo pr-5" style="font-weight:bold" id="telephone" for="telephone">Telefone fixo</label>
-                        <div style="color:black"> {{$candidatos->telephone}}  </div> 
+                        <div style="color:black"> {{$candidatos->telephone}}  </div>
                     </div>
                     <div class="">
                         <label class="celular" style="font-weight:bold" for="cell_phone">Celular</label>
-                        <div style="color:black"> {{$candidatos->cell_phone}}  </div> 
+                        <div style="color:black"> {{$candidatos->cell_phone}}  </div>
                     </div>
                 </div>
 
                 <div class="redes-sociais col form-row px-2">
                     <div class="align-self-center pr-5">
                         <img src="/assets/icones/quadrado-linkedin.png" alt="linkedin">
-                        <a href="http://{{ $candidatos->linkedin }}">Likedin</a> 
+                        <a href="http://{{ $candidatos->linkedin }}">Likedin</a>
                     </div>
                         <div class="align-self-center pr-5">
                         <img src="/assets/icones/quadrado-Instagram.png" alt="instagram">
@@ -156,7 +156,7 @@
                 <input class="salvar btn btn-primary p-1" type="submit" value="Salvar" onCLick="">
             </div>-->
         </section>
-        
+
 
         <section class="objetivo-profissional border mt-3">
             <div class="Experiência pt-3 mx-4">
@@ -165,29 +165,29 @@
 
             <div class="form-group pt-3 px-1 mx-4">
                 <label for="professional-goal" style="font-weight:bold">Objetivo Profissional</label>
-                <div style="color:black"> {{ $candidatos->professional_goal }}  </div> 
+                <div style="color:black"> {{ $candidatos->professional_goal }}  </div>
             </div>
 
             <div class="areasInteresses pb-2 px-1 mx-4">
                 <label for="areas" style="font-weight:bold">Areas de interesse</label>
-                <div style="color:black"> {{ $candidatos->areas }}  </div> 
+                <div style="color:black"> {{ $candidatos->areas }}  </div>
             </div>
 
             <div class="form-group pt-4 px-1 mx-4">
                 <label for="professional_experience" style="font-weight:bold">Experiência</label>
-                <div style="color:black"> {{ $candidatos->professional_experience }}  </div> 
+                <div style="color:black"> {{ $candidatos->professional_experience }}  </div>
             </div>
 
             <div class="empresa form-group px-1 mx-4">
                 <label class="pr-2 pt-2" style="font-weight:bold" for="company">Empresa</label>
-                <div style="color:black"> {{ $candidatos->company }}  </div> 
+                <div style="color:black"> {{ $candidatos->company }}  </div>
             </div>
 
             <div class="cargo form-group px-1 mx-4">
                 <label class="pr-2 pt-2" style="font-weight:bold" for="jobe_role">Cargo</label>
-                <div style="color:black"> {{ $candidatos->jobe_role }}  </div> 
+                <div style="color:black"> {{ $candidatos->jobe_role }}  </div>
             </div>
-            
+
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" name="month" style="font-weight:bold" for="dataInicio">Data início:</label>
 
@@ -201,7 +201,7 @@
 
             <div class="form-group pt-3 mx-4 pb-3">
                 <label for="job_description" style="font-weight:bold">Descrição</label>
-                <div style="color:black"> {{ $candidatos->job_description }}  </div> 
+                <div style="color:black"> {{ $candidatos->job_description }}  </div>
             </div>
 
             <!--<div class="button d-flex justify-content-end py-4 mr-4" method="">
@@ -218,12 +218,12 @@
             <form class="formacaoAcademica mx-4" method="">
                 <div class="instituicao form-group pt-3">
                     <label class="pr-2" style="font-weight:bold" for="instution">Instituição</label>
-                    <div style="color:black"> {{$candidatos->instution}}  </div> 
+                    <div style="color:black"> {{$candidatos->instution}}  </div>
                 </div>
 
                 <div class="formacao form-group">
                     <label class="pr-2 pt-2" style="font-weight:bold" for="formation">Formação</label>
-                    <div style="color:black"> {{ $candidatos->formation }}  </div> 
+                    <div style="color:black"> {{ $candidatos->formation }}  </div>
                 </div>
             </form>
 
@@ -241,13 +241,13 @@
 
             <div class="form-group pt-3 mx-4">
                 <label for="course_description" style="font-weight:bold">Descrição</label>
-                <div style="color:black"> {{ $candidatos->course_description }}  </div> 
+                <div style="color:black"> {{ $candidatos->course_description }}  </div>
             </div>
 
             <form class="button d-flex justify-content-end py-4 mr-4" method="post">
 
                 <a href="{{route('candidatoEdit', $candidatos)}}" class="editar btn btn-primary pl-3 m-1" type> Editar</a>
-                <a href="{{route('curriculoDestroy', $candidatos->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>            
+                <a href="{{route('curriculoDestroy', $candidatos->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>
             </form>
         </section>
     </div>

@@ -30,3 +30,5 @@ class AreaEmpresaController extends Controller
     //    return redirect()->route('inscritos'); 
    // }
 }
+
+

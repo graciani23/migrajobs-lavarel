@@ -53,14 +53,14 @@
                
             </div>    
        <div>
-        <form action="/empresaCandidato/candidatosInscritos/{{$dadosVaga->id}}" method="POST">
+        <!-- <form action="/empresaCandidato/candidatosInscritos/{{$dadosVaga->id}}" method="POST">
             @csrf 
             <button class="editar btn btn-success mt-3">
                 Veja os candidatos aplicados
             </button>
-        </form>
-           <!-- <a href="{{route('showCandidatos')}}" class="editar btn btn-success mt-3 pr-3" type> Veja os candidatos aplicados</a>
-       </div> -->
+        </form> -->
+          <a href="{{route('showCandidatos')}}" class="editar btn btn-success mt-3 pr-3" type> Veja os candidatos aplicados</a>
+    
        <div>
         <a href="{{route('vagaIndex')}}" class="editar btn btn-info mt-3 p-2" type> Todas as suas vagas pulicadas!</a>
    </div>

@@ -16,8 +16,12 @@
             @csrf
             <h2><strong>Realize seu cadastro!</strong></h2>
             <div class="form-group">
-                <input type="text" id="inputName" placeholder="Digite seu nome completo" name="name" value="{{ old('name') }}">
+                <input type="text" id="inputName" placeholder="Digite seu nome" name="name" value="{{ old('name') }}">
                 {!! $errors->first('name', '<small>:message</small>') !!}<br>
+            </div>
+            <div class="form-group">
+                <input type="text" id="inputSobrenome" placeholder="Digite seu sobrenome" name="sobrenome" value="{{ old('sobrenome') }}">
+                {!! $errors->first('sobrenome', '<small>:message</small>') !!}<br>
             </div>
             <div class="form-group">
                 <input type="email" id="inputEmail" placeholder="Email" name="email" value="{{ old('email') }}">

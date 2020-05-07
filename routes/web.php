@@ -33,7 +33,7 @@ Route::get('/candidato/logout', 'CurriculoController@logout')->name('candidato.l
 
 Route::get('/vagasCandidato/vagasEmpresa', 'SearchController@vagasPublicadas')->name('vagasPublicadas');
 Route::get('/vagasCandidato/perfilVaga/{id}', 'SearchController@show')->name('showVaga');
-Route::get('/vagasCandidato/vagasInscritas', 'SearchController@vagasInscritas')->name('inscricao');
+Route::get('/vagasCandidato/vagasInscritas/', 'SearchController@vagasInscritas')->name('inscricao');
 
 Route::get('/empresaCandidato/candidatos', 'AreaEmpresaController@showCandidato')->name('showCandidatos');
 Route::get('/empresaCandidato/perfilCandidato/{id}', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');

@@ -12,7 +12,7 @@ class VagasController extends Controller
 
     public function index() {
         $dadosVaga = Vaga::all();
-        //auth()->user()-> empresa->vagas; 
+        auth()->user()->empresa->vagas; 
         return view('vaga-index', compact('dadosVaga'));
     }
 

@@ -20,6 +20,7 @@ class CurriculoController extends Controller
         $usuario->fill($curriculo);
         $usuario->save();
         $novoCurriculo = new Candidato();
+        $novoCurriculo->date = "$request->month-$request->year";
         $novoCurriculo->fill($curriculo);
         if($request->hasFile('image')){
             $path = $request->file('image')->store('img', 'public');
@@ -49,10 +50,12 @@ class CurriculoController extends Controller
         return view('/candidatos/candidato-editar', compact('candidatos'));
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
         $candidatos = auth()->user()->candidato;
         
         $curriculo = $request->all();
+        $candidatos->date = "$request->month-$request->year";
         $candidatos->fill($curriculo);
         if($request -> hasFile ('image')){
             $path = $request->file('image')->store('img', 'public');
@@ -62,14 +65,16 @@ class CurriculoController extends Controller
         return redirect()->route('candidatoShow', [$candidatos]);  
     }
     
-    public function destroy(){
+    public function destroy()
+    {
         $candidatos = auth()->user()->candidato;
         $candidatos->delete();
         return redirect()->route('index'); 
     }
     
     
-    public function menuShow(Request $request, $id){
+    public function menuShow(Request $request, $id)
+    {
         $candidatos = Candidato::find($id);
         return view('includes.menuCurriculo', compact('candidatos')); 
     }

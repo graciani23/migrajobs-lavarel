@@ -248,13 +248,31 @@
 
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
-
-                    @include('./includes/comboBoxMesAno')
+                <select class="form-control col-sm-4" name="month">
+                    <option value="">Mês</option>
+                    <?php for ($i=1; $i < 13; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                    <select class="form-control col-sm-4" name="year">
+                        <option value="">Ano</option>
+                        <?php for ($i=2000; $i < 2021; $i++) { ?>
+                            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                        <?php } ?>
+                    </select>
+                </select>
 
                 <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
+                <select class="form-control col-sm-4" name="month">
+                    <option value="">Mês</option>
+                    <?php for ($i=1; $i < 13; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                <select class="form-control col-sm-4" name="year">
+                    <option value="">Ano</option>
+                    <?php for ($i=2000; $i < 2021; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select>
                 </div><br>
 
             <div class="form-group pt-3 pb-3 mx-4">
@@ -287,14 +305,32 @@
 
             <div class="data form-row pt-2 mx-4">
                 <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
+                <select class="form-control col-sm-4" name="month">
+                    <option value="">Mês</option>
+                    <?php for ($i=1; $i < 13; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select>
+                <select class="form-control col-sm-4" name="year">
+                    <option value="">Ano</option>
+                    <?php for ($i=2000; $i < 2021; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select>
 
-                    @include('./includes/comboBoxMesAno')
-
-                <br>
                 <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
+                <select class="form-control col-sm-4" name="month">
+                    <option value="">Mês</option>
+                    <?php for ($i=1; $i < 13; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select>
+                <select class="form-control col-sm-4" name="year">
+                    <option value="">Ano</option>
+                    <?php for ($i=2000; $i < 2021; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                </select>
             </div><br>
 
             <div class="form-group pt-3 mx-4">

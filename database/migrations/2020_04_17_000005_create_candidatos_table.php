@@ -44,13 +44,12 @@ class CreateCandidatosTable extends Migration
             $table->string('linkedin', 45)->nullable();
             $table->string('instagram', 45)->nullable();;
             $table->string('facebook', 45)->nullable();
-            $table->string('professional_goal', 200)->nullable();
+            $table->longText('professional_goal')->nullable();
             $table->string('areas',45)->nullable();
             $table->longText('professional_experience')->nullable();
             $table->string('company', 45)->nullable();
             $table->string('job_role', 45)->nullable();
-            $table->string('month')->nullable();
-            $table->string('year')->nullable();
+            $table->dateTime('date')->nullable();
             $table->longText('job_description')->nullable();
             $table->string('instution', 45)->nullable();
             $table->string('formation', 45)->nullable();

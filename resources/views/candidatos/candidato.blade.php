@@ -24,7 +24,7 @@
                 <img src="{{asset("storage/".$candidatos->image)}}" alt="">
             </div>
         </div>
-
+       
         <section class="dados-pessoais border pt-4">
             <div class="form-row mx-4">
                 <div class="col">
@@ -184,17 +184,15 @@
                 <div style="color:black"> {{ $candidatos->job_role }}  </div> 
             </div>
             
-            <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" name="month" style="font-weight:bold" for="dataInicio">Data início:</label>
-
-                <div style="color:black"> {{ $candidatos->month }} / {{ $candidatos->year }}  </div> 
-
-
-                <label class="termino pr-2" name="year" style="font-weight:bold" for="dataTermino">Data término:</label>
-
-                <div style="color:black"> {{ $candidatos->month }} / {{ $candidatos->year }}  </div> 
-
-                </div><br>
+            <div class="data form-row pt-2 mx-4"> 
+                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
+                <div>{{ $candidatos->date }}</div>        
+            <br>
+        
+            <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
+                <div>{{ $candidatos->date }}</div>
+            </div><br>
+            
 
             <div class="form-group pt-3 mx-4 pb-3">
                 <label for="job_description" style="font-weight:bold">Descrição</label>
@@ -225,16 +223,16 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
-                <br>
-                <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
+            
+            <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
+                <div>{{ $candidatos->month }}</div> 
+                <div>{{ $candidatos->year }}</div>       
+            <br>
+            <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
+                <div>{{ $candidatos->month }}</div> 
+                <div>{{ $candidatos->year }}</div>
             </div><br>
+            
 
             <div class="form-group pt-3 mx-4">
                 <label for="course_description" style="font-weight:bold">Descrição</label>
@@ -247,6 +245,7 @@
                 <a href="{{route('curriculoDestroy', $candidatos->id)}}" class="editar btn btn-danger pl-3 m-1" type> Deletar</a>            
             </form>
         </section>
+        
     </div>
 
     <div class="rodape mt-3">

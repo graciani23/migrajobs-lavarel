@@ -23,7 +23,6 @@ class CreateUsersTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('sobrenome');
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

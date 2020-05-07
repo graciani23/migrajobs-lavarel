@@ -189,11 +189,11 @@
             </div>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" name="month" style="font-weight:bold" for="dataInicio">Data início:</label>
+                <label class="inicio pr-2" name="mes" style="font-weight:bold" for="mes">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
 
-                <label class="termino pr-2" name="year" style="font-weight:bold" for="dataTermino">Data término:</label>
+                <label class="termino pr-2" name="mes_dois" style="font-weight:bold" for="mes_dois">Data término:</label>
 
                     @include('./includes/comboBoxMesAno')
 
@@ -228,12 +228,12 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
+                <label class="inicio pr-2" style="font-weight:bold" for="mes_dois">Data início:</label>
 
                     @include('./includes/comboBoxMesAno')
 
                 <br>
-                <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
+                <label class="termino pr-2" style="font-weight:bold" for="ano_dois">Data término:</label>
 
                     @include('./includes/comboBoxMesAno')
 

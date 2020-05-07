@@ -19,10 +19,7 @@
                 <input type="text" id="inputName" placeholder="Digite seu nome" name="name" value="{{ old('name') }}">
                 {!! $errors->first('name', '<small>:message</small>') !!}<br>
             </div>
-            <div class="form-group">
-                <input type="text" id="inputSobrenome" placeholder="Digite seu sobrenome" name="sobrenome" value="{{ old('sobrenome') }}">
-                {!! $errors->first('sobrenome', '<small>:message</small>') !!}<br>
-            </div>
+           
             <div class="form-group">
                 <input type="email" id="inputEmail" placeholder="Email" name="email" value="{{ old('email') }}">
                 {!! $errors->first('email', '<small>:message</small>') !!}<br>

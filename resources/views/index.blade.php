@@ -114,16 +114,40 @@
                     </form>
                 </div>
             </div>
+            <script>
 
+                $('#enviar').submit(function(event) {
+                    event.preventDefault();
+
+                    const _token = $("input[name='_token']").val();
+                    const nome = $('input[name="nome"]').val();
+                    const email = $('input[name="email"]').val();
+                    const mensagem = $('textarea[name="mensagem"]').val();
+
+                    $.ajax({
+                        url: '/index', // caminho para o script que vai processar os dados
+                        type: 'POST',
+                        data: {_token:_token, nome: nome, email: email, mensagem: mensagem},
+
+                        success: function(response) {
+                            $("body").append("<div>"+response+"</div>");
+                        }
+                    });
+                });
+
+            </script>
         </div>
     </main>
     <section>
         <div class="col-sm-12">
             <h4 id="link-contato">Dúvidas?</h4>
-
                 <div class="form-contato">
                     <h5 class="card-title"><a name="FALE CONOSCO">FALE CONOSCO</h5>
-                    <form method="post" action="{{ action('MessageController@enviarEmail') }}" enctype="multpart/form-data">
+
+                    <div id="resp" style="display:none" class="alert alert-info" role="alert"></div>
+
+                    {{-- <form method="post" action="{{ action('MessageController@enviarEmail') }}" enctype="multpart/form-data" id="contactform"> --}}
+                        <form method="post" enctype="multpart/form-data" id="contactform">
                         @csrf
                         <div class="form-group">
                             <label for="nome"></label>
@@ -141,14 +165,16 @@
                         {!! $errors->first('mensagem', '<small>:message</small>') !!}<br>
                         </div>
                         <div class="form-group form-check">
-                            <button type="submit" class="entrar">Enviar</button>
+                            <button type="submit" class="entrar" id="enviar">Enviar</button>
+                            <div id="resp" style="display:none" class="alert alert-info" role="alert"></div>
                         </div>
+
                     </form>
                 </div>
         <br>
     </section>
 
         @include('includes/footer')
-
+<script>https://code.jquery.com/jquery-3.5.1.min.js</script>
 </body>
 </html>

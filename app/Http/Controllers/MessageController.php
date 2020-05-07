@@ -18,8 +18,7 @@ class MessageController extends Controller
         Mail::to('migrajobscontato@gmail.com')->send(new MensagemRecebida($mensagem));
 
 
-        // return redirect()->route('index');
-        return "Mensagem enviada!";
+        return response()->json(['success' => 'Mensagem enviada!']);
 
     }
 }

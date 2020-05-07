@@ -35,6 +35,11 @@ class SearchController extends Controller
         return view ('vagasCandidato/vagasInscritas',compact('vagas')); 
     }
 
+    public function inscrever ($id) {
+        $candidato = auth()->user()->candidato; 
+        $candidato->vagas()->attach($id);
+        return redirect()->route('inscrever'); 
+    }
     
 
 

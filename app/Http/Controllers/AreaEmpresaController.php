@@ -15,13 +15,18 @@ class AreaEmpresaController extends Controller
     }
 
 
-    public function showCandidato(Request $request){
-        $candidatos = Candidato::all();
-        //$candidatos = auth()->user()->candidato;
+    public function showCandidato(){
+        //$candidatos = Candidato::all();
+        $candidatos = auth()->user()->vagas->candidato;
         return view('/empresaCandidato/candidatos', compact('candidatos')); 
     }
 
     
+    public function candidatosInscritos () {
+        //$candidato = auth()->user()->candidato;
+        $vaga = auth()->user()->vaga->candidato; 
+        return redirect()->route('inscritos'); 
+    }
 
     
 

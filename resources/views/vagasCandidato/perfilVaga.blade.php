@@ -46,7 +46,13 @@
            
         </div>    
    <div>
-        <a href="{{route('inscricao')}}" class="editar btn btn-success mt-3" type> Candidate-se agora!</a>
+       <form action="/vagasCandidato/inscrever/{{$dadosVaga->id}}" method="POST">
+            @csrf 
+            <button class="editar btn btn-success mt-3">
+                Candidate-se agora!
+            </button>
+        </form>
+    
    </div>
     </section>
     

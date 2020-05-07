@@ -216,8 +216,12 @@ header img {
     width: 100%;
 }
 
-.termino {
+/* .termino {
     margin-left: 102px;
+}
+ */
+.data > label > select{
+    width: 10px!important;
 }
 
 footer {

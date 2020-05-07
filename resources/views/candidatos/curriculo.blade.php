@@ -253,13 +253,13 @@
                     <?php for ($i=1; $i < 13; $i++) { ?>
                         <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                     <?php } ?>
-                    <select class="form-control col-sm-4" name="year">
-                        <option value="">Ano</option>
-                        <?php for ($i=2000; $i < 2021; $i++) { ?>
-                            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                        <?php } ?>
-                    </select>
                 </select>
+                <select class="form-control col-sm-4" name="year">
+                    <option value="">Ano</option>
+                    <?php for ($i=2000; $i < 2021; $i++) { ?>
+                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                    </select>
 
                 <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
                 <select class="form-control col-sm-4" name="month">
@@ -267,13 +267,14 @@
                     <?php for ($i=1; $i < 13; $i++) { ?>
                         <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                     <?php } ?>
+                </select>
                 <select class="form-control col-sm-4" name="year">
                     <option value="">Ano</option>
                     <?php for ($i=2000; $i < 2021; $i++) { ?>
                         <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
                     <?php } ?>
                 </select>
-                </div><br>
+            </div><br>
 
             <div class="form-group pt-3 pb-3 mx-4">
                 <label for="job-description">Descrição</label>

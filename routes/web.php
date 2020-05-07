@@ -37,7 +37,7 @@ Route::get('/vagasCandidato/vagasInscritas/', 'SearchController@vagasInscritas')
 Route::post('/vagasCandidato/inscrever/{id}', 'SearchController@inscrever')->name('inscrever');
 
 Route::get('/empresaCandidato/candidatos', 'AreaEmpresaController@showCandidato')->name('showCandidatos');
-Route::post('/empresaCandidato/candidatosInscritos/{id}', 'AreaEmpresaController@candidatosInscritos')->name('inscritos');
+//Route::post('/empresaCandidato/candidatosInscritos/{id}', 'AreaEmpresaController@candidatosInscritos')->name('inscritos');
 
 Route::get('/empresaCandidato/perfilCandidato/{id}', 'AreaEmpresaController@perfilCandidato')->name('perfilCandidato');
 

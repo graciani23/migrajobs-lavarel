@@ -14,6 +14,7 @@ class AreaEmpresaController extends Controller
         $candidatos = Candidato::find($id);
         return view('empresaCandidato/perfilCandidato', compact('candidatos')); 
     }
+    
 
       
     public function showCandidato(){
@@ -23,11 +24,11 @@ class AreaEmpresaController extends Controller
     }
 
     
-  //  public function candidatosInscritos () {
-  //      //$candidato = auth()->user()->candidato;
-  //      $vaga = auth()->user()->vaga->candidato; 
-  //      return redirect()->route('inscritos'); 
-  //  }
+    //public function candidatosInscritos () {
+    //    //$candidato = auth()->user()->candidato;
+    //    $vaga = auth()->user()->vaga->candidato; 
+    //    return redirect()->route('inscritos'); 
+   // }
 }
 
 

@@ -161,11 +161,11 @@
             <div class="form-row pt-3 mx-4">
                 <div class="col">
                 <label class="telefone-fixo" id="telefone-fixo" for="telephone">Telefone fixo</label>
-                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+55 (00) 0000-0000" value="{{isset($candidatos->telephone) ? $candidatos->telephone : ''}}">
+                    <input type="number" class="form-control border-secondary" name="telephone" id="telephone" placeholder="+550000000000" value="{{isset($candidatos->telephone) ? $candidatos->telephone : ''}}">
                 </div>
                 <div class="col">
                     <label class="celular" for="cell-phone">Celular</label>
-                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+55 (00) 00000-0000" value="{{isset($candidatos->cell_phone) ? $candidatos->cell_phone : ''}}">
+                    <input type="number" class="form-control border-secondary" name="cell_phone" id="cell_phone" placeholder="+5500000000000" value="{{isset($candidatos->cell_phone) ? $candidatos->cell_phone : ''}}">
                 </div>
             </div>
 
@@ -240,33 +240,15 @@
             </div>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
-                <select class="form-control col-sm-4" name="month">
-                    <option value="">Mês</option>
-                    <?php for ($i=1; $i < 13; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                <select class="form-control col-sm-4" name="year">
-                    <option value="">Ano</option>
-                    <?php for ($i=2000; $i < 2021; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                
-                <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
-                <select class="form-control col-sm-4" name="month">
-                    <option value="">Mês</option>
-                    <?php for ($i=1; $i < 13; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                <select class="form-control col-sm-4" name="year">
-                    <option value="">Ano</option>
-                    <?php for ($i=2000; $i < 2021; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
+                <div class="col">
+                    <label class="data-nascimento" for="date_inicio">Data de início:</label>
+                    <input type="date" class="form-control border-secondary" name="date_inicio" id="date_inicio" placeholder="dd/mm/aaaa" value="{{isset($candidato->date_inicio) ? $candidato->date_inicio : ''}}">
+                </div>
+            
+                <div class="col">
+                    <label class="data-nascimento" for="date_termino">Data de término</label>
+                    <input type="date" class="form-control border-secondary" name="date_termino" id="date_termino" placeholder="dd/mm/aaaa" value="{{isset($candidato->date_termino) ? $candidato->date_termino : ''}}">
+                </div>
                 </div><br>
 
             <div class="form-group pt-3 mx-4 pb-4">
@@ -298,34 +280,16 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" name="month" for="dataInicio">Data início:</label>
-                <select class="form-control col-sm-4" name="month">
-                    <option value="">Mês</option>
-                    <?php for ($i=1; $i < 13; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                <select class="form-control col-sm-4" name="year">
-                    <option value="">Ano</option>
-                    <?php for ($i=2000; $i < 2021; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                
-                <label class="termino pr-2" name="year" for="dataTermino">Data término:</label>
-                <select class="form-control col-sm-4" name="month">
-                    <option value="">Mês</option>
-                    <?php for ($i=1; $i < 13; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                <select class="form-control col-sm-4" name="year">
-                    <option value="">Ano</option>
-                    <?php for ($i=2000; $i < 2021; $i++) { ?>
-                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                </select>
-                </div><br>
+                <div class="col">
+                <label class="data-nascimento" for="data_inicio">Data de início:</label>
+                    <input type="date" class="form-control border-secondary" name="data_inicio" id="data_inicio" placeholder="dd/mm/aaaa" value="{{isset($candidato->data_inicio) ? $candidato->data_inicio : ''}}">
+                </div>
+            
+                <div class="col">
+                    <label class="data-nascimento" for="data_termino">Data de término</label>
+                    <input type="date" class="form-control border-secondary" name="data_termino" id="data_termino" placeholder="dd/mm/aaaa" value="{{isset($candidato->data_termino) ? $candidato->data_termino : ''}}">
+                </div>
+            </div>
 
             <div class="form-group pt-3 mx-4">
                 <label for="course-description">Descrição</label>

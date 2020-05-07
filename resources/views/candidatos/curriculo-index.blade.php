@@ -191,12 +191,12 @@
             <<div class="data form-row pt-2 mx-4">
             
                 <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                    <div>{{ $candidatos->month }}</div>
-                    <div>{{ $candidatos->year }}</div>        
+                    <div>{{ $candidatos->date }}</div>
+                            
                 <br>
                 <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                <div>{{ $candidatos->month }}</div>
-                <div>{{ $candidatos->year }}</div>
+                <div>{{ $candidatos->date }}</div>
+                
                 </div><br>
                 
             <div class="form-group pt-3 mx-4 pb-3">

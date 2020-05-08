@@ -124,8 +124,6 @@
                 <div class="form-contato">
                     <h5 class="card-title"><a name="FALE CONOSCO">FALE CONOSCO</h5>
 
-                    <div id="resp" style="display:none" class="alert alert-info" role="alert"></div>
-
                     <form method="post" action="{{ action('MessageController@enviarEmail') }}" enctype="multpart/form-data" id="contactform">
                         @csrf
                         <div class="form-group">
@@ -145,7 +143,7 @@
                         </div>
                         <div class="form-group form-check">
                             <button type="submit" class="entrar" id="enviar">Enviar</button>
-                            <div id="resp" style="display:none" class="alert alert-info" role="alert"></div>
+                            <input id="limpa" style="display:none" type="reset">
                         </div>
 
                     </form>
@@ -179,6 +177,7 @@
 
             success: function(response) {
                 alert(response.success);
+                $('#limpa').click();
             }
         });
     });

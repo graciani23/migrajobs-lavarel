@@ -13,7 +13,7 @@ O projeto tem como objetivo ajudar os refugiados/imigrantes na busca por vagas d
     <th>09/03/2020</th>
     <th>27/03/2020</th>
     <th>20/04/2020</th>
-    <th></th>
+    <th>08/05/2020</th>
 
   </tr>
   <tr>
@@ -23,7 +23,7 @@ O projeto tem como objetivo ajudar os refugiados/imigrantes na busca por vagas d
     <td>Entrega do DER, SQL</td>
     <td>Criar projeto no laravel, criar rotas e controllers</td>
     <td>Desenvolver a lógica, CRUD, models, conexão com DB, validação de registros gravados no DB,login e painel Admin</td>
-    <td></td>
+    <td>Apresentação final</td>
   </tr>
 </table>
 

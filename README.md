@@ -35,8 +35,8 @@ O projeto tem como objetivo ajudar os refugiados/imigrantes na busca por vagas d
 * Laravel
 
 ## Time:
-* Graciani Sousa - Administradora por formação, apaixonada por tecnologia e pelo Nino, meu shitzu!<br/>
-Sou estudante de Back-end na {reprograma} e Desenvolvimento Web Full Stack - Digital House.<br/>
+* <strong> Graciani Sousa </strong> - Administradora por formação, apaixonada por tecnologia e pelo Nino, meu shitzu!<br/>
+Concluí o curso de Back-end na {reprograma} e Desenvolvimento Web Full Stack - Digital House.<br/>
 Meu objetivo na área de tecnologia é resolver problemas e desenvolver soluções que facilitem o dia a dia das pessoas!<br/><br/>
 
 * Isa Mary Kusuki Yabiku - Natureza me encanta, principalmente pôr do sol! Tenho como hobby praticar esportes. <br/>

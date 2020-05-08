@@ -78,8 +78,8 @@
                 <h4>Endereço</h4>
             </div>
             <div class="row">
-            <div class="form-row ml-4 col pr-5">
-                <div class="form-group ">
+                <div class="form-row ml-4 col pr-5">
+                <div class="form-group col ">
                     <label for="zip-code" style="font-weight:bold">CEP</label>
                     <div style="color:black"> {{$candidatos->zip_code}}  </div> 
                     <div class="form-group pt-4">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projeto Integrador - Refugiados</title>
+    <meta content="{{ csrf_token() }}" name="csrf-token">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/estiloSobreNos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -114,28 +115,7 @@
                     </form>
                 </div>
             </div>
-            <script>
 
-                $('#enviar').submit(function(event) {
-                    event.preventDefault();
-
-                    const _token = $("input[name='_token']").val();
-                    const nome = $('input[name="nome"]').val();
-                    const email = $('input[name="email"]').val();
-                    const mensagem = $('textarea[name="mensagem"]').val();
-
-                    $.ajax({
-                        url: '/index', // caminho para o script que vai processar os dados
-                        type: 'POST',
-                        data: {_token:_token, nome: nome, email: email, mensagem: mensagem},
-
-                        success: function(response) {
-                            $("body").append("<div>"+response+"</div>");
-                        }
-                    });
-                });
-
-            </script>
         </div>
     </main>
     <section>
@@ -146,8 +126,7 @@
 
                     <div id="resp" style="display:none" class="alert alert-info" role="alert"></div>
 
-                    {{-- <form method="post" action="{{ action('MessageController@enviarEmail') }}" enctype="multpart/form-data" id="contactform"> --}}
-                        <form method="post" enctype="multpart/form-data" id="contactform">
+                    <form method="post" action="{{ action('MessageController@enviarEmail') }}" enctype="multpart/form-data" id="contactform">
                         @csrf
                         <div class="form-group">
                             <label for="nome"></label>
@@ -170,11 +149,40 @@
                         </div>
 
                     </form>
+
+
                 </div>
         <br>
     </section>
 
         @include('includes/footer')
-<script>https://code.jquery.com/jquery-3.5.1.min.js</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+
+
+
+    $('#contactform').submit(function(event) {
+        event.preventDefault();
+
+        const nome = $('input[name="nome"]').val();
+        const email = $('input[name="email"]').val();
+        const mensagem = $('textarea[name="mensagem"]').val();
+
+        $.ajax({
+            url: '/index', // caminho para o script que vai processar os dados
+            type: 'POST',
+            data: $(this).serialize(),
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+
+            success: function(response) {
+                alert(response.success);
+            }
+        });
+    });
+
+</script>
 </body>
 </html>

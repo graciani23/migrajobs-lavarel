@@ -39,12 +39,12 @@ O projeto tem como objetivo ajudar os refugiados/imigrantes na busca por vagas d
 Concluí o curso de Back-end na {reprograma} e Desenvolvimento Web Full Stack - Digital House.<br/>
 Meu objetivo na área de tecnologia é resolver problemas e desenvolver soluções que facilitem o dia a dia das pessoas!<br/><br/>
 
-* Isa Mary Kusuki Yabiku - Natureza me encanta, principalmente pôr do sol! Tenho como hobby praticar esportes. <br/>
+* <strong> Isa Mary Kusuki Yabiku </strong> - Natureza me encanta, principalmente pôr do sol! Tenho como hobby praticar esportes. <br/>
 Sou Bacharel em Ciência Contábeis, mas descobri uma nova paixão, a tecnologia. <br/>
 Estudante de Desenvolvimento Web Full Stack - Digital House. <br/>
 Descobri que programamos para pessoas (profissionais e usuários) e por isso, meu objetivo além de resolver bugs, é fazer um código com fácil entendimento e com um bom desempenho.<br/>
 
-* Stephanie Vapsys - Jornalista que escreve também em códigos <br/>
+* <strong> Stephanie Vapsys </strong> - Jornalista que escreve também em códigos <br/>
 Gosto de usar a tecnologia para desenvolver novas alternativas para os meios de comunicação. Sou formada em Comunicação Social - Jornalismo, pela Faculdade Cásper Líbero, e meu TCC foi uma revista digital totalmente interativa para tablet e smartphone. Na época, contei com ajuda de amigos programadores para transformar o conteúdo diagramado em código, mas senti que precisava aprender na prática sobre linguagem de programação. Passei quatro anos e meio em redação de revista tradicional e agora estudo Desenvolvimento Web Full Stack na Digital House. Descobri que além de comunicadora também posso ser uma ótima desenvolvedora! </br>  
 
 

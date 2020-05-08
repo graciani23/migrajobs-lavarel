@@ -123,8 +123,8 @@ nav ul li a:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 7px;
-    margin-left: 10vh;
-    
+/*     margin-left: 10vh;
+ */    
 }
 
 .sair {
@@ -145,8 +145,10 @@ nav ul li a:hover {
 
 /* Dados Pessoais */
 .fundo {
-    background-image: url("/assets/img/quebracabeca.jpg");
+    background-image: url("/assets/img/inclusao-social.png");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 180px;
     margin-top: 50px;
     

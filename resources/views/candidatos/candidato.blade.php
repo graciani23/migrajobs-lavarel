@@ -187,13 +187,13 @@
             <div class="data form-row pt-2 mx-4"> 
                     <div class="col">
                         <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                        <div style="color:black">{{ $candidatos->date_inicio }}</div>        
+                        <div style="color:black">{{date('d/m/Y', strtotime($candidatos->date_inicio)) }}</div>        
                 <br>
                     </div>
                 
                     <div class="col">
                            <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                            <div style="color:black">{{ $candidatos->date_termino }}</div>
+                            <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->date_termino)) }}</div>
                     </div>
                 </div>
          
@@ -225,13 +225,13 @@
             <div class="data form-row pt-2 mx-4">
                 <div class="col">
                     <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                    <div style="color:black">{{ $candidatos->data_inicio }}</div> 
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->data_inicio)) }}</div> 
                 </div>
 
                  <br>
                  <div class="col">
                     <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                    <div style="color:black">{{ $candidatos->data_termino }}</div>    
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->data_termino)) }}</div>    
                  </div>
               
             </div><br>

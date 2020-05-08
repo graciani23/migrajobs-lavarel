@@ -143,7 +143,7 @@
                     </div>
                         <div class="align-self-center">
                         <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
-                        <a href="http://{{ $candidatos->facebook }}">Facobook</a>
+                        <a href="http://{{ $candidatos->facebook }}">Facebook</a>
                     </div>
                 </div>
             </div>
@@ -185,14 +185,16 @@
             </div>
             
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" name="month" style="font-weight:bold" for="dataInicio">Data início:</label>
+                <div class="col">
+                    <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data de início:</label>
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->date_inicio)) }}</div> 
+                </div>
 
-                    @include('./includes/comboBoxMesAno')
 
-                <label class="termino pr-2" name="year" style="font-weight:bold" for="dataTermino">Data término:</label>
-
-                    @include('./includes/comboBoxMesAno')
-
+                <div class="col">
+                    <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data de término:</label>
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->date_termino)) }}</div> 
+                </div>
                 </div><br>
 
             <div class="form-group pt-3 mx-4 pb-3">
@@ -224,14 +226,17 @@
             </form>
 
             <div class="data form-row pt-2 mx-4">
-                <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
+                 <div class="col">
+                    <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data de início:</label>
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->data_inicio)) }}</div> 
+                </div>
 
-                    @include('./includes/comboBoxMesAno')
 
                 <br>
-                <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-
-                    @include('./includes/comboBoxMesAno')
+                <div class="col">
+                    <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data de término:</label>
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->data_termino)) }}</div> 
+                </div>
 
             </div><br>
 

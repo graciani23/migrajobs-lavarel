@@ -146,7 +146,7 @@
                     </div>
                         <div class="align-self-center">
                         <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
-                        <a href="http://{{ $candidatos->facebook }}">Facobook</a>
+                        <a href="http://{{ $candidatos->facebook }}">Facebook</a>
                     </div>
                 </div>
             </div>

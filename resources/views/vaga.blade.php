@@ -15,13 +15,9 @@
     @csrf 
     <div class="container">
         <div class="fundo">
-            <div class="foto">
-                <img src="https://pbs.twimg.com/profile_images/1129626341370933250/dizro5ap_400x400.jpg" alt="">
-            </div>
+        
         </div>
-            <div class="editar-foto form-group">
-                <label for="edit-photo"></label>
-            </div>
+           
        
         <section class="dados-pessoais border">
         <div class="pt-3 mx-4">

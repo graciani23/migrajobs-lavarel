@@ -49,7 +49,7 @@
             <div class="form-row pt-2 mx-4">
                 <div class="col">
                     <label class="data-nascimento" style="font-weight:bold" for="birth">Data de Nascimento</label>
-                    <div style="color:black"> {{ $candidatos->birth }}</div>
+                    <div style="color:black"> {{ date('d/m/Y', strtotime($candidatos->birth))}}</div>
                 </div>
                 <div class="col">
                     <label class="document" style="font-weight:bold" id="document" for="idade">Documento</label>
@@ -78,8 +78,8 @@
                 <h4>Endereço</h4>
             </div>
             <div class="row">
-            <div class="form-row ml-4 col pr-5">
-                <div class="form-group ">
+                <div class="form-row ml-4 col pr-5">
+                <div class="form-group col ">
                     <label for="zip-code" style="font-weight:bold">CEP</label>
                     <div style="color:black"> {{$candidatos->zip_code}}  </div> 
                     <div class="form-group pt-4">
@@ -143,7 +143,7 @@
                     </div>
                         <div class="align-self-center">
                         <img src="/assets/icones/quadrado-facebook.png" alt="facebook">
-                        <a href="http://{{ $candidatos->facebook }}">Facobook</a>
+                        <a href="http://{{ $candidatos->facebook }}">Facebook</a>
                     </div>
                 </div>
             </div>
@@ -187,13 +187,13 @@
             <div class="data form-row pt-2 mx-4"> 
                     <div class="col">
                         <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                        <div style="color:black">{{ $candidatos->date_inicio }}</div>        
+                        <div style="color:black">{{date('d/m/Y', strtotime($candidatos->date_inicio)) }}</div>        
                 <br>
                     </div>
                 
                     <div class="col">
                            <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                            <div style="color:black">{{ $candidatos->date_termino }}</div>
+                            <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->date_termino)) }}</div>
                     </div>
                 </div>
          
@@ -225,13 +225,13 @@
             <div class="data form-row pt-2 mx-4">
                 <div class="col">
                     <label class="inicio pr-2" style="font-weight:bold" for="dataInicio">Data início:</label>
-                    <div style="color:black">{{ $candidatos->data_inicio }}</div> 
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->data_inicio)) }}</div> 
                 </div>
 
                  <br>
                  <div class="col">
                     <label class="termino pr-2" style="font-weight:bold" for="dataTermino">Data término:</label>
-                    <div style="color:black">{{ $candidatos->data_termino }}</div>    
+                    <div style="color:black">{{ date('d/m/Y', strtotime($candidatos->data_termino)) }}</div>    
                  </div>
               
             </div><br>
